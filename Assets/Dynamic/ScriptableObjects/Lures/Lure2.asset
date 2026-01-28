@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 779b7c462bea1be4b8cc85fbcd0fc33b, type: 3}
-  m_Name: LureData
+  m_Name: Lure2
   m_EditorClassIdentifier: Assembly-CSharp::Lure.Data.LureData
-  LureIcon: {fileID: 0}
-  LurePrice: 
+  LureIcon: {fileID: 21300000, guid: 22b2fc74e2e2ace49a373ac5309c6f12, type: 3}
+  LurePrice: 50
