@@ -15,10 +15,6 @@ namespace Player
         [Header("Animation")]
         [SerializeField] private Animator _animator;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-
-        }
 
         private void FixedUpdate()
         {
@@ -33,27 +29,20 @@ namespace Player
 
         private void Move()
         {
-            float horizontal = _joystick.Horizontal;
-            float vertical = _joystick.Vertical;
-            Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
-            if (direction.magnitude >= 0.1f)
+            float horizontalMovement = _joystick.Horizontal * _moveSpeed;
+            float verticalMovement = _joystick.Vertical * _moveSpeed;
+
+            _rigidbody.linearVelocity = new Vector3(horizontalMovement, _rigidbody.angularVelocity.y, verticalMovement);
+
+            if (_joystick.Horizontal != 0f || _joystick.Vertical != 0f)
             {
-                Vector3 moveDirection = direction * _moveSpeed * Time.fixedDeltaTime;
-                _rigidbody.MovePosition(transform.position + moveDirection);
-
-                // Rotate player towards movement direction
-                Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
-                _rigidbody.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 720 * Time.fixedDeltaTime);
-
-                //// Set animation parameter
+                transform.rotation = Quaternion.LookRotation(_rigidbody.linearVelocity);
                 //_animator.SetBool("isRunning", true);
             }
             //else
             //{
-            //    // Set animation parameter
             //    _animator.SetBool("isRunning", false);
             //}
-
         }
     }
 }
