@@ -24,7 +24,7 @@ namespace Interactables
                 HandleTouch(touchPosition);
             }
 
-    #if UNITY_EDITOR
+    #if UNITY_EDITOR  
 
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {

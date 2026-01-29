@@ -12,7 +12,7 @@ namespace Lure.UI
         [SerializeField] private TMP_Text _lurePrice;
 
         private SetAllLuresUI _luresLayout;
-        public void SetupLureUI(LureData data, SetAllLuresUI luresLayout)
+        public void SetupLureUI(LureData data, SetAllLuresUI luresLayout )
         {
             _luresLayout = luresLayout;
             _lureIcon.sprite = data.LureIcon;
@@ -24,6 +24,7 @@ namespace Lure.UI
             if(_luresLayout != null)
             {
                 _luresLayout.LureTradeUi.SetActive(true);
+                _luresLayout.SetTradePanel(_lureIcon.sprite, _lurePrice.text + " Poissongs");
             }
         }
     }
