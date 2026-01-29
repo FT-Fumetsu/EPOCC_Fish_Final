@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Interactables.Trader
 {
+    [RequireComponent(typeof(Collider))]
     public class TraderInteractable : MonoBehaviour, IInteractable
     {
         [SerializeField] private GameObject _tradeUi;
