@@ -397,3 +397,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Lure.UI.SetupLurePrefabsUi
   _lureIcon: {fileID: 6163514011703726585}
   _lurePrice: {fileID: 8942069951023026693}
+  _tradeButton: {fileID: 4551580496487484046}
