@@ -7,6 +7,6 @@ namespace Lure.Data
     {
         //public Lure LureType;
         public Sprite LureIcon;
-        public string LurePrice;
+        public int LurePrice;
     }
 }
