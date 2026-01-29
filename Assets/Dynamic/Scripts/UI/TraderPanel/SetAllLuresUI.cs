@@ -1,5 +1,6 @@
 using Lure.Data;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,10 @@ namespace UI.TraderPanel
 
         [SerializeField] private GameObject _lureUIPrefab;
         [SerializeField] private LureData[] _lureDatas;
+
+        [Header("TradePanel")]
+        [SerializeField] private Image _tradeIcon;
+        [SerializeField] private TMP_Text _tradePriceText;
 
         private readonly List<GameObject> _spawnedItems = new();
 
@@ -55,6 +60,13 @@ namespace UI.TraderPanel
                 }
             }
             _spawnedItems.Clear();
+        }
+
+        public void SetTradePanel(Sprite tradeSprite, string tradePrice)
+        {
+            _tradeIcon.sprite = tradeSprite;
+            _tradePriceText.text = tradePrice;
+            Debug.Log("Prix = " + tradePrice);
         }
     }
 }
