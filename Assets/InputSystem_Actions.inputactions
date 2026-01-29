@@ -68,6 +68,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DebugAddFish",
+                    "type": "Button",
+                    "id": "b4af5f80-4a7f-4f44-94be-36dff6553b7a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DebugRemoveFish",
+                    "type": "Button",
+                    "id": "b6371355-6dde-413d-aee4-6833e2204dde",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -321,6 +339,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "DebugStopColliders",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "21cecadc-e923-4856-b550-a9fc83b1d357",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DebugAddFish",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ee993f8d-c754-422b-903b-efdc3c2bcb34",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DebugRemoveFish",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
