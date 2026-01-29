@@ -1,3 +1,4 @@
+using Manager.Fishs;
 using Lure.Data;
 using System.Collections.Generic;
 using TMPro;
@@ -19,6 +20,14 @@ namespace UI.TraderPanel
         [SerializeField] private TMP_Text _tradePriceText;
 
         private readonly List<GameObject> _spawnedItems = new();
+
+        private int _currentFishPrice;
+
+        public int CurrentFishPrice
+        {
+            get => _currentFishPrice;
+            set => _currentFishPrice = value;
+        }
 
         public GameObject LureTradeUi => _lureTradeUi;
 
@@ -45,6 +54,7 @@ namespace UI.TraderPanel
                 if(item != null)
                 {
                     item.SetupLureUI(lureData, this);
+                    item.CheckTradeAvailable(lureData.LurePrice, lureData);
                 }
                 _spawnedItems.Add(prefab);
             }
@@ -62,11 +72,23 @@ namespace UI.TraderPanel
             _spawnedItems.Clear();
         }
 
-        public void SetTradePanel(Sprite tradeSprite, string tradePrice)
+        public void SetTradePanel(Sprite tradeSprite, string tradePrice, int currentPrice)
         {
             _tradeIcon.sprite = tradeSprite;
             _tradePriceText.text = tradePrice;
+            _currentFishPrice = currentPrice;
             Debug.Log("Prix = " + tradePrice);
+        }
+
+        public void AcceptTrade()
+        {
+            if(_currentFishPrice > FishsManager.Instance.FishsCount)
+            {
+                Debug.LogWarning("SetAllLuresUI: Not enough fish to complete the trade.");
+                return;
+            }
+
+            FishsManager.Instance.RemoveFishs(_currentFishPrice);
         }
     }
 }
