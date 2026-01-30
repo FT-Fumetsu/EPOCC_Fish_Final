@@ -14,17 +14,10 @@ namespace Player
 
         [Header("Animation")]
         [SerializeField] private Animator _animator;
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
 
         private void FixedUpdate()
         {
             Move();
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
 
         private void Move()
@@ -37,11 +30,11 @@ namespace Player
             if (_joystick.Horizontal != 0f || _joystick.Vertical != 0f)
             {
                 transform.rotation = Quaternion.LookRotation(_rigidbody.linearVelocity);
-                //_animator.SetBool("isRunning", true);
+                //_animator.SetBool("is_running", true);
             }
             //else
             //{
-            //    _animator.SetBool("isRunning", false);
+            //    _animator.SetBool("is_running", false);
             //}
         }
     }
