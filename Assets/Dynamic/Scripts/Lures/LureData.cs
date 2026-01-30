@@ -1,3 +1,4 @@
+using Fish.Spawner.Data;
 using UnityEngine;
 
 namespace Lure.Data
@@ -8,5 +9,6 @@ namespace Lure.Data
         //public Lure LureType;
         public Sprite LureIcon;
         public int LurePrice;
+        public FishSpawnData[] SpawnTable;
     }
 }

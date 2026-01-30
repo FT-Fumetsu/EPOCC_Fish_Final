@@ -17,7 +17,9 @@ namespace Interactables
                 Debug.Log("fingerId = " + fingerId);
 
                 if (EventSystem.current.IsPointerOverGameObject(fingerId))
+                {
                     return;
+                }
 
                 Debug.Log("Touch detected on screen.");
                 Vector2 touchPosition = Touchscreen.current.primaryTouch.position.ReadValue();

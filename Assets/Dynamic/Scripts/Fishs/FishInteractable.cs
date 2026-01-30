@@ -10,7 +10,7 @@ namespace Interactables.Fishs
         public void OnInteract()
         {
             FishsManager.Instance.AddFishs(_fishCount);
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }
