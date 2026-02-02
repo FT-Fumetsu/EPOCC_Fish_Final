@@ -8,17 +8,17 @@ namespace Fish.Spawner
     public class FishSpawner : MonoBehaviour
     {
         [Header("Table par défaut (sans appât)")]
-        public FishSpawnData[] defaultSpawnTable;
+        [SerializeField] private FishSpawnData[] defaultSpawnTable;
 
         [Header("Appâts disponibles")]
-        public LureData[] lures;
+        [SerializeField] private LureData[] lures;
 
         [Header("Appât actif")]
-        public int activeLureIndex = -1;
+        [SerializeField] private int activeLureIndex = -1;
 
         [Header("Délai entre spawns")]
-        public float minDelay = 5f;
-        public float maxDelay = 15f;
+        [SerializeField] private float _minDelay = 5f;
+        [SerializeField] private float _maxDelay = 15f;
 
         void Start()
         {
@@ -29,7 +29,7 @@ namespace Fish.Spawner
         {
             while (true)
             {
-                yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
+                yield return new WaitForSeconds(Random.Range(_minDelay, _maxDelay));
 
                 FishSpawnData[] table = GetCurrentSpawnTable();
                 GameObject fish = GetWeightedRandomFish(table);
@@ -51,14 +51,14 @@ namespace Fish.Spawner
         {
             float total = 0f;
             foreach (var fish in table)
-                total += fish.spawnChance;
+                total += fish.spawnWeight;
 
             float rand = Random.Range(0f, total);
             float current = 0f;
 
             foreach (var fish in table)
             {
-                current += fish.spawnChance;
+                current += fish.spawnWeight;
                 if (rand <= current)
                     return fish.fishPrefab;
             }

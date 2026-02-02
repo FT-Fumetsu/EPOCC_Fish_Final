@@ -7,8 +7,8 @@ namespace Fish.Spawner.Data
     {
         public GameObject fishPrefab;
 
-        [Tooltip("Chance to spawn this fish (0 to 1)")]
-        [Range(0, 1)] public float spawnChance;
+        [Tooltip("Weight of the fish to spawn")]
+        [Range(0, 1)] public float spawnWeight;
 
         [HideInInspector]
         public float currentChance;

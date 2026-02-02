@@ -10,5 +10,8 @@ namespace Lure.Data
         public Sprite LureIcon;
         public int LurePrice;
         public FishSpawnData[] SpawnTable;
+
+        //Only for debug
+        public string LureName;
     }
 }

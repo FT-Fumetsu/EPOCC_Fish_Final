@@ -15,8 +15,11 @@ namespace Lure.UI
 
         private SetAllLuresUI _luresLayout;
         private int _lureCost;
+
+        private LureData _currentLureData;
         public void SetupLureUI(LureData data, SetAllLuresUI luresLayout )
         {
+            _currentLureData = data;
             _luresLayout = luresLayout;
             _lureIcon.sprite = data.LureIcon;
             _lureCost = data.LurePrice;
@@ -28,7 +31,7 @@ namespace Lure.UI
             if(_luresLayout != null)
             {
                 _luresLayout.LureTradeUi.SetActive(true);
-                _luresLayout.SetTradePanel(_lureIcon.sprite, _lurePrice.text + " Poissongs", _lureCost);
+                _luresLayout.SetTradePanel(_currentLureData);
             }
         }
 

@@ -1,4 +1,5 @@
 using Manager.Fishs;
+using Manager.Lure;
 using Lure.Data;
 using System.Collections.Generic;
 using TMPro;
@@ -22,6 +23,7 @@ namespace UI.TraderPanel
         private readonly List<GameObject> _spawnedItems = new();
 
         private int _currentFishPrice;
+        private LureData _currentData;
 
         public int CurrentFishPrice
         {
@@ -72,12 +74,13 @@ namespace UI.TraderPanel
             _spawnedItems.Clear();
         }
 
-        public void SetTradePanel(Sprite tradeSprite, string tradePrice, int currentPrice)
+        public void SetTradePanel(LureData data)
         {
-            _tradeIcon.sprite = tradeSprite;
-            _tradePriceText.text = tradePrice;
-            _currentFishPrice = currentPrice;
-            Debug.Log("Prix = " + tradePrice);
+            _currentData = data;
+            _tradeIcon.sprite = data.LureIcon;
+            _tradePriceText.text = data.LurePrice.ToString();
+            _currentFishPrice = data.LurePrice;
+            Debug.Log("Prix = " + data.LurePrice);
         }
 
         public void AcceptTrade()
@@ -89,6 +92,7 @@ namespace UI.TraderPanel
             }
 
             FishsManager.Instance.RemoveFishs(_currentFishPrice);
+            LureManager.Instance.AddLure(_currentData, 1);
         }
     }
 }
