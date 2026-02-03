@@ -90,7 +90,7 @@ namespace UI.Lures
            }
            else if (lureUsed)
            {
-               luresButton.SetActive(false);s
+               luresButton.SetActive(false);
                return;
            }
            luresButton.SetActive(true);
