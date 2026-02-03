@@ -23,7 +23,7 @@ namespace Manager.Lure
                 _lureCounts[lure] = 0;
 
             _lureCounts[lure] += amount;
-            Debug.Log($"Ajouté {amount}x {lure.LureName}. Total : {_lureCounts[lure]}");
+            Debug.Log($"Ajoutï¿½ {amount}x {lure.LureName}. Total : {_lureCounts[lure]}");
         }
 
         public bool HasLure(LureData lure)
@@ -38,23 +38,30 @@ namespace Manager.Lure
             return _lureCounts.Count > 0;
         }
 
-        public bool UseLure(LureData lure)
+        public bool BoolUseLure(LureData lure)
         {
             if (!HasLure(lure))
                 return false;
 
             _lureCounts[lure]--;
-            Debug.Log($"Utilisé 1x {lure.LureName}. Il en reste : {_lureCounts[lure]}");
+            Debug.Log($"UtilisÃ© 1x {lure.LureName}. Il en reste : {_lureCounts[lure]}");
 
             return true;
         }
 
         public int GetLureCount(LureData lure)
         {
-            return lure != null && _lureCounts.TryGetValue(lure, out int count)
-                ? count
-                : 0;
+            if (lure == null || !_lureCounts.ContainsKey(lure))
+                return 0;
+
+            return _lureCounts[lure];
         }
+        
+        public IEnumerable<LureData> GetAllLures()
+        {
+            return new List<LureData>(_lureCounts.Keys);
+        }
+        
 
         public void Test()
         {
