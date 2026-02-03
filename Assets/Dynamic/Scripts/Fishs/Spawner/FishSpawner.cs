@@ -2,6 +2,7 @@ using Fish.Spawner.Data;
 using Lure.Data;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Fish.Spawner
 {
@@ -17,19 +18,27 @@ namespace Fish.Spawner
         [SerializeField] private int activeLureIndex = -1;
 
         [Header("Délai entre spawns")]
-        [SerializeField] private float _minDelay = 5f;
-        [SerializeField] private float _maxDelay = 15f;
+        [SerializeField] private float minDelay = 5f;
+        [SerializeField] private float maxDelay = 15f;
+        
+        [Header("Angle de spawn (deg)")]
+        [SerializeField] private float minSpawnAngle = -45f;
+        [SerializeField] private float maxSpawnAngle = 45f;
+        
+        [Header("Gizmos")]
+        [SerializeField] private float gizmoRadius = 20f;
+        [SerializeField] private int gizmoSegments = 32;
 
         void Start()
         {
             StartCoroutine(SpawnRoutine());
         }
 
-        IEnumerator SpawnRoutine()
+        private IEnumerator SpawnRoutine()
         {
             while (true)
             {
-                yield return new WaitForSeconds(Random.Range(_minDelay, _maxDelay));
+                yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
 
                 FishSpawnData[] table = GetCurrentSpawnTable();
                 GameObject fish = GetWeightedRandomFish(table);
@@ -40,8 +49,25 @@ namespace Fish.Spawner
                     continue;
                 }
                 
-                float rot = Random.Range(0f, 360f);
-                Instantiate(fish, transform.position, Quaternion.Euler(0, 0, rot));
+                float randomOffset = Random.Range(minSpawnAngle, maxSpawnAngle);
+                float finalZ = transform.eulerAngles.z + randomOffset;
+                
+                Debug.Log(transform.eulerAngles);
+                
+                bool flip = Random.value < 0.5f;
+
+                Quaternion rotation;
+                
+                if (flip)
+                {
+                    rotation = Quaternion.Euler(180f, 0f, finalZ);
+                }
+                else
+                {
+                    rotation = Quaternion.Euler(0f, 0f, finalZ);
+                }
+                
+                Instantiate(fish, transform.position, rotation);
             }
         }
 
@@ -114,5 +140,40 @@ namespace Fish.Spawner
             activeLureIndex = -1;
         }
         
+#if UNITY_EDITOR
+        void OnDrawGizmosSelected()
+        {
+            if (!Application.isPlaying)
+            {
+                Gizmos.color = new Color(0f, 1f, 1f, 0.6f);
+            }
+            else
+            {
+                Gizmos.color = Color.cyan;
+            }
+
+            Vector3 center = transform.position;
+            Quaternion baseRot = transform.rotation;
+            float startAngle = minSpawnAngle + transform.eulerAngles.z;
+            float endAngle = maxSpawnAngle + transform.eulerAngles.z;
+            int segments = Mathf.Max(3, gizmoSegments);
+            float radius = Mathf.Max(0.1f, gizmoRadius);
+
+            Vector3 prevPoint = center + (baseRot * Quaternion.Euler(0, 0, startAngle) * Vector3.right) * radius;
+            for (int i = 1; i <= segments; i++)
+            {
+                float t = (float)i / segments;
+                float angle = Mathf.Lerp(startAngle, endAngle, t);
+                Vector3 nextPoint = center + (baseRot * Quaternion.Euler(0, 0, angle) * Vector3.right) * radius;
+                Gizmos.DrawLine(prevPoint, nextPoint);
+                prevPoint = nextPoint;
+            }
+
+            Vector3 dirStart = baseRot * Quaternion.Euler(0, 0, startAngle) * Vector3.right;
+            Vector3 dirEnd = baseRot * Quaternion.Euler(0, 0, endAngle) * Vector3.right;
+            Gizmos.DrawLine(center, center + dirStart * radius);
+            Gizmos.DrawLine(center, center + dirEnd * radius);
+        }
+#endif
     }
 }

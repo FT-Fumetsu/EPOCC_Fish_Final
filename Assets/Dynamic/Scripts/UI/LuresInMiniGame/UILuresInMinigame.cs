@@ -44,13 +44,12 @@ namespace UI.Lures
                btn.onClick.RemoveAllListeners();
    
                var localLure = entry.lure;
-               var localButtonObj = entry.button;
    
-               btn.onClick.AddListener(() => OnLureButtonClicked(localLure, localButtonObj));
+               btn.onClick.AddListener(() => OnLureButtonClicked(localLure));
            }
        }
        
-       private void OnLureButtonClicked(LureData lure, GameObject buttonObj)
+       private void OnLureButtonClicked(LureData lure)
        {
            if (lure == null || LureManager.Instance == null)
                return;
@@ -83,12 +82,7 @@ namespace UI.Lures
    
        private void CheckLureButton(bool lureUsed)
        {
-           if (!LureManager.Instance.HasAnyLure())
-           {
-               luresButton.SetActive(false);
-               return;
-           }
-           else if (lureUsed)
+           if (!LureManager.Instance.HasAnyLure() || lureUsed)
            {
                luresButton.SetActive(false);
                return;
@@ -96,7 +90,7 @@ namespace UI.Lures
            luresButton.SetActive(true);
        }
    
-       public void CheckAllLures(bool lureUsed)
+       private void CheckAllLures(bool lureUsed)
        {
            if (lureUsed)
            {
