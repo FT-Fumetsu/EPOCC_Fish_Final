@@ -7,16 +7,16 @@ namespace Fish.Spawner
 {
     public class FishSpawner : MonoBehaviour
     {
-        [Header("Table par dÈfaut (sans app‚t)")]
+        [Header("Table par d√©faut (sans app√¢t)")]
         [SerializeField] private FishSpawnData[] defaultSpawnTable;
 
-        [Header("App‚ts disponibles")]
+        [Header("App√¢ts disponibles")]
         [SerializeField] private LureData[] lures;
 
-        [Header("App‚t actif")]
+        [Header("App√¢t actif")]
         [SerializeField] private int activeLureIndex = -1;
 
-        [Header("DÈlai entre spawns")]
+        [Header("D√©lai entre spawns")]
         [SerializeField] private float _minDelay = 5f;
         [SerializeField] private float _maxDelay = 15f;
 
@@ -34,6 +34,12 @@ namespace Fish.Spawner
                 FishSpawnData[] table = GetCurrentSpawnTable();
                 GameObject fish = GetWeightedRandomFish(table);
 
+                if (fish == null)
+                {
+                    Debug.LogWarning("FishSpawner: No valid fish prefab found to spawn.");
+                    continue;
+                }
+                
                 float rot = Random.Range(0f, 360f);
                 Instantiate(fish, transform.position, Quaternion.Euler(0, 0, rot));
             }
@@ -41,6 +47,11 @@ namespace Fish.Spawner
 
         FishSpawnData[] GetCurrentSpawnTable()
         {
+            if (defaultSpawnTable == null) defaultSpawnTable = new FishSpawnData[0];
+
+            if (lures == null || lures.Length == 0)
+                return defaultSpawnTable;
+            
             if (activeLureIndex < 0 || activeLureIndex >= lures.Length)
                 return defaultSpawnTable;
 
@@ -65,5 +76,43 @@ namespace Fish.Spawner
 
             return table[0].fishPrefab;
         }
+        
+        public void SetActiveLure(LureData lure)
+        {
+            if (lures == null || lures.Length == 0)
+            {
+                Debug.LogWarning("FishSpawner: aucun app√¢t configur√©.");
+                activeLureIndex = -1;
+                return;
+            }
+        
+            if (lure == null)
+            {
+                activeLureIndex = -1;
+                return;
+            }
+        
+            for (int i = 0; i < lures.Length; i++)
+            {
+                if (lures[i] == lure)
+                {
+                    activeLureIndex = i;
+                    return;
+                }
+            }
+        
+            for (int i = 0; i < lures.Length; i++)
+            {
+                if (lures[i] != null && lure != null && lures[i].name == lure.name)
+                {
+                    activeLureIndex = i;
+                    return;
+                }
+            }
+        
+            Debug.LogWarning($"FishSpawner: app√¢t non trouv√© dans le tableau `lures` : {lure.name}");
+            activeLureIndex = -1;
+        }
+        
     }
 }

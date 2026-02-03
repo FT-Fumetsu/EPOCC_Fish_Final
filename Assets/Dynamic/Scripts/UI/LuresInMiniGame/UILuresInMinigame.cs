@@ -1,36 +1,126 @@
+using System.Collections.Generic;
 using UnityEngine;
 
+using Lure.Data;
 using Manager.Lure;
+using UnityEngine.UI;
 
-public class UILuresInMinigame : MonoBehaviour
+namespace UI.Lures.Buttons
 {
-    [SerializeField] private GameObject _luresButton;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [System.Serializable]
+    public class LureButtonEntry
     {
-        CheckLureButton();
-    }
-
-    private void OnEnable()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void CheckLureButton()
-    {
-        if (!LureManager.Instance.HasAnyLure())
-        {
-            _luresButton.SetActive(false);
-            Debug.LogWarning("Has No Lures");
-            return;
-        }
-        _luresButton.SetActive(true);
-        Debug.Log("Has Lures");
+        public LureData lure;
+        public GameObject button;
     }
 }
+
+
+namespace UI.Lures
+{
+    using Buttons;
+   public class UILuresInMinigame : MonoBehaviour
+   {
+       [SerializeField] private GameObject luresButton;
+       [SerializeField] private List<LureButtonEntry> lureButtons = new List<LureButtonEntry>();
+       
+       void Start()
+       {
+           CheckLureButton(false);
+           SetupButtons();
+       }
+       
+       private void SetupButtons()
+       {
+           foreach (var entry in lureButtons)
+           {
+               if (entry == null || entry.button == null)
+                   continue;
+   
+               var btn = entry.button.GetComponent<Button>();
+               if (btn == null)
+                   continue;
+   
+               btn.onClick.RemoveAllListeners();
+   
+               var localLure = entry.lure;
+               var localButtonObj = entry.button;
+   
+               btn.onClick.AddListener(() => OnLureButtonClicked(localLure, localButtonObj));
+           }
+       }
+       
+       private void OnLureButtonClicked(LureData lure, GameObject buttonObj)
+       {
+           if (lure == null || LureManager.Instance == null)
+               return;
+   
+           bool used = false;
+           var lureManager = LureManager.Instance;
+   
+           if (lureManager != null && lure != null)
+           {
+               used = lureManager.BoolUseLure(lure); // appel direct, compile-time checked
+           }
+   
+           if (used)
+           {
+               var spawners = FindObjectsOfType<Fish.Spawner.FishSpawner>();
+               foreach(var spawner in spawners)
+               {
+                   spawner.SetActiveLure(lure);
+               }
+               
+               CheckAllLures(true);
+               CheckLureButton(true);
+               Debug.Log($"Appât utilisé : {(lure != null ? lure.LureName : "Unknown")}");
+           }
+           else
+           {
+               Debug.LogWarning($"Impossible d'utiliser l'appât : {(lure != null ? lure.LureName : "Unknown")}");
+           }
+       }
+   
+       private void CheckLureButton(bool lureUsed)
+       {
+           if (!LureManager.Instance.HasAnyLure())
+           {
+               luresButton.SetActive(false);
+               return;
+           }
+           else if (lureUsed)
+           {
+               luresButton.SetActive(false);s
+               return;
+           }
+           luresButton.SetActive(true);
+       }
+   
+       public void CheckAllLures(bool lureUsed)
+       {
+           if (lureUsed)
+           {
+               foreach (var entry in lureButtons)
+               {
+                   entry.button.SetActive(false);
+               }
+
+               return;
+           }
+           foreach (var entry in lureButtons)
+           {
+               if (entry == null || entry.button == null)
+                   continue;
+   
+               int count = 0;
+               if (entry.lure != null)
+                   count = LureManager.Instance.GetLureCount(entry.lure);
+   
+               bool shouldBeActive = count > 0;
+               entry.button.SetActive(shouldBeActive);
+               Debug.Log($"Lure: {(entry.lure != null ? entry.lure.LureName : "Unknown")}, Count: {count}, ButtonActive: {shouldBeActive}");
+           }
+       }
+   } 
+}
+
