@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Static/01_Assets/Caisse.meta
 guid: 5e35fffcaa6159e488c282b5b463063a
+========
+guid: d65079ac29e14fd45bc9ceccaa199ba5
+>>>>>>>> 4e964d6 (Integration_Cabane et textures decoration poisson):Assets/Static/03_Textures/TEX_Cabane.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
