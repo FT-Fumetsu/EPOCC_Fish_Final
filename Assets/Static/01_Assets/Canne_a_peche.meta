@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Static/01_Assets/Canne_a_peche.meta
 guid: f0828a8b4c3f78442a2c5b782c670218
+========
+guid: 14e9280fcf005124aa61aad2072c7038
+>>>>>>>> 4e964d640026488b6ceef29f5af32f3ccdd71368:Assets/Static/03_Textures/TEX_Cabane/TEX_CompartimentAPPAT.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
