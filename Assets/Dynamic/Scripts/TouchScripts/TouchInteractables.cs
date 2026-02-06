@@ -1,3 +1,4 @@
+using Manager.Pause;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -6,10 +7,19 @@ namespace Interactables
 {
     public class TouchInteractables : MonoBehaviour
     {
+        private bool _isPaused = false;
+        
         void Update()
         {
-            if(UI.UIState.IsUiOpen)
+            if (PauseManager.Instance.IsPaused)
+            {
                 return;
+            }
+
+            if (UI.UIState.IsUiOpen)
+            {
+                return;
+            }
 
             if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
             {
