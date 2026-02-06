@@ -4,7 +4,13 @@ namespace Fish.StateMachine
 {
     public class FishFleeState: IState
     {
-        public void Enter(IStateMachineData stateMachineData){}
+
+        public void Enter(IStateMachineData stateMachineData)
+        {
+            var data = (FishStateMachineData)stateMachineData;
+            float fleeRotationAngle = Random.Range(data.FleeMinAngle, data.FleeMaxAngle);
+            data.FishTransform.rotation = Quaternion.Euler(0, 0, fleeRotationAngle + data.FishTransform.rotation.eulerAngles.z);
+        }
     
         public IState Update(IStateMachineData stateMachineData)
         {

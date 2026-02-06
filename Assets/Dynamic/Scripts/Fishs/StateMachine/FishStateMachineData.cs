@@ -10,6 +10,9 @@ namespace Fish.StateMachine
         public float ConstantSpeed;
         public float FleeSpeed;
     
+        public float FleeMinAngle;
+        public float FleeMaxAngle;
+        
         public float StopTimer;
         public float TimerBeforeStop;
     }

@@ -143,5 +143,7 @@ MonoBehaviour:
   _spawnSpeed: 5
   _constantSpeed: 20
   _fleeSpeed: 50
+  _fleeMinAngle: -45
+  _fleeMaxAngle: 45
   _stopTimer: 2
   _timerBeforeStop: 2

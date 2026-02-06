@@ -8,8 +8,6 @@ namespace Fish.StateMachine
         
         public void Enter(IStateMachineData stateMachineData)
         {
-            var data = (FishStateMachineData)stateMachineData;
-            data.FishTransform.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
         }
     
         public IState Update(IStateMachineData stateMachineData)

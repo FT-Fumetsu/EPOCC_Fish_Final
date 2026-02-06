@@ -10,6 +10,10 @@ namespace Fish.StateMachine
         [SerializeField] private float _constantSpeed;
         [SerializeField] private float _fleeSpeed;
         
+        [Header("FleeDirection")]
+        [SerializeField] private float _fleeMinAngle = -45f;
+        [SerializeField] private float _fleeMaxAngle = 45f;
+        
         [Header("Timers")] 
         [SerializeField] private float _stopTimer;
         [SerializeField] private float _timerBeforeStop;
@@ -25,6 +29,8 @@ namespace Fish.StateMachine
                 SpawnSpeed = _spawnSpeed,
                 ConstantSpeed = _constantSpeed,
                 FleeSpeed =  _fleeSpeed,
+                FleeMinAngle = _fleeMinAngle,
+                FleeMaxAngle = _fleeMaxAngle,
                 StopTimer = _stopTimer,
                 TimerBeforeStop = _timerBeforeStop
             };
