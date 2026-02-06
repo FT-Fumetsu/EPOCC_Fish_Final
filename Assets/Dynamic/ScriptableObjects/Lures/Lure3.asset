@@ -16,10 +16,16 @@ MonoBehaviour:
   LurePrice: 75
   SpawnTable:
   - fishPrefab: {fileID: 2213645133388932619, guid: 05ef49ee51f203246af3c84860613e5f, type: 3}
-    spawnWeight: 0.25
+    spawnWeight: 0.125
+    currentChance: 0
+  - fishPrefab: {fileID: 2213645133388932619, guid: ce02d3a74789281499530f82eb31f7fd, type: 3}
+    spawnWeight: 0.125
     currentChance: 0
   - fishPrefab: {fileID: 3064477644981082617, guid: a52a9b4cb1a5c2e41b2e5e38b0472aef, type: 3}
-    spawnWeight: 0.5
+    spawnWeight: 0.25
+    currentChance: 0
+  - fishPrefab: {fileID: 3064477644981082617, guid: a51354c5e401ca5419acb4270dde3109, type: 3}
+    spawnWeight: 0.25
     currentChance: 0
   - fishPrefab: {fileID: 5342801984082797290, guid: 07c49416cfc02994d876059450cb2efb, type: 3}
     spawnWeight: 0.25

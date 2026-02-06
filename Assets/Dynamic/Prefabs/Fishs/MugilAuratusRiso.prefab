@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5070164429655955418}
   - component: {fileID: 3711621928371334652}
   - component: {fileID: 3845776522509432873}
-  - component: {fileID: -3405043906516167197}
+  - component: {fileID: -3513124451258666606}
   m_Layer: 0
-  m_Name: LittlePoissong
+  m_Name: MugilAuratusRiso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.91196, z: 19.44}
-  m_LocalScale: {x: 2.84, y: 2.84, z: 2.84}
+  m_LocalScale: {x: 0.083, y: 0.083, z: 0.083}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 4f88163148150b148ae0d446a66dcbb8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8a13689168042b4fa5a3a70f5a285c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,9 +126,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2236329, y: 0.51074225, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-3405043906516167197
+  m_Size: {x: 44.01242, y: 15.52751, z: 0.1}
+  m_Center: {x: 0.04956521, y: 0.08926334, z: 0}
+--- !u!114 &-3513124451258666606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,8 +137,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5548365985278890572}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a68546bda4ccc2648919f7c6751a7df1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ad72058e6d39ce4cbb7087d3ffbdae5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fish.Movement.FishMovement
-  _moveSpeed: 10
-  _direction: {x: -1, y: 0, z: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::Fish.StateMachine.FishStateMachine
+  _spawnSpeed: 5
+  _constantSpeed: 10
+  _fleeSpeed: 30
+  _stopTimer: 3
+  _timerBeforeStop: 3

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 453592206260588324}
   - component: {fileID: 6394327563169801457}
   - component: {fileID: 1833784256110977141}
-  - component: {fileID: -1896928521555568746}
+  - component: {fileID: -6296921434394644770}
   m_Layer: 0
   m_Name: HugePoissong
   m_TagString: Untagged
@@ -128,7 +128,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2236329, y: 0.51074225, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-1896928521555568746
+--- !u!114 &-6296921434394644770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,8 +137,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5342801984082797290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a68546bda4ccc2648919f7c6751a7df1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ad72058e6d39ce4cbb7087d3ffbdae5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fish.Movement.FishMovement
-  _moveSpeed: 10
-  _direction: {x: -1, y: 0, z: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::Fish.StateMachine.FishStateMachine
+  _spawnSpeed: 5
+  _constantSpeed: 10
+  _fleeSpeed: 30
+  _stopTimer: 3
+  _timerBeforeStop: 3
