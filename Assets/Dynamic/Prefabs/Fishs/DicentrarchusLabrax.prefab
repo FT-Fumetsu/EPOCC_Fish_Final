@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5baac4192d73243860a62efddf3535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Fishs.FishInteractable
-  _fishCount: 3
+  _fishCount: 1
 --- !u!65 &1589968393031143711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fish.StateMachine.FishStateMachine
   _spawnSpeed: 5
-  _constantSpeed: 10
-  _fleeSpeed: 30
-  _stopTimer: 3
-  _timerBeforeStop: 3
+  _constantSpeed: 20
+  _fleeSpeed: 50
+  _stopTimer: 2
+  _timerBeforeStop: 2

@@ -55,17 +55,8 @@ namespace Fish.Spawner
                 
                 float randomOffset = Random.Range(minSpawnAngle, maxSpawnAngle);
                 var finalZ = transform.rotation.eulerAngles.z + randomOffset;
-                    
-                if (_tapeTaupe)
-                {
-                    var fishMovement = fish.GetComponent<Fish.Movement.FishMovement>();
-                    if (fishMovement != null)
-                    {
-                        fishMovement.TapeTaupe = true;
-                    }
-                }
                 
-                FishStateMachine fishStateMachine = Instantiate<FishStateMachine>(fish, transform.position, Quaternion.Euler(0f, 0f, finalZ));
+                Instantiate(fish, transform.position, Quaternion.Euler(0f, 0f, finalZ));
             }
         }
 
