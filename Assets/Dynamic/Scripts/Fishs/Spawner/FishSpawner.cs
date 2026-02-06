@@ -1,6 +1,7 @@
 using Fish.Spawner.Data;
 using Lure.Data;
 using System.Collections;
+using Fish.StateMachine;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,6 +9,9 @@ namespace Fish.Spawner
 {
     public class FishSpawner : MonoBehaviour
     {
+        [Header("Minigame Bool")]
+        [SerializeField] private bool _tapeTaupe;
+        
         [Header("Table par défaut (sans appât)")]
         [SerializeField] private FishSpawnData[] defaultSpawnTable;
 
@@ -41,7 +45,7 @@ namespace Fish.Spawner
                 yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
 
                 FishSpawnData[] table = GetCurrentSpawnTable();
-                GameObject fish = GetWeightedRandomFish(table);
+                FishStateMachine fish = GetWeightedRandomFish(table);
 
                 if (fish == null)
                 {
@@ -50,24 +54,18 @@ namespace Fish.Spawner
                 }
                 
                 float randomOffset = Random.Range(minSpawnAngle, maxSpawnAngle);
-                float finalZ = transform.eulerAngles.z + randomOffset;
-                
-                Debug.Log(transform.eulerAngles);
-                
-                bool flip = Random.value < 0.5f;
-
-                Quaternion rotation;
-                
-                if (flip)
+                var finalZ = transform.rotation.eulerAngles.z + randomOffset;
+                    
+                if (_tapeTaupe)
                 {
-                    rotation = Quaternion.Euler(180f, 0f, finalZ);
-                }
-                else
-                {
-                    rotation = Quaternion.Euler(0f, 0f, finalZ);
+                    var fishMovement = fish.GetComponent<Fish.Movement.FishMovement>();
+                    if (fishMovement != null)
+                    {
+                        fishMovement.TapeTaupe = true;
+                    }
                 }
                 
-                Instantiate(fish, transform.position, rotation);
+                FishStateMachine fishStateMachine = Instantiate<FishStateMachine>(fish, transform.position, Quaternion.Euler(0f, 0f, finalZ));
             }
         }
 
@@ -84,7 +82,7 @@ namespace Fish.Spawner
             return lures[activeLureIndex].SpawnTable;
         }
 
-        GameObject GetWeightedRandomFish(FishSpawnData[] table)
+        FishStateMachine GetWeightedRandomFish(FishSpawnData[] table)
         {
             float total = 0f;
             foreach (var fish in table)
@@ -97,10 +95,10 @@ namespace Fish.Spawner
             {
                 current += fish.spawnWeight;
                 if (rand <= current)
-                    return fish.fishPrefab;
+                    return fish.fishPrefab.GetComponent<FishStateMachine>();
             }
 
-            return table[0].fishPrefab;
+            return table[0].fishPrefab.GetComponent<FishStateMachine>();
         }
         
         public void SetActiveLure(LureData lure)
@@ -154,8 +152,8 @@ namespace Fish.Spawner
 
             Vector3 center = transform.position;
             Quaternion baseRot = transform.rotation;
-            float startAngle = minSpawnAngle + transform.eulerAngles.z;
-            float endAngle = maxSpawnAngle + transform.eulerAngles.z;
+            float startAngle = /* transform.rotation.eulerAngles.z + */ minSpawnAngle;
+            float endAngle = /* transform.rotation.eulerAngles.z + */ maxSpawnAngle;
             int segments = Mathf.Max(3, gizmoSegments);
             float radius = Mathf.Max(0.1f, gizmoRadius);
 

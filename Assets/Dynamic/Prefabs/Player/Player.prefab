@@ -34,8 +34,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2352972645825035961}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6984145035899747777
@@ -178,83 +177,3 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   includeTriggers: 1
---- !u!1001 &2823133933542168914
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7530066939582584496}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1366802268930994711, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 65aeec1da6801c64f8ba599e0cb7dc2b, type: 2}
-    - target: {fileID: 919132149155446097, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_Name
-      value: pose
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 9bff948e2e5742345ade51d36121d40f, type: 2}
-    - target: {fileID: 5866666021909216657, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-      propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'Spine_03SHJnt'\n\tTransform 'Spine_02SHJnt'\n\tTransform
-        'Spine_01SHJnt'\n\tTransform 'ROOTSHJnt'\n\tTransform 'Spine_TopSHJnt'\n\tTransform
-        'Spine_04SHJnt'\n\tTransform 'r_Leg_HipSHJnt'\n\tTransform 'Spine_03SHJnt'\n\tTransform
-        'Spine_02SHJnt'\n\tTransform 'Spine_01SHJnt'\n\tand more ...\n\tFrom animation
-        clip 'Take 001'"
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
---- !u!4 &2352972645825035961 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 82e8c7bbe856fc24886a86963253f4d2, type: 3}
-  m_PrefabInstance: {fileID: 2823133933542168914}
-  m_PrefabAsset: {fileID: 0}

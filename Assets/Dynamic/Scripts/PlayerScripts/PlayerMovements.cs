@@ -30,12 +30,12 @@ namespace Player
             if (_joystick.Horizontal != 0f || _joystick.Vertical != 0f)
             {
                 transform.rotation = Quaternion.LookRotation(new Vector3(_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z));
-                //_animator.SetBool("is_running", true);
+                _animator.SetBool("isWalking", true);
             }
-            //else
-            //{
-            //    _animator.SetBool("is_running", false);
-            //}
+            else
+            {
+                _animator.SetBool("isWalking", false);
+            }
         }
     }
 }
