@@ -23,7 +23,23 @@ ModelImporter:
       will be discarded.\n\t'l_Leg_BallSHJnt' is inbetween humanoid transforms and
       has rotation animation that will be discarded.\n\t'r_Leg_BallSHJnt' is inbetween
       humanoid transforms and has rotation animation that will be discarded.\n"
-    animationRetargetingWarnings: 
+    animationRetargetingWarnings: "\nRetargeting quality report for clip 'Take 001':\n\tLeftLowerLeg
+      average position error 24.1 mm and maximum position error 29.7 mm at time 0:13
+      (15.7%) Frame 13\n\tLeftFoot average position error 15.1 mm and maximum position
+      error 30.5 mm at time 0:13 (15.7%) Frame 13\n\tRightLowerLeg average position
+      error 24.2 mm and maximum position error 29.7 mm at time 0:13 (15.7%) Frame
+      13\n\tRightFoot average position error 15.1 mm and maximum position error 30.5
+      mm at time 0:13 (15.7%) Frame 13\n\tLeftUpperArm average position error 13.0
+      mm and maximum position error 28.5 mm at time 0:13 (15.7%) Frame 13\n\tLeftLowerArm
+      average position error 14.7 mm and maximum position error 28.9 mm at time 0:13
+      (15.7%) Frame 13\n\tLeftHand average position error 13.1 mm and maximum position
+      error 28.6 mm at time 0:13 (15.7%) Frame 13\n\tRightUpperArm average position
+      error 13.0 mm and maximum position error 28.5 mm at time 0:13 (15.7%) Frame
+      13\n\tRightLowerArm average position error 15.8 mm and maximum position error
+      29.1 mm at time 0:13 (15.7%) Frame 13\n\tRightHand average position error 13.1
+      mm and maximum position error 28.6 mm at time 0:13 (15.7%) Frame 13\n\tHead
+      average position error 13.0 mm and maximum position error 28.5 mm at time 0:13
+      (15.7%) Frame 13\n"
     animationDoRetargetingWarnings: 1
     importAnimatedCustomProperties: 0
     importConstraints: 0
