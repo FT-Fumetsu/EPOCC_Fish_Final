@@ -1,16 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuManager : MonoBehaviour
+namespace UI.Menu
 {
-    public void OpenLevel(string levelName)
+    public class MenuManager : MonoBehaviour
     {
-        SceneManager.LoadScene(levelName);
-    }
-    
-    public void QuitGame()
-    {
-        Debug.Log("QUIT GAME !!!");
-        Application.Quit();
+        public void OpenLevel(string levelName)
+        {
+            SceneManager.LoadScene(levelName);
+        }
+
+        public void QuitGame()
+        {
+            Debug.Log("QUIT GAME !!!");
+            Application.Quit();
+        }
     }
 }
