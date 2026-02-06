@@ -6,14 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Dynamic/Scenes/ProtoScene.unity
-    guid: 427648c7fea0ed548a64dbbfb1d5c873
+    path: Assets/Dynamic/Scenes/Menus/MainMenu.unity
+    guid: 0f83671e36f63644ea233b0c6c1eb6f6
+  - enabled: 1
+    path: Assets/Dynamic/Scenes/ile_CETTI.unity
+    guid: a2258bb0a05c3d74099d728ca5491e8f
   - enabled: 1
     path: Assets/Dynamic/Scenes/MinigameScenes/TapTaupeScene.unity
     guid: 55ddb13337678e643bc375df451bce33
   - enabled: 1
-    path: Assets/Dynamic/Scenes/ile_CETTI.unity
-    guid: a2258bb0a05c3d74099d728ca5491e8f
+    path: Assets/Dynamic/Scenes/ProtoScene.unity
+    guid: 427648c7fea0ed548a64dbbfb1d5c873
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
