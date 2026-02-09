@@ -22,8 +22,6 @@ namespace Player
 
         private void Move()
         {
-            Debug.Log(_rigidbody.linearVelocity);
-            
             float horizontalMovement = _joystick.Horizontal * _moveSpeed;
             float verticalMovement = _joystick.Vertical * _moveSpeed;
 

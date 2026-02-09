@@ -7,8 +7,6 @@ namespace Interactables
 {
     public class TouchInteractables : MonoBehaviour
     {
-        private bool _isPaused = false;
-        
         void Update()
         {
             if (PauseManager.Instance.IsPaused)

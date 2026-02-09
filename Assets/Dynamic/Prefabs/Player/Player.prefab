@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5115075131004166993}
   - component: {fileID: 2722550374785846587}
   - component: {fileID: 8425758316493751874}
-  - component: {fileID: 7213578281833847815}
-  - component: {fileID: 4978574388878742519}
+  - component: {fileID: 2132368832553092398}
+  - component: {fileID: 302793123164087149}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -180,7 +180,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   includeTriggers: 1
---- !u!114 &7213578281833847815
+--- !u!114 &2132368832553092398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -308,35 +308,11 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: FishsManager, Assembly-CSharp
-        m_MethodName: AddFishs
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: b4af5f80-4a7f-4f44-94be-36dff6553b7a
     m_ActionName: 'Player/DebugAddFish[/Keyboard/upArrow]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: FishsManager, Assembly-CSharp
-        m_MethodName: RemoveFishs
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: b6371355-6dde-413d-aee4-6833e2204dde
     m_ActionName: 'Player/DebugRemoveFish[/Keyboard/downArrow]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -344,34 +320,22 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!95 &4978574388878742519
-Animator:
-  serializedVersion: 7
+--- !u!114 &302793123164087149
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6219267132941485867}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 30c634296f65bb6469ddc2a314f6d060, type: 3}
-  m_Controller: {fileID: 9100000, guid: fe0c73b540236bf4e92da28afc94890d, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'Spine_03SHJnt'\n\tTransform 'Spine_02SHJnt'\n\tTransform
-    'l_Leg_ToeSHJnt'\n\tTransform 'Spine_01SHJnt'\n\tTransform 'ROOTSHJnt'\n\tTransform
-    'r_Leg_ToeSHJnt'\n\tTransform 'Spine_TopSHJnt'\n\tTransform 'Spine_04SHJnt'\n\tTransform
-    'r_Leg_HipSHJnt'\n\tTransform 'Spine_03SHJnt'\n\tand more ...\n\tFrom animation
-    clip 'Take 001'"
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d19879693ae53f4f8af3d4ddfd9c04f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFootstepSFXLauncher
+  _clips:
+  - {fileID: 11400000, guid: 3f8f2303eb277284f835fdf20b8fdf8f, type: 2}
+  - {fileID: 11400000, guid: 49717d479a1bae84fab39d3ffce7cd49, type: 2}
+  _animator: {fileID: 2722394957989895368}
 --- !u!1001 &4239104521095197632
 PrefabInstance:
   m_ObjectHideFlags: 0
