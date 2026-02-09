@@ -45,8 +45,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0079bd0a0f73d7d47befdb28b9239d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fish.Spawner.FishSpawner
+  _tapeTaupe: 0
   defaultSpawnTable:
   - fishPrefab: {fileID: 5548365985278890572, guid: d9824e46d3deb1a40890561d5fc4f836, type: 3}
+    spawnWeight: 0.5
+    currentChance: 0
+  - fishPrefab: {fileID: 5548365985278890572, guid: b307aa7be21c86d4c9da548607731ba1, type: 3}
+    spawnWeight: 0.5
+    currentChance: 0
+  - fishPrefab: {fileID: 5548365985278890572, guid: b307aa7be21c86d4c9da548607731ba1, type: 3}
     spawnWeight: 0.5
     currentChance: 0
   - fishPrefab: {fileID: 5548365985278890572, guid: b307aa7be21c86d4c9da548607731ba1, type: 3}
