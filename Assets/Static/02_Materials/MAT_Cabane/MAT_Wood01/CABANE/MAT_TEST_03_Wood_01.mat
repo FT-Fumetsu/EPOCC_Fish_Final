@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7971462278003451059
+--- !u!114 &-6138707064707894087
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_StylizedWood_01
+  m_Name: MAT_TEST_03_Wood_01
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,11 +42,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: c1feafa1c99c5a748811b7dbdf011a6a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 36f4ee53e859d4344b04c3a8efa98cf6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: e7e1dc199d9870847a180db85e6b95e0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9e2eb699cf556a64d9f8ff608003993f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -66,7 +66,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c1feafa1c99c5a748811b7dbdf011a6a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 36f4ee53e859d4344b04c3a8efa98cf6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -74,11 +74,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 958d603c9fe31e04b9216f3dea3e1c3f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7620d0d949ffd5044968f3e5ec5d8551, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: b52971018202cf243b1748170da001e6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 21f6de7f3c5a34246931b8f125b48f7c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
