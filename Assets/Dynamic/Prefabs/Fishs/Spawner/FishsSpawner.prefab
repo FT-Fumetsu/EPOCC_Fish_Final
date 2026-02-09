@@ -48,16 +48,16 @@ MonoBehaviour:
   _tapeTaupe: 0
   defaultSpawnTable:
   - fishPrefab: {fileID: 5548365985278890572, guid: d9824e46d3deb1a40890561d5fc4f836, type: 3}
-    spawnWeight: 0.5
+    spawnWeight: 0.25
     currentChance: 0
   - fishPrefab: {fileID: 5548365985278890572, guid: b307aa7be21c86d4c9da548607731ba1, type: 3}
-    spawnWeight: 0.5
+    spawnWeight: 0.25
     currentChance: 0
-  - fishPrefab: {fileID: 5548365985278890572, guid: b307aa7be21c86d4c9da548607731ba1, type: 3}
-    spawnWeight: 0.5
+  - fishPrefab: {fileID: 5548365985278890572, guid: 299018861e5ad4b47a9ca9e5daaf19f9, type: 3}
+    spawnWeight: 0.25
     currentChance: 0
-  - fishPrefab: {fileID: 5548365985278890572, guid: b307aa7be21c86d4c9da548607731ba1, type: 3}
-    spawnWeight: 0.5
+  - fishPrefab: {fileID: 2213645133388932619, guid: 77e9deea139e0014b8e63ad0d331cca5, type: 3}
+    spawnWeight: 0.25
     currentChance: 0
   lures:
   - {fileID: 11400000, guid: 85a463850de9b2145863d0e8b0643ad0, type: 2}
