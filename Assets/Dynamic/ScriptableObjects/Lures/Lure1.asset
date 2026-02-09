@@ -16,15 +16,27 @@ MonoBehaviour:
   LurePrice: 25
   SpawnTable:
   - fishPrefab: {fileID: 5548365985278890572, guid: d9824e46d3deb1a40890561d5fc4f836, type: 3}
-    spawnWeight: 0.375
+    spawnWeight: 0.1875
     currentChance: 0
   - fishPrefab: {fileID: 5548365985278890572, guid: b307aa7be21c86d4c9da548607731ba1, type: 3}
-    spawnWeight: 0.375
+    spawnWeight: 0.1875
     currentChance: 0
-  - fishPrefab: {fileID: 2213645133388932619, guid: 05ef49ee51f203246af3c84860613e5f, type: 3}
-    spawnWeight: 0.125
+  - fishPrefab: {fileID: 5548365985278890572, guid: 299018861e5ad4b47a9ca9e5daaf19f9, type: 3}
+    spawnWeight: 0.1875
+    currentChance: 0
+  - fishPrefab: {fileID: 2213645133388932619, guid: 77e9deea139e0014b8e63ad0d331cca5, type: 3}
+    spawnWeight: 0.1875
+    currentChance: 0
+  - fishPrefab: {fileID: 2213645133388932619, guid: a0c2a47c5a085b34caa5b2356e4fe684, type: 3}
+    spawnWeight: 0.0625
+    currentChance: 0
+  - fishPrefab: {fileID: 5548365985278890572, guid: 52cd1b0d53ac40746bac752e3f029dc6, type: 3}
+    spawnWeight: 0.0625
+    currentChance: 0
+  - fishPrefab: {fileID: 5548365985278890572, guid: 0cefb3b9827aecd4683c06f8305d70f8, type: 3}
+    spawnWeight: 0.0625
     currentChance: 0
   - fishPrefab: {fileID: 2213645133388932619, guid: ce02d3a74789281499530f82eb31f7fd, type: 3}
-    spawnWeight: 0.125
+    spawnWeight: 0.0625
     currentChance: 0
   LureName: First Lure
