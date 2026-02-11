@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7bf8b7038d5a9e547899e85fc40eeb69, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -278,113 +278,69 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3160585430315366441, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_MinValue
-      value: 0.0001
+    - target: {fileID: 261162619192998228, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3160585430315366441, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+    - target: {fileID: 261162619192998228, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3160585430315366441, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+    - target: {fileID: 1203329663252717901, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3160585430315366441, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
+    - target: {fileID: 1203329663252717901, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3160585430315366441, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
+    - target: {fileID: 1203329663252717901, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3160585430315366441, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetSFXVolume
+    - target: {fileID: 2326993773957446859, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3160585430315366441, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Audio.Settings.VolumeSettings, Assembly-CSharp
+    - target: {fileID: 2326993773957446859, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3160585430315366441, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+    - target: {fileID: 2326993773957446859, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5125260301496918835, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_MinValue
-      value: 0.0001
+    - target: {fileID: 2690674792693802648, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5125260301496918835, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+    - target: {fileID: 2690674792693802648, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5125260301496918835, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+    - target: {fileID: 2690674792693802648, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5125260301496918835, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+    - target: {fileID: 7581698813312340092, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5125260301496918835, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
+    - target: {fileID: 7581698813312340092, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5125260301496918835, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
+    - target: {fileID: 7809067676059510394, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5125260301496918835, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5125260301496918835, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetEnvironmentVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 5125260301496918835, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Audio.Settings.VolumeSettings, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5125260301496918835, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+    - target: {fileID: 7809067676059510394, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8077670870100714422, guid: 4ac69092842f15144947f701b035e7af, type: 3}
       propertyPath: m_Name
       value: MobileControls
-      objectReference: {fileID: 0}
-    - target: {fileID: 8078733781592005957, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_MinValue
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8078733781592005957, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8078733781592005957, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8078733781592005957, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8078733781592005957, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8078733781592005957, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetMasterVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 8078733781592005957, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Audio.Settings.VolumeSettings, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8078733781592005957, guid: 4ac69092842f15144947f701b035e7af, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8516145454345454331, guid: 4ac69092842f15144947f701b035e7af, type: 3}
       propertyPath: m_Pivot.x
