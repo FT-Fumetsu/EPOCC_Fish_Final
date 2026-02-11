@@ -63,11 +63,11 @@ namespace UI.Lures
            }
    
            if (used)
-           {
-               var spawners = FindObjectsOfType<Fish.Spawner.FishSpawner>();
-               foreach(var spawner in spawners)
+           {               
+               var spawnerArray = FindObjectsByType<Fish.Spawner.FishSpawner>(FindObjectsSortMode.None);
+               foreach(var spawnerItem in spawnerArray)
                {
-                   spawner.SetActiveLure(lure);
+                   spawnerItem.SetActiveLure(lure);
                }
                
                CheckAllLures(true);

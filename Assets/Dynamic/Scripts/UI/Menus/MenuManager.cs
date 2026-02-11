@@ -1,3 +1,4 @@
+using Manager.Pause;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,7 @@ namespace UI.Menu
     {
         public void OpenLevel(string levelName)
         {
+            PauseManager.Instance.TogglePause(false);
             SceneManager.LoadScene(levelName);
         }
 

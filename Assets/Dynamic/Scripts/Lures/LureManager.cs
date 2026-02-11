@@ -2,12 +2,16 @@ using Lure.Data;
 using System.Collections.Generic;
 using UnityEngine;
 using Singletons;
+using Unity.VisualScripting;
 
 namespace Manager.Lure
 {
     public class LureManager : PersistentMonoSingleton<LureManager>
     {
         private Dictionary<LureData, int> _lureCounts = new();
+        
+        
+        [SerializeField] private LureData[] _lureDatabase;
 
         protected override void OnInitialized()
         {
@@ -66,6 +70,44 @@ namespace Manager.Lure
         public void Test()
         {
             Debug.Log(HasAnyLure() ? "Has any lure !" : "Has no lures !");
+        }
+
+        public Dictionary<int, int> Serialize()
+        {
+            Dictionary<int, int> serializedData = new();
+            
+            foreach (KeyValuePair<LureData, int> countByLureDataItem in _lureCounts)
+            {
+                int lureId = System.Array.IndexOf(_lureDatabase, countByLureDataItem.Key);
+                if (lureId >= 0)
+                {
+                    serializedData[lureId] = countByLureDataItem.Value;
+                }
+                else
+                {
+                    Debug.LogWarning($"Lure {countByLureDataItem.Key.LureName} not found in database, skipping serialization.");
+                }
+            }
+            
+            return serializedData;
+        }
+        
+        public void Deserialize(Dictionary<int, int> serializedData)
+        {
+            _lureCounts.Clear();
+            
+            foreach (KeyValuePair<int, int> item in serializedData)
+            {
+                if (item.Key >= 0 && item.Key < _lureDatabase.Length)
+                {
+                    LureData lure = _lureDatabase[item.Key];
+                    _lureCounts[lure] = item.Value;
+                }
+                else
+                {
+                    Debug.LogWarning($"Lure ID {item.Key} is out of bounds, skipping deserialization.");
+                }
+            }
         }
 
         public override void Uninitialize()

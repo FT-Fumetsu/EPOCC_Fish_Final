@@ -13,7 +13,7 @@ public class CodexUIManager : MonoBehaviour
     [SerializeField] private Button _nextButton;
 
     [Header("Fish List")]
-    [SerializeField] private List<FishData> _allFishData = new List<FishData>();
+    [SerializeField] private List<FishData> _allFishData = new();
 
     private int currentPageIndex = 0;
 
@@ -27,11 +27,12 @@ public class CodexUIManager : MonoBehaviour
 
     public void UpdatePage()
     {
-        if (_allFishData.Count == 0) return;
+        if (_allFishData.Count == 0)
+            return;
 
-        var currentFish = _allFishData[currentPageIndex];
+        FishData currentFish = _allFishData[currentPageIndex];
 
-        var count = FishingCodex.Instance.GetCountForFish(currentFish);
+        int count = FishingCodex.Instance.GetCountForFish(currentFish);
 
         _fishNameText.text = FishingCodex.Instance.IsNameUnlocked(currentFish) ? currentFish.fishName : "???";
 
