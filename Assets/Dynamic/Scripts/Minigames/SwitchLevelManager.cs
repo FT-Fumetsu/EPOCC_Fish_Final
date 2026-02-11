@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
-public class RunMinigameSFXLauncher : MonoBehaviour
+public class SwitchLevelManager : MonoBehaviour
 {
-    [SerializeField] private SwitchLevelManager _switchLevelManager;
+    public event Action OnLevelSwitch;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,5 +14,10 @@ public class RunMinigameSFXLauncher : MonoBehaviour
     void Update()
     {
         
+    }
+    
+    public void SwitchLevel()
+    {
+        OnLevelSwitch?.Invoke();
     }
 }
