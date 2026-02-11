@@ -40,10 +40,13 @@ namespace Minigames.Countdown
         
         private void OnTimerEnd()
         {
-            if (_endPanel != null)
-            {
-                _endPanel.SetActive(true);
-            }
+            if (_endPanel == null) 
+                return;
+
+            if (_endPanel.activeSelf)
+                return;
+            
+            _endPanel.SetActive(true);
             
             Debug.Log("End Countdown");
             PauseManager.Instance.TogglePause(true);
