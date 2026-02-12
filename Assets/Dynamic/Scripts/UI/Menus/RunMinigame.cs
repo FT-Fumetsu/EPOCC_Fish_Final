@@ -8,4 +8,9 @@ public class RunMinigame : MonoBehaviour
     {
         SceneManager.LoadScene(minigameSceneName);
     }
+    
+    public void SaveGame()
+    {
+        Save.SaveSystem.Instance?.Save();
+    }
 }

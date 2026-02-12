@@ -40,16 +40,18 @@ namespace Minigames.Countdown
         
         private void OnTimerEnd()
         {
-            if (_endPanel == null) 
+            if (!_endPanel) 
                 return;
 
             if (_endPanel.activeSelf)
                 return;
             
+            Save.SaveSystem.Instance?.Save();
+            
             _endPanel.SetActive(true);
             
             Debug.Log("End Countdown");
-            PauseManager.Instance.TogglePause(true);
+            PauseManager.Instance?.TogglePause(true);
         }
     }
 }

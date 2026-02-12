@@ -20,9 +20,7 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
     private Dictionary<FishData, int> _fishCounts = new();
     
     [SerializeField] private FishData[] _fishDatabase;
-
-    public static FishingCodex Instance { get; private set; }
-
+    
     protected override void OnInitialized()
     {
         base.OnInitialized();
