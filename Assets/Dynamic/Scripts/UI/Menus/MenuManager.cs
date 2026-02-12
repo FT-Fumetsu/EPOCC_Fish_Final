@@ -17,5 +17,10 @@ namespace UI.Menu
             Debug.Log("QUIT GAME !!!");
             Application.Quit();
         }
+
+        public void SaveGame()
+        {
+            Save.SaveSystem.Instance?.Save();
+        }
     }
 }
