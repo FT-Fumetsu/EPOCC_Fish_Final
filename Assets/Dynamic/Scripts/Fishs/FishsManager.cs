@@ -7,7 +7,11 @@ namespace Manager.Fishs
     {
         [SerializeField] private int _fishsCount = 0;
 
-        public int FishsCount => _fishsCount;
+        public int FishsCount
+        {
+            get => _fishsCount;
+            set => _fishsCount = value;
+        }
 
         protected override void OnInitialized()
         {

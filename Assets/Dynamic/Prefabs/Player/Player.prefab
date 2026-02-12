@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 2722550374785846587}
   - component: {fileID: 8425758316493751874}
   - component: {fileID: 2132368832553092398}
-  - component: {fileID: 302793123164087149}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -320,22 +319,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &302793123164087149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6219267132941485867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d19879693ae53f4f8af3d4ddfd9c04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerFootstepSFXLauncher
-  _clips:
-  - {fileID: 11400000, guid: 3f8f2303eb277284f835fdf20b8fdf8f, type: 2}
-  - {fileID: 11400000, guid: 49717d479a1bae84fab39d3ffce7cd49, type: 2}
-  _animator: {fileID: 2722394957989895368}
 --- !u!1001 &4239104521095197632
 PrefabInstance:
   m_ObjectHideFlags: 0
