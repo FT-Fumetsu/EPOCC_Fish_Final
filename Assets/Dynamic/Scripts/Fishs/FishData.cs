@@ -12,11 +12,11 @@ public class FishData : ScriptableObject
     [TextArea]
     [SerializeField] private string _description;
     
-    public Sprite icon => _icon;
-    public string fishName => _fishName;
+    public Sprite Icon => _icon;
+    public string FishName => _fishName;
     public string FishSize => _fishSize;
     public string FishFood => _fishFood;
-    public string description => _description;
+    public string Description => _description;
     
 }
 
