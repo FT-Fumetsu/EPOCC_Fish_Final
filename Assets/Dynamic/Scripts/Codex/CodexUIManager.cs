@@ -1,14 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine.Serialization;
 
 public class CodexUIManager : MonoBehaviour
 {
+    [Header("UI References")]
     [SerializeField] private Image _fishIcon;
     [SerializeField] private Image _hiddenFishIcon;
-    [SerializeField] private Text _fishNameText;
-    [SerializeField] private Text _fishDescText;
+    [SerializeField] private TextMeshProUGUI _fishNameText;
+    [SerializeField] private TextMeshProUGUI _fishSizeText;
+    [SerializeField] private TextMeshProUGUI _fishFoodText;
+    [SerializeField] private TextMeshProUGUI _fishDescText;
     [SerializeField] private Button _prevButton;
     [SerializeField] private Button _nextButton;
 
@@ -21,6 +25,11 @@ public class CodexUIManager : MonoBehaviour
     {
         _prevButton.onClick.AddListener(OnPrevPage);
         _nextButton.onClick.AddListener(OnNextPage);
+        
+        _fishNameText.text = "";
+        _fishSizeText.text = "";
+        _fishFoodText.text = "";
+        _fishDescText.text = "";
 
         UpdatePage();
     }
@@ -34,16 +43,55 @@ public class CodexUIManager : MonoBehaviour
 
         int count = FishingCodex.Instance.GetCountForFish(currentFish);
 
-        _fishNameText.text = FishingCodex.Instance.IsNameUnlocked(currentFish) ? currentFish.fishName : "???";
-
-        _fishIcon.sprite = FishingCodex.Instance.IsIconUnlocked(currentFish) ? currentFish.icon : _hiddenFishIcon.sprite;
-
-        if (FishingCodex.Instance.IsDescriptionUnlocked(currentFish))
-            _fishDescText.text = currentFish.description;
-        else if (count > 0)
-            _fishDescText.text = $"Pêché {count} fois — continue pour en apprendre plus !";
+        if (FishingCodex.Instance.IsNameUnlocked(currentFish))
+        {
+            _fishNameText.text = currentFish.FishName;
+        }
         else
-            _fishDescText.text = "Poisson non découvert.";
+        {
+            _fishNameText.text = "Pêchez plus de cette espèce pour révéler son nom !";
+            return;
+        }
+
+        if (FishingCodex.Instance.IsIconUnlocked(currentFish))
+        {
+            _fishIcon.sprite = currentFish.Icon;
+        }
+        else
+        {
+            _fishIcon.sprite = /*_hiddenFishIcon.sprite*/ null;
+            _fishNameText.text = "Pêchez plus de cette espèce pour révéler sa taille !";
+            return;
+        }
+        
+        if (FishingCodex.Instance.IsSizeUnlocked(currentFish))
+        {
+            _fishSizeText.text = currentFish.FishSize;
+        }
+        else
+        {
+            _fishNameText.text = "Pêchez plus de cette espèce pour révéler sa taille !";
+            return;
+        }
+
+        if (FishingCodex.Instance.IsFoodUnlocked(currentFish))
+        {
+            _fishFoodText.text = currentFish.FishFood;
+        }
+        else
+        {
+            _fishNameText.text = "Pêchez plus de cette espèce pour révéler sa nourriture préférée !";
+            return;
+        }
+        
+        if (FishingCodex.Instance.IsDescriptionUnlocked(currentFish))
+        {
+            _fishDescText.text = currentFish.Description;
+        }
+        else
+        {
+            _fishDescText.text = "Pêchez plus de cette espèce pour révéler sa description !";
+        }
     }
 
 

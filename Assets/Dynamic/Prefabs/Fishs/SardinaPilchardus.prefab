@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Fishs.FishInteractable
   _fishCount: 1
+  _fishData: {fileID: 11400000, guid: 28f18e94ea9b04c4e96185d9721fb2ba, type: 2}
 --- !u!65 &3845776522509432873
 BoxCollider:
   m_ObjectHideFlags: 0
