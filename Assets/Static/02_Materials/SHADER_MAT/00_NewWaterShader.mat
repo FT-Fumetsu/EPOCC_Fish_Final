@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 00_NewWaterShader
-  m_Shader: {fileID: -6465566751694194690, guid: fb4946fb29b08c94c9486f1a63fc0f78, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 0c6c0566aa1041b469c6ecdfc33d9c67, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -113,6 +113,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _Water_Depth: 0.5
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
@@ -120,8 +121,10 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Deep_Color: {r: 0.1981132, g: 0.35980776, b: 0.7924528, a: 1}
+    - _Deep_Water: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Shallow_Color: {r: 0.27144888, g: 0.7824891, b: 0.9433962, a: 1}
+    - _Shallow_Water: {r: 0.020024916, g: 0.6254889, b: 0.8490566, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
