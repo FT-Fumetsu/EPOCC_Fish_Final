@@ -9,13 +9,16 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
     [SerializeField] private int _fishCountForName = 1;
 
     [Tooltip("Nombre de poissons à pêcher pour révéler la description")]
-    [SerializeField] private int _fishCountForDescription = 5;
+    [SerializeField] private int _fishCountForDescription = 7;
 
     [Tooltip("Nombre de poissons à pêcher pour révéler l'icône")]
     [SerializeField] private int _fishCountForIcon = 3;
 
     [Tooltip("Nombre de poissons à pêcher pour révéler la taille")]
-    [SerializeField] private int _fishCountForSize = 7;
+    [SerializeField] private int _fishCountForSize = 5;
+    
+    [Tooltip("Nombre de poissons à pêcher pour révéler la nourriture")]
+    [SerializeField] private int _fishCountForFood = 5;
 
     private Dictionary<FishData, int> _fishCounts = new();
     
@@ -57,6 +60,11 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
     {
         return GetCountForFish(fish) >= _fishCountForSize;
     }
+    
+    public bool IsFoodUnlocked(FishData fish)
+    {
+        return GetCountForFish(fish) >= _fishCountForFood;
+    }
 
     public Dictionary<int, int> Serialize()
     {
@@ -71,7 +79,7 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
             }
             else
             {
-                Debug.LogWarning($"Lure {countByLureDataItem.Key.fishName} not found in database, skipping serialization.");
+                Debug.LogWarning($"Lure {countByLureDataItem.Key.FishName} not found in database, skipping serialization.");
             }
         }
         
