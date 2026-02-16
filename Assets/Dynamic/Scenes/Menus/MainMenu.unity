@@ -1159,6 +1159,7 @@ MonoBehaviour:
   _fishCountForDescription: 5
   _fishCountForIcon: 3
   _fishCountForSize: 7
+  _fishCountForFood: 5
   _fishDatabase:
   - {fileID: 11400000, guid: 84542fe2c03e3b84898f311050561a09, type: 2}
   - {fileID: 11400000, guid: 29db27f0a9c2e5e408e444304e8bca79, type: 2}
@@ -1563,7 +1564,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ProtoScene
+          m_StringArgument: ile_CETTI
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1753774127
