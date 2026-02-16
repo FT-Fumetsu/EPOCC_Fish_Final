@@ -10,7 +10,6 @@ namespace Manager.Lure
     {
         private Dictionary<LureData, int> _lureCounts = new();
         
-        
         [SerializeField] private LureData[] _lureDatabase;
 
         protected override void OnInitialized()

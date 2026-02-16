@@ -23,7 +23,7 @@ namespace Lure.UI
             _luresLayout = luresLayout;
             _lureIcon.sprite = data.LureIcon;
             _lureCost = data.LurePrice;
-            _lurePrice.text = ("Price = " + data.LurePrice.ToString());
+            _lurePrice.text = (data.LurePrice.ToString());
         }
 
         public void OpenTradePanel()
