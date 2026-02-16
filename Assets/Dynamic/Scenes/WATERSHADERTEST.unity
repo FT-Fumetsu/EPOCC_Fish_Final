@@ -579,7 +579,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: c18217fa8dd58a0478389d93580d4cf3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 8b1ea66774dae334a82a85ecd3b2e3bc, type: 2}
+      objectReference: {fileID: 2100000, guid: 815b3a26ca0f80e4f98bedd7f4eef2f3, type: 2}
     - target: {fileID: 919132149155446097, guid: c18217fa8dd58a0478389d93580d4cf3, type: 3}
       propertyPath: m_Name
       value: SHADER_Plane_Water
