@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Static/010_UI/Appats.meta
 guid: e085044571ccd26439c63dd8172ec16d
 folderAsset: yes
 DefaultImporter:
+========
+guid: 4b83569d67af61e458304325a23e5dfd
+NativeFormatImporter:
+>>>>>>>> d4df301e6ed8f3cc48638d50fb9b092e6b002557:Assets/Settings/PC_RPAsset.asset.meta
   externalObjects: {}
+  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
