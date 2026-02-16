@@ -13,6 +13,7 @@ namespace Interactables.Trader
         {
             if (_tradeUi != null)
             {
+                Debug.LogWarning("Trade UI !");
                 _tradeUi.SetActive(true);
                 _lureTradeUi.SetActive(false);
                 if (_mobileControls != null)

@@ -445,6 +445,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4584677599113137358, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5125260301496918835, guid: 4ac69092842f15144947f701b035e7af, type: 3}
       propertyPath: m_MinValue
       value: 0.0001
@@ -5909,6 +5913,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 627754804882230305, guid: c0760ccee6afc0841a41e94f36d91f06, type: 3}
   m_PrefabInstance: {fileID: 1168643942}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1128336065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3390833969782087725, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
+  m_PrefabInstance: {fileID: 2106919032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1135423701
 GameObject:
   m_ObjectHideFlags: 0
@@ -7870,7 +7879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Trader.TraderInteractable
   _tradeUi: {fileID: 2106919033}
-  _lureTradeUi: {fileID: 2106919034}
+  _lureTradeUi: {fileID: 1128336065}
   _mobileControls: {fileID: 80594075}
 --- !u!1001 &1508371218
 PrefabInstance:
@@ -11144,6 +11153,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TradePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 4945872865835039350, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5422293494061958744, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -11186,7 +11199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5422293494061958744, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.34734
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5422293494061958744, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11206,11 +11219,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5422293494061958744, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -91.88326
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5422293494061958744, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 15.25486
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5422293494061958744, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11224,6 +11237,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5468700697906996956, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 80594075}
+    - target: {fileID: 5547938198123238902, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
+      propertyPath: _lureTradeUi
+      value: 
+      objectReference: {fileID: 1128336065}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11232,11 +11253,6 @@ PrefabInstance:
 --- !u!1 &2106919033 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4945872865835039350, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
-  m_PrefabInstance: {fileID: 2106919032}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2106919034 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2138675016637569498, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
   m_PrefabInstance: {fileID: 2106919032}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2126636529
@@ -11412,6 +11428,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -44.9
       objectReference: {fileID: 0}
+    - target: {fileID: 2665247113208709030, guid: ca3c9ba6ef44d18418ded012facf3799, type: 3}
+      propertyPath: m_Size.y
+      value: 0.42440385
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665247113208709030, guid: ca3c9ba6ef44d18418ded012facf3799, type: 3}
+      propertyPath: m_Center.x
+      value: -0.016983747
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665247113208709030, guid: ca3c9ba6ef44d18418ded012facf3799, type: 3}
+      propertyPath: m_Center.y
+      value: -0.28780073
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665247113208709030, guid: ca3c9ba6ef44d18418ded012facf3799, type: 3}
+      propertyPath: m_Center.z
+      value: 0.0000029933917
+      objectReference: {fileID: 0}
     - target: {fileID: 4775623942411566908, guid: ca3c9ba6ef44d18418ded012facf3799, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -11451,6 +11483,26 @@ PrefabInstance:
     - target: {fileID: 4775623942411566908, guid: ca3c9ba6ef44d18418ded012facf3799, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046978328690238339, guid: ca3c9ba6ef44d18418ded012facf3799, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046978328690238339, guid: ca3c9ba6ef44d18418ded012facf3799, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5826792
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046978328690238339, guid: ca3c9ba6ef44d18418ded012facf3799, type: 3}
+      propertyPath: m_Center.x
+      value: -4.1806317e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046978328690238339, guid: ca3c9ba6ef44d18418ded012facf3799, type: 3}
+      propertyPath: m_Center.y
+      value: -0.2086582
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046978328690238339, guid: ca3c9ba6ef44d18418ded012facf3799, type: 3}
+      propertyPath: m_Center.z
+      value: -3.4146064e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8068990171011336779, guid: ca3c9ba6ef44d18418ded012facf3799, type: 3}
       propertyPath: m_Name
