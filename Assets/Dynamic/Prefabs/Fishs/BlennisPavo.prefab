@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5baac4192d73243860a62efddf3535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Fishs.FishInteractable
-  _fishCount: 1
+  _fishCount: 4
   _fishData: {fileID: 11400000, guid: d7dc5917c284c314faf624f2d7b89df0, type: 2}
 --- !u!65 &8520283786452085119
 BoxCollider:

@@ -9,7 +9,7 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
     [SerializeField] private int _fishCountForName = 1;
 
     [Tooltip("Nombre de poissons à pêcher pour révéler la description")]
-    [SerializeField] private int _fishCountForDescription = 7;
+    [SerializeField] private int _fishCountForDescription = 10;
 
     [Tooltip("Nombre de poissons à pêcher pour révéler l'icône")]
     [SerializeField] private int _fishCountForIcon = 3;
@@ -18,7 +18,7 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
     [SerializeField] private int _fishCountForSize = 5;
     
     [Tooltip("Nombre de poissons à pêcher pour révéler la nourriture")]
-    [SerializeField] private int _fishCountForFood = 5;
+    [SerializeField] private int _fishCountForFood = 7;
 
     private Dictionary<FishData, int> _fishCounts = new();
     

@@ -24,7 +24,6 @@ public class InventoryData : MonoBehaviour
                 return;
             _icon.sprite = _currentLureData.LureIcon;
             _countText.text = Manager.Lure.LureManager.Instance?.GetLureCount(_currentLureData).ToString();
-            Debug.LogWarning("Lure !");
         }
         else
         {
@@ -32,7 +31,6 @@ public class InventoryData : MonoBehaviour
                 return;
             _icon.sprite = _currentFish.Icon;
             _countText.text = FishingCodex.Instance?.GetCountForFish(_currentFish).ToString();
-            Debug.LogWarning("Fish !");
         }
     }
 }

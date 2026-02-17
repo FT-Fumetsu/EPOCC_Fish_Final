@@ -25,17 +25,18 @@ public class CodexUIManager : MonoBehaviour
     {
         _prevButton.onClick.AddListener(OnPrevPage);
         _nextButton.onClick.AddListener(OnNextPage);
-        
-        _fishNameText.text = "";
-        _fishSizeText.text = "";
-        _fishFoodText.text = "";
-        _fishDescText.text = "";
 
         UpdatePage();
     }
 
     public void UpdatePage()
     {
+        _fishNameText.text = "";
+        _fishSizeText.text = "";
+        _fishFoodText.text = "";
+        _fishDescText.text = "";
+        _fishIcon.sprite = /*_hiddenFishIcon.sprite*/ null;
+        
         if (_allFishData.Count == 0)
             return;
 
@@ -60,7 +61,7 @@ public class CodexUIManager : MonoBehaviour
         else
         {
             _fishIcon.sprite = /*_hiddenFishIcon.sprite*/ null;
-            _fishNameText.text = "Pêchez plus de cette espèce pour révéler sa taille !";
+            _fishSizeText.text = "Pêchez plus de cette espèce pour révéler sa taille !";
             return;
         }
         
@@ -70,7 +71,7 @@ public class CodexUIManager : MonoBehaviour
         }
         else
         {
-            _fishNameText.text = "Pêchez plus de cette espèce pour révéler sa taille !";
+            _fishSizeText.text = "Pêchez plus de cette espèce pour révéler sa taille !";
             return;
         }
 
@@ -80,7 +81,7 @@ public class CodexUIManager : MonoBehaviour
         }
         else
         {
-            _fishNameText.text = "Pêchez plus de cette espèce pour révéler sa nourriture préférée !";
+            _fishFoodText.text = "Pêchez plus de cette espèce pour révéler sa nourriture préférée !";
             return;
         }
         
