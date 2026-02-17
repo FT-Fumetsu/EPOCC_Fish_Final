@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745353692ad109245a8da99be19065d6, type: 3}
   m_Name: FlesusPasser
   m_EditorClassIdentifier: Assembly-CSharp::FishData
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 38beb040567fdb948989cf7b9edbaf7b, type: 3}
   _fishName: FlesusPasser
   _fishSize: 50-60CM
   _fishFood: "Petits poisson, crustac\xE9s"

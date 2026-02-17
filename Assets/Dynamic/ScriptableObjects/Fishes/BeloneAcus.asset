@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745353692ad109245a8da99be19065d6, type: 3}
   m_Name: BeloneAcus
   m_EditorClassIdentifier: Assembly-CSharp::FishData
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: f7a5e9a832d5c9e409ec86e0cc657643, type: 3}
   _fishName: BeloneAcus
   _fishSize: 50-100cm
   _fishFood: "Petits poissons, crustac\xE9s, vers marins, plancton"

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745353692ad109245a8da99be19065d6, type: 3}
   m_Name: BlennisPavo
   m_EditorClassIdentifier: Assembly-CSharp::FishData
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 9938d9be658637e4c9719b7a03d91c93, type: 3}
   _fishName: BlennisPavo
   _fishSize: 8-12CM
   _fishFood: "Crustac\xE9s, Vers marins, Algues"

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745353692ad109245a8da99be19065d6, type: 3}
   m_Name: MugilAuratusRiso
   m_EditorClassIdentifier: Assembly-CSharp::FishData
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: e8a13689168042b4fa5a3a70f5a285c6, type: 3}
   _fishName: Mugil-Auratus-Riso
   _fishSize: 30-50CM
   _fishFood: Algue et herbe marines

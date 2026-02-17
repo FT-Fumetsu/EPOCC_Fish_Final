@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745353692ad109245a8da99be19065d6, type: 3}
   m_Name: AnguilaVulgarisVarAcutirostris
   m_EditorClassIdentifier: Assembly-CSharp::FishData
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 80d2ec4b1285d9d4f8b8477a72aed5da, type: 3}
   _fishName: AnguilaVulgarisVarAcutirostris
   _fishSize: 60-80CM
   _fishFood: "Poissons, crustac\xE9s, vers et autres invert\xE9br\xE9s"
