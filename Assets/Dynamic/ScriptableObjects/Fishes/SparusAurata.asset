@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: SparusAurata
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 0}
-  _fishName: 
-  _fishSize: 
-  _fishFood: 
-  _description: 
+  _fishName: SparusAurata
+  _fishSize: 20-35CM
+  _fishFood: "mollusques, crustac\xE9s et petits poissons"
+  _description: "Vit en mer M\xE9diterran\xE9e et dans l\u2019Atlantique Est, pr\xE8s
+    des c\xF4tes sableuses ou rocheuses, lagunes et estuaires,Poisson au corps ovale
+    et argent\xE9, comprim\xE9 lat\xE9ralement, avec une bande dor\xE9e caract\xE9ristique
+    entre les yeux et une tache noire pr\xE8s des ou\xEFes."

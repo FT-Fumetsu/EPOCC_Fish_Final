@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 0}
   _fishName: AnguilaVulgarisVarAcutirostris
-  _fishSize: 
-  _fishFood: 
-  _description: 
+  _fishSize: 60-80CM
+  _fishFood: "Poissons, crustac\xE9s, vers et autres invert\xE9br\xE9s"
+  _description: "L'Anguille est un poissons euryhalin, elle vit a faible profondeurs
+    en eau douce et dans les estuaires. On la trouve parfois dans des \"Lagons\"
+    comme le bassin d'Arcachon ou le bassin de Thau. Elle pr\xE9f\xE8re les zones
+    mixtes roches-sediments et affectionne particulierement les fonds meubles sablo-vaseux. "
