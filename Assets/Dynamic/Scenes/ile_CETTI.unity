@@ -445,6 +445,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4239812980089501932, guid: 4ac69092842f15144947f701b035e7af, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5125260301496918835, guid: 4ac69092842f15144947f701b035e7af, type: 3}
       propertyPath: m_MinValue
       value: 0.0001
@@ -7870,7 +7874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Trader.TraderInteractable
   _tradeUi: {fileID: 2106919033}
-  _lureTradeUi: {fileID: 2106919034}
+  _lureTradeUi: {fileID: 0}
   _mobileControls: {fileID: 80594075}
 --- !u!1001 &1508371218
 PrefabInstance:
@@ -11144,6 +11148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TradePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 4945872865835039350, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5422293494061958744, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -11186,7 +11194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5422293494061958744, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.34734
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5422293494061958744, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11206,11 +11214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5422293494061958744, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -91.88326
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5422293494061958744, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 15.25486
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5422293494061958744, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11232,11 +11240,6 @@ PrefabInstance:
 --- !u!1 &2106919033 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4945872865835039350, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
-  m_PrefabInstance: {fileID: 2106919032}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2106919034 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2138675016637569498, guid: 30e683fbdbb9c7a4d968be41c169e227, type: 3}
   m_PrefabInstance: {fileID: 2106919032}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2126636529
