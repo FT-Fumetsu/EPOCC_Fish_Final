@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: MugilAuratusRiso
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 0}
-  _fishName: 
-  _fishSize: 
-  _fishFood: 
-  _description: 
+  _fishName: Mugil-Auratus-Riso
+  _fishSize: 30-50CM
+  _fishFood: Algue et herbe marines
+  _description: "Le muge dor\xE9 se tient dans les zones oc\xE9aniques durant les
+    saisons froides, du printemps \xE0 l'automne ; il regagne les eaux littorales.
+    Son corps est large, gris argent\xE9 et par\xE9 de 8 \xE0 9 lignes gris sombres
+    \xE0 brun. une tache jaune or se situe sur la partie haute et post\xE9rieure
+    des opercules"

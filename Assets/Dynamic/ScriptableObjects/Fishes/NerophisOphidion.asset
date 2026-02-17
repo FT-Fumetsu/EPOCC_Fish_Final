@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: NerophisOphidion
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 0}
-  _fishName: 
-  _fishSize: 
-  _fishFood: 
-  _description: 
+  _fishName: NerophisOphidion
+  _fishSize: 15-20CM
+  _fishFood: Plancton.
+  _description: "le n\xE9rophis ophidion qui ressemble \xE0 un fil est facile \xE0
+    identifier gr\xE2ce \xE0 sa petite t\xEAte et \xE0 son opercule. La t\xEAte et
+    le museau rappellent l\u2019hippocampe,. Il vit en position verticale parmi le
+    crin marin, les laminaires et les algues brunes, en enroulant sa queue dans les
+    algues, et en flottant parmi la v\xE9g\xE9tation"

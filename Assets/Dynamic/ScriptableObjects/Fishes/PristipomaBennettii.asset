@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: PristipomaBennettii
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 0}
-  _fishName: 
-  _fishSize: 
-  _fishFood: 
-  _description: 
+  _fishName: Pristipoma Bennettii
+  _fishSize: 25-35CM
+  _fishFood: "Crustac\xE9,Mollusque, petits poissons"
+  _description: "Il peut mesurer jusqu'\xE0 53,5 cm de longueur totale mais sa taille
+    habituelle est d'environ 25 cmComme les autres poissons de la famille des Haemulidae,
+    il peut produire des sons graves en contractant des muscles contre sa vessie
+    natatoire. Ces petits grognements servent \xE0 la communication ou \xE0 la d\xE9fense,
+    surtout lorsqu\u2019il est stress\xE9 ou manipul\xE9."

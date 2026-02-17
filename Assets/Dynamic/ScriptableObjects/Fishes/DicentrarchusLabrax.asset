@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 0}
   _fishName: DicentrarchusLabrax
-  _fishSize: 
-  _fishFood: 
-  _description: 
+  _fishSize: 70-80CM
+  _fishFood: "Petits poissons,Crustac\xE9s"
+  _description: "Ce poisson se rencontre essentielement au-dessus des fond sableux
+    ou rocheux de la fange littorale. il penetre en eaux saumatres et dans les ports.
+    Des juveniles ont deja ete observ\xE9 dans la partie terminalle des fleuves cotiers.\nSon
+    corp est allong\xE9 et legerement comprim\xE9, sa taille ordinairement comprise
+    entre 70 et 80cm(1,10 m au maximum). Son dos est de teinte grise, les flancs
+    sont plus clairs, avec des reflets jaunatresou argent\xE9."

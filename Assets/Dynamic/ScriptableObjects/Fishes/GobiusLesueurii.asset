@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: GobiusLesueurii
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 0}
-  _fishName: 
-  _fishSize: 
-  _fishFood: 
-  _description: 
+  _fishName: GobiusLesueurii
+  _fishSize: 10-13CM
+  _fishFood: "Crustac\xE9s et invertebr\xE9"
+  _description: "C'est une esp\xE8ce vivant dans des eaux peu profondes, il se rencontre
+    de pr\xE9f\xE9rence sous les pierres et dans les touffes d'algues. Le Gobie a
+    une t\xEAte massive, au corps trapu et cylindrique qui peut atteindre douze centim\xE8tres
+    de long et des yeux pro\xE9minents"

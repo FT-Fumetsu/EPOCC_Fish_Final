@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: SardinaPilchardus
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 0}
-  _fishName: 
-  _fishSize: 
-  _fishFood: 
-  _description: 
+  _fishName: SardinaPilchardus
+  _fishSize: 15-20 CM
+  _fishFood: Plancton, Vegetaux marins
+  _description: "La sardine vit en pleine eau (esp\xE8ce p\xE9lagique), principalement
+    au-dessus du plateau continental.\nOn la rencontre entre la surface et environ
+    100 m de profondeur, en Atlantique Est et en M\xE9diterran\xE9e.Elle forme de
+    grands bancs compacts dans des zones riches en plancton. elle est un poisson
+    p\xE9lagique argent\xE9"

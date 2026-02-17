@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: MullusSurmuletus
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 0}
-  _fishName: 
-  _fishSize: 
-  _fishFood: 
-  _description: 
+  _fishName: MullusSurmuletus
+  _fishSize: 15-25CM
+  _fishFood: "Mollusques et crustac\xE9s"
+  _description: "Malgr\xE9 son nom, il est plus fr\xE9quemment rencontr\xE9 sur les
+    fonds meubles. Toutefois, il n'h\xE9site pas \xE0 s'aventurer au voisinage des
+    riches cherchant sa nourriture \xE0 l'aide de ses deux barbillons. son corps
+    \xE9lanc\xE9 avec de grosses \xE9cailles marqu\xE9 de bandes marron et jaune"
