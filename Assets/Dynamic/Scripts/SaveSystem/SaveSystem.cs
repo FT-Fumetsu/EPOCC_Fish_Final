@@ -20,6 +20,7 @@ namespace Save
         private FishsManager _fishsManager;
         private LureManager _lureManager;
         private FishingCodex _fishingCodex;
+        private DialogueLauncher _tutorialDialogueLauncher;
 
         // Dernière position connue du joueur (même si PlayerMovements n'est pas présent dans la scène)
         private SerializableVector3 _lastPlayerPosition;
@@ -37,7 +38,9 @@ namespace Save
             _fishsManager = (FishsManager)FindFirstObjectByType(typeof(FishsManager));
             _lureManager = (LureManager)FindFirstObjectByType(typeof(LureManager));
             _fishingCodex = (FishingCodex)FindFirstObjectByType(typeof(FishingCodex));
-
+            DialogueLauncher[] allDialogueLaunchers = FindObjectsByType<DialogueLauncher>(FindObjectsSortMode.None);
+            _tutorialDialogueLauncher = Array.Find(allDialogueLaunchers, dialogueLauncher => !dialogueLauncher.IsReusable);
+            
             // initialise
             _lastPlayerPosition = new SerializableVector3(Vector3.zero);
             _hasLastPlayerPosition = false;

@@ -7,7 +7,7 @@ namespace Interactables.Fishs
     public class FishInteractable : MonoBehaviour, IInteractable
     {
         [SerializeField, Tooltip("La scène dans laquelle les poissons ne peuvent plus être touchés")] 
-        private string _sceneName;
+        private string _sceneName;  
         
         [SerializeField, Range(1, 100)] private int _fishCount;
         [SerializeField] private FishData _fishData;

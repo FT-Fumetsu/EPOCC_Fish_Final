@@ -5,13 +5,8 @@ namespace Fish.StateMachine
 {
     public class FishStateMachine : MonoBehaviour
     {
-        [Header("Scenes")]
-        [SerializeField, Tooltip("La scène dans laquelle les poissons ne peuvent plus être touchés")] 
-        private string _sceneName;
-        
         [Header("Speed")]
         [SerializeField] private float _spawnSpeed;
-        [SerializeField] private float _constantSpeed;
         [SerializeField] private float _fleeSpeed;
         
         [Header("FleeDirection")]
@@ -31,7 +26,6 @@ namespace Fish.StateMachine
             {
                 FishTransform = transform,
                 SpawnSpeed = _spawnSpeed,
-                ConstantSpeed = _constantSpeed,
                 FleeSpeed =  _fleeSpeed,
                 FleeMinAngle = _fleeMinAngle,
                 FleeMaxAngle = _fleeMaxAngle,
@@ -50,7 +44,6 @@ namespace Fish.StateMachine
             {
                 FishTransform = transform,
                 SpawnSpeed = _spawnSpeed,
-                ConstantSpeed = _constantSpeed,
                 FleeSpeed =  _fleeSpeed,
                 StopTimer = _stopTimer,
                 TimerBeforeStop = _timerBeforeStop
