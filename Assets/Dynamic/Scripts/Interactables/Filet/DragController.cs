@@ -41,6 +41,9 @@ public class DragController : MonoSingleton<DragController>
 
     private void Update()
     {
+        Debug.Log(Pointer.current.position.value);
+        Debug.Log(Screen.width);
+        Debug.Log(Screen.height);
         if (_positionAction == null || _pressAction == null)
             return;
 
