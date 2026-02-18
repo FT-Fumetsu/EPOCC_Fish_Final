@@ -41,13 +41,10 @@ namespace Player
                 // Si le rigidbody est disponible, mettre à jour sa position et annuler toute vélocité
                 if (_rigidbody != null)
                 {
-                    // Placer physiquement le rigidbody
                     _rigidbody.position = pos;
                     _rigidbody.linearVelocity = Vector3.zero;
                     _rigidbody.angularVelocity = Vector3.zero;
-                    // Mettre également à jour le transform pour sécurité
                     transform.position = pos;
-                    // Mettre le rigidbody en sommeil pour éviter un mouvement immédiat
                     _rigidbody.Sleep();
                 }
                 else
@@ -63,7 +60,6 @@ namespace Player
 
         private void OnDisable()
         {
-            // Send last position so SaveSystem can use it when player is missing
             try
             {
                 Save.SaveSystem.Instance?.UpdatePlayerPosition(transform.position);
@@ -90,7 +86,6 @@ namespace Player
         {
             Move();
 
-            // Envoyer périodiquement la position au SaveSystem
             _positionSaveTimer += Time.fixedDeltaTime;
             if (_positionSaveTimer >= _positionSaveInterval || Vector3.Distance(transform.position, _lastPositionSaved) > _positionSaveThreshold)
             {
