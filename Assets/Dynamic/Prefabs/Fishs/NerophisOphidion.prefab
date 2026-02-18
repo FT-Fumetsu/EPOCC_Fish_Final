@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3711621928371334652}
   - component: {fileID: 3845776522509432873}
   - component: {fileID: 180994316728328006}
-  - component: {fileID: 4779146843467227408}
   - component: {fileID: 5958221358504845734}
   m_Layer: 0
   m_Name: NerophisOphidion
@@ -86,12 +85,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 267b1bd895a484d49b0afdd13fb0b489, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9268f104d98e27a45abfe7e8e53d3afd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 47.24, y: 35.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -130,8 +129,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 45.96219, y: 25.14185, z: 0.10000001}
-  m_Center: {x: -0.1184082, y: 1.3817173, z: 0}
+  m_Size: {x: 40.110504, y: 6.554254, z: 0.1}
+  m_Center: {x: 0.09673062, y: 0.26301846, z: 0}
 --- !u!114 &180994316728328006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad72058e6d39ce4cbb7087d3ffbdae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fish.StateMachine.FishStateMachine
+  _sceneName: 
   _spawnSpeed: 5
   _constantSpeed: 20
   _fleeSpeed: 50
@@ -151,19 +151,6 @@ MonoBehaviour:
   _fleeMaxAngle: 45
   _stopTimer: 2
   _timerBeforeStop: 2
---- !u!114 &4779146843467227408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5548365985278890572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 558890b29970b384abf55ead1652dd6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fishs.Utility.DisableFishTouchInteraction
-  _disableInteraction: 0
 --- !u!54 &5958221358504845734
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2359034154878786357}
   - component: {fileID: 8520283786452085119}
   - component: {fileID: 3597195003792954373}
-  - component: {fileID: 219685061549211068}
   - component: {fileID: 7501045897068274238}
   m_Layer: 0
   m_Name: AnguilaVulgarisVarAcutirostris
@@ -86,12 +85,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 80d2ec4b1285d9d4f8b8477a72aed5da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c715e6be4e8d94e429a582b757bc76a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 47.24, y: 35.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -144,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad72058e6d39ce4cbb7087d3ffbdae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fish.StateMachine.FishStateMachine
+  _sceneName: 
   _spawnSpeed: 5
   _constantSpeed: 20
   _fleeSpeed: 50
@@ -151,19 +151,6 @@ MonoBehaviour:
   _fleeMaxAngle: 45
   _stopTimer: 2
   _timerBeforeStop: 2
---- !u!114 &219685061549211068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2213645133388932619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 558890b29970b384abf55ead1652dd6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fishs.Utility.DisableFishTouchInteraction
-  _disableInteraction: 0
 --- !u!54 &7501045897068274238
 Rigidbody:
   m_ObjectHideFlags: 0
