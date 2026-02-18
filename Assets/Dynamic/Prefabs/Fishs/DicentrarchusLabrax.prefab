@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3377160658052037690}
   - component: {fileID: 1589968393031143711}
   - component: {fileID: -4602205684895262769}
-  - component: {fileID: -6022175665091059535}
   - component: {fileID: 6086537638204312988}
   m_Layer: 0
   m_Name: DicentrarchusLabrax
@@ -144,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad72058e6d39ce4cbb7087d3ffbdae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fish.StateMachine.FishStateMachine
+  _sceneName: 
   _spawnSpeed: 5
   _constantSpeed: 20
   _fleeSpeed: 50
@@ -151,19 +151,6 @@ MonoBehaviour:
   _fleeMaxAngle: 45
   _stopTimer: 2
   _timerBeforeStop: 2
---- !u!114 &-6022175665091059535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3064477644981082617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 558890b29970b384abf55ead1652dd6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fishs.Utility.DisableFishTouchInteraction
-  _disableInteraction: 0
 --- !u!54 &6086537638204312988
 Rigidbody:
   m_ObjectHideFlags: 0

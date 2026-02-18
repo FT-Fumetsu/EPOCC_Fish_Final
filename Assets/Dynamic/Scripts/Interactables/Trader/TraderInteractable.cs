@@ -11,6 +11,7 @@ namespace Interactables.Trader
         [SerializeField] private GameObject _mobileControls;
         public void OnInteract()
         {
+            Debug.Log("Interact !");
             if (_tradeUi != null)
             {
                 Debug.LogWarning("Trade UI !");

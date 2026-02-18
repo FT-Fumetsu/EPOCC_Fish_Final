@@ -16,6 +16,8 @@ namespace UI.TraderPanel
         [SerializeField] private GameObject _lureUIPrefab;
         [SerializeField] private LureData[] _lureDatas;
 
+        [SerializeField] private TMP_Text _fishesNumberText;
+
         [Header("TradePanel")]
         [SerializeField] private Image _tradeIcon;
         [SerializeField] private TMP_Text _tradePriceText;
@@ -47,7 +49,9 @@ namespace UI.TraderPanel
                 Debug.LogWarning("SetAllLuresUI: Missing references or no lure data available.");
                 return;
             }
-
+            
+            _fishesNumberText.text = FishsManager.Instance.FishsCount.ToString();
+            
             foreach (var lureData in _lureDatas)
             {
                 var prefab = Instantiate(_lureUIPrefab, _luresLayoutGroup);
@@ -92,6 +96,7 @@ namespace UI.TraderPanel
             }
 
             FishsManager.Instance.RemoveFishs(_currentFishPrice);
+            _fishesNumberText.text = FishsManager.Instance.FishsCount.ToString();
             LureManager.Instance.AddLure(_currentData, 1);
         }
     }

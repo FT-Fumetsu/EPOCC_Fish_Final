@@ -34,7 +34,7 @@ namespace Singletons
         {
             if (_instance == null)
                 return;
-            
+
             _instance.Uninitialize();
             _instance = default(T);
         }
