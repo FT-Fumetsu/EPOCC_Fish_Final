@@ -13,6 +13,8 @@ namespace Save.Data
         
         public Dictionary<int, int> countByLure;
         public Dictionary<int, int> countByFish;
+        
+        public bool isTutorialDialogueLaunched;
     }
 
     [System.Serializable]

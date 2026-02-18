@@ -7,7 +7,6 @@ namespace Fish.StateMachine
         public Transform FishTransform;
 
         public float SpawnSpeed;
-        public float ConstantSpeed;
         public float FleeSpeed;
     
         public float FleeMinAngle;
