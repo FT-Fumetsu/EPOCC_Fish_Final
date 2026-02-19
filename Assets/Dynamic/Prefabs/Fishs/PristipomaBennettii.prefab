@@ -143,9 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad72058e6d39ce4cbb7087d3ffbdae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fish.StateMachine.FishStateMachine
-  _sceneName: 
   _spawnSpeed: 5
-  _constantSpeed: 20
   _fleeSpeed: 50
   _fleeMinAngle: -45
   _fleeMaxAngle: 45
