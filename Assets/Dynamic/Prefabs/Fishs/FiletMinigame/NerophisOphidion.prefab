@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 59866958389728306}
   - component: {fileID: 5070164429655955418}
-  - component: {fileID: 3711621928371334652}
   - component: {fileID: 3845776522509432873}
   - component: {fileID: 5958221358504845734}
   - component: {fileID: 7587027350696856754}
+  - component: {fileID: 7842392837118547673}
   m_Layer: 0
   m_Name: NerophisOphidion
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.91196, z: 19.44}
-  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,21 +95,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &3711621928371334652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5548365985278890572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc5baac4192d73243860a62efddf3535, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactables.Fishs.FishInteractable
-  _sceneName: FiletMinigameScene
-  _fishCount: 4
-  _fishData: {fileID: 11400000, guid: 0aad298b94098b14abec92fcba9a1d17, type: 2}
 --- !u!65 &3845776522509432873
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -170,5 +155,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d3c089e55ca3a49b787e3f71400beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishMovement
-  _speed: 20
+  _speed: 50
   _direction: {x: 1, y: 0, z: 0}
+--- !u!114 &7842392837118547673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5548365985278890572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76703bb03aac9004887cf68b011d6ed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fish.Interactable.FishCaptureWithNet
+  _fishCount: 4
+  _fishData: {fileID: 11400000, guid: 0aad298b94098b14abec92fcba9a1d17, type: 2}

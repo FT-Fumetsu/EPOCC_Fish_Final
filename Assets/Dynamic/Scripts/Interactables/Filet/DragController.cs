@@ -4,16 +4,21 @@ using UnityEngine.InputSystem;
 
 public class DragController : MonoSingleton<DragController>
 {
+    [SerializeField] private Vector3 _spawnPosition;
+    
     [SerializeField] private GameObject _minPosition;
     [SerializeField] private GameObject _maxPosition;
 
     private bool _hasClickedOnce;
     private void Update()
     {
+        if(Manager.Pause.PauseManager.Instance?.IsPaused == true)
+            return;
+        
         if (Pointer.current == null)
         {
             if (_minPosition)
-                transform.position = _minPosition.transform.position;
+                transform.position = _spawnPosition;
             return;
         }
 
@@ -25,7 +30,7 @@ public class DragController : MonoSingleton<DragController>
             if (!isPressed)
             {
                 if (_minPosition)
-                    transform.position = _minPosition.transform.position;
+                    transform.position = _spawnPosition;
                 return;
             }
 

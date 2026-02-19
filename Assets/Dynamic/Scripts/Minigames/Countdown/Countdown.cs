@@ -18,10 +18,12 @@ namespace Minigames.Countdown
             {
                 case > 0:
                     _remainingTime -= Time.deltaTime;
+                    Debug.Log(_countdownText.text);
                     break;
                 case <= 0:
                     _remainingTime = 0;
                     OnTimerEnd();
+                    Debug.Log("END !!!!!");
                     break;
             }
             

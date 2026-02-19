@@ -113,15 +113,15 @@ namespace Save
         {
             if (_fishsManager == null)
             {
-                Debug.LogWarning("SaveSystem: FishsManager reference is null. totalFishCount will be 0.");
+                Debug.LogWarning("SaveSystem: FishsManager reference is null. totalFishCount will be null.");
             }
             if (_lureManager == null)
             {
-                Debug.LogWarning("SaveSystem: LureManager reference is null. countByLure will be empty.");
+                Debug.LogWarning("SaveSystem: LureManager reference is null. countByLure will be null.");
             }
             if (_fishingCodex == null)
             {
-                Debug.LogWarning("SaveSystem: FishingCodex reference is null. countByFish will be empty.");
+                Debug.LogWarning("SaveSystem: FishingCodex reference is null. countByFish will be null.");
             }
 
             // Utilise la position du player s'il existe sinon fallback sur la dernière position connue (ou zéro)
@@ -230,10 +230,5 @@ namespace Save
                 Debug.LogError($"JSON Deserialisation Error: {ex.Message}");
             }
         }
-
-        // private void OnApplicationQuit()
-        // {
-        //     Save();
-        // }
     }
 }

@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Dynamic/Scenes/ProtoScene.unity
     guid: 427648c7fea0ed548a64dbbfb1d5c873
+  - enabled: 1
+    path: Assets/Dynamic/Scenes/MinigameScenes/FiletMinigameScene.unity
+    guid: 9ddd0e79d0e03694595630aef7690091
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
