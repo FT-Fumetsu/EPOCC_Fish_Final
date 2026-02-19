@@ -8,7 +8,7 @@ public class CodexUIManager : MonoBehaviour
 {
     [Header("UI References")]
     [SerializeField] private Image _fishIcon;
-    [SerializeField] private Image _hiddenFishIcon;
+    [SerializeField] private Sprite _hiddenFishIcon;
     [SerializeField] private TextMeshProUGUI _fishNameText;
     [SerializeField] private TextMeshProUGUI _fishSizeText;
     [SerializeField] private TextMeshProUGUI _fishFoodText;
@@ -35,7 +35,7 @@ public class CodexUIManager : MonoBehaviour
         _fishSizeText.text = "";
         _fishFoodText.text = "";
         _fishDescText.text = "";
-        _fishIcon.sprite = /*_hiddenFishIcon.sprite*/ null;
+        _fishIcon.sprite = _hiddenFishIcon;
         
         if (_allFishData.Count == 0)
             return;
@@ -60,7 +60,7 @@ public class CodexUIManager : MonoBehaviour
         }
         else
         {
-            _fishIcon.sprite = /*_hiddenFishIcon.sprite*/ null;
+            _fishIcon.sprite = _hiddenFishIcon;
             _fishSizeText.text = "Pêchez plus de cette espèce pour révéler sa taille !";
             return;
         }
