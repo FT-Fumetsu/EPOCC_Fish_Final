@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4443842580510795586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3767366034956434891}
+  - component: {fileID: 3180358266322364367}
+  m_Layer: 0
+  m_Name: FishMonoSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3767366034956434891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443842580510795586}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.055546615, y: 0.70492166, z: -0.055546615, w: 0.70492166}
+  m_LocalPosition: {x: 0, y: 8.953, z: 54.791}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -9.011}
+--- !u!114 &3180358266322364367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443842580510795586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8aa5f360aff13468c2d6c47477014f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fishs.Spawner.FishMonoSpawner
+  _defaultSpawnTable:
+  - fishPrefab: {fileID: 5548365985278890572, guid: 684648b057a692e45aa3cf4c46fee2e9, type: 3}
+    spawnWeight: 0.25
+    currentChance: 0
+  - fishPrefab: {fileID: 5548365985278890572, guid: 26871c46fc39faf48b8ac7db3eb0a48b, type: 3}
+    spawnWeight: 0.25
+    currentChance: 0
+  - fishPrefab: {fileID: 5548365985278890572, guid: b232bd5d8b39ce7429e449cf84f65ed2, type: 3}
+    spawnWeight: 0.25
+    currentChance: 0
+  - fishPrefab: {fileID: 2213645133388932619, guid: e96a6622633d86548919c4b5c977b049, type: 3}
+    spawnWeight: 0.25
+    currentChance: 0
+  _minSpawnPosition: {fileID: 0}
+  _maxSpawnPosition: {fileID: 0}
+  _lures:
+  - {fileID: 11400000, guid: 1a4311d4433abb641a4c230fd944ad90, type: 2}
+  - {fileID: 11400000, guid: 4b19ff2446c8e4848adeb00a93fac1dc, type: 2}
+  - {fileID: 11400000, guid: 9bdfd17fa4cbfdb41ad33a92bc27d590, type: 2}
+  - {fileID: 11400000, guid: 33ab56cd1a95b5d45942fc7838b01347, type: 2}
+  _activeLureIndex: -1
+  _minDelay: 1
+  _maxDelay: 3

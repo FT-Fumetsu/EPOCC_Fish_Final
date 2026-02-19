@@ -40,7 +40,7 @@ namespace Interactables.Fishs
             if (_isCaptured)
                 return;
 
-            if (other.GetComponent<Draggable>() == null) 
+            if (other.GetComponent<DragController>() == null) 
                 return;
             
             if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == _sceneName)

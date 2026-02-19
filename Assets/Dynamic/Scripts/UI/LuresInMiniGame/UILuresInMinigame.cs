@@ -65,10 +65,19 @@ namespace UI.Lures
            if (used)
            {               
                var spawnerArray = FindObjectsByType<Fish.Spawner.FishSpawner>(FindObjectsSortMode.None);
-               foreach(var spawnerItem in spawnerArray)
+               if (spawnerArray != null)
                {
-                   spawnerItem.SetActiveLure(lure);
+                   foreach(var spawnerItem in spawnerArray)
+                   {
+                       spawnerItem.SetActiveLure(lure);
+                   }
                }
+               else
+               {
+                   var spawner = FindAnyObjectByType<Fishs.Spawner.FishMonoSpawner>();
+                   spawner.SetActiveLure(lure);
+               }
+               
                
                CheckAllLures(true);
                CheckLureButton(true);

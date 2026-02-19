@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 779b7c462bea1be4b8cc85fbcd0fc33b, type: 3}
+  m_Name: Lure2Filet
+  m_EditorClassIdentifier: Assembly-CSharp::Lure.Data.LureData
+  LureIcon: {fileID: 21300000, guid: c7fd41972d876874399acd80f81e9728, type: 3}
+  LurePrice: 50
+  SpawnTable:
+  - fishPrefab: {fileID: 5548365985278890572, guid: 684648b057a692e45aa3cf4c46fee2e9, type: 3}
+    spawnWeight: 0.0625
+    currentChance: 0
+  - fishPrefab: {fileID: 5548365985278890572, guid: 26871c46fc39faf48b8ac7db3eb0a48b, type: 3}
+    spawnWeight: 0.0625
+    currentChance: 0
+  - fishPrefab: {fileID: 5548365985278890572, guid: b232bd5d8b39ce7429e449cf84f65ed2, type: 3}
+    spawnWeight: 0.0625
+    currentChance: 0
+  - fishPrefab: {fileID: 2213645133388932619, guid: e96a6622633d86548919c4b5c977b049, type: 3}
+    spawnWeight: 0.0625
+    currentChance: 0
+  - fishPrefab: {fileID: 2213645133388932619, guid: 1840aeb0f9772f14f8d030a777cddb3e, type: 3}
+    spawnWeight: 0.125
+    currentChance: 0
+  - fishPrefab: {fileID: 5548365985278890572, guid: cd78e40cf9929154ebefb83122180f94, type: 3}
+    spawnWeight: 0.125
+    currentChance: 0
+  - fishPrefab: {fileID: 5548365985278890572, guid: 0cefb3b9827aecd4683c06f8305d70f8, type: 3}
+    spawnWeight: 0.125
+    currentChance: 0
+  - fishPrefab: {fileID: 2213645133388932619, guid: 62a9286760e4e0d44b4214415c05b106, type: 3}
+    spawnWeight: 0.125
+    currentChance: 0
+  - fishPrefab: {fileID: 5548365985278890572, guid: b76b028b4a872d7499cf74b1c2fb7b4b, type: 3}
+    spawnWeight: 0.083333336
+    currentChance: 0
+  - fishPrefab: {fileID: 3064477644981082617, guid: 0925dcd66f44ba1488696f1de37b2838, type: 3}
+    spawnWeight: 0.083333336
+    currentChance: 0
+  - fishPrefab: {fileID: 2213645133388932619, guid: 92905c409f7506c43b26647d28cfbdf2, type: 3}
+    spawnWeight: 0.083333336
+    currentChance: 0
+  LureName: Second Lure
