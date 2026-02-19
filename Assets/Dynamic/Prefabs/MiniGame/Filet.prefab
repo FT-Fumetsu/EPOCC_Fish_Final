@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9026627004432026217}
   - component: {fileID: 8804666856427259146}
-  - component: {fileID: 196923597711016708}
+  - component: {fileID: 6922041528242012745}
   m_Layer: 0
   m_Name: Filet
   m_TagString: Untagged
@@ -50,13 +50,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.1788597, y: 1.1345192, z: 0.3236246}
   m_Center: {x: -0.16185975, y: 0.54694575, z: -1.4344993}
---- !u!114 &196923597711016708
+--- !u!114 &6922041528242012745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,9 +65,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1725804463241452261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a56edeb7c258e4d821320ae36f8ece, type: 3}
+  m_Script: {fileID: 11500000, guid: 94992ec1537769d43832ae49f6707563, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Draggable
+  m_EditorClassIdentifier: Assembly-CSharp::DragController
+  _minPosition: {fileID: 0}
+  _maxPosition: {fileID: 0}
 --- !u!1001 &103620900492543301
 PrefabInstance:
   m_ObjectHideFlags: 0

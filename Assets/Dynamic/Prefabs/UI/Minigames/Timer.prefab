@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Minigames.Countdown.Countdown
   _countdownText: {fileID: 5365739124963237185}
-  _remainingTime: 10
+  _remainingTime: 30
   _endPanel: {fileID: 0}
 --- !u!1 &8426345392487072374
 GameObject:
