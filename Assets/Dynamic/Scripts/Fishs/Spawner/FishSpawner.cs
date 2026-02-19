@@ -9,9 +9,6 @@ namespace Fish.Spawner
 {
     public class FishSpawner : MonoBehaviour
     {
-        [Header("Minigame Bool")]
-        [SerializeField] private bool _tapeTaupe;
-        
         [Header("Table par défaut (sans appât)")]
         [SerializeField] private FishSpawnData[] defaultSpawnTable;
 
@@ -33,7 +30,7 @@ namespace Fish.Spawner
         [SerializeField] private float gizmoRadius = 20f;
         [SerializeField] private int gizmoSegments = 32;
 
-        void Start()
+        private void Start()
         {
             StartCoroutine(SpawnRoutine());
         }
@@ -56,7 +53,7 @@ namespace Fish.Spawner
                 float randomOffset = Random.Range(minSpawnAngle, maxSpawnAngle);
                 var finalZ = transform.rotation.eulerAngles.z + randomOffset;
                 
-                Instantiate(fish, transform.position, Quaternion.Euler(0f, 0f, finalZ));
+                Instantiate(fish, transform.position, Quaternion.Euler(0f, 0f, finalZ), transform);
             }
         }
 
