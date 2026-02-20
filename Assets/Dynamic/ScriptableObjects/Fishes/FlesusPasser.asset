@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FlesusPasser
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 21300000, guid: 38beb040567fdb948989cf7b9edbaf7b, type: 3}
+  _codexIcon: {fileID: 21300000, guid: 73641229eba50434a97843de37046d8f, type: 3}
   _fishName: FlesusPasser
   _fishSize: 50-60CM
   _fishFood: "Petits poisson, crustac\xE9s"

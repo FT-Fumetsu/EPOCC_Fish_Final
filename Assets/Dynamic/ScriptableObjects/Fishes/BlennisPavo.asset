@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BlennisPavo
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 21300000, guid: 9938d9be658637e4c9719b7a03d91c93, type: 3}
+  _codexIcon: {fileID: 21300000, guid: 9198b2b4bd0ba5147872a33248c59d53, type: 3}
   _fishName: BlennisPavo
   _fishSize: 8-12CM
   _fishFood: "Crustac\xE9s, Vers marins, Algues"

@@ -56,7 +56,7 @@ public class CodexUIManager : MonoBehaviour
 
         if (FishingCodex.Instance.IsIconUnlocked(currentFish))
         {
-            _fishIcon.sprite = currentFish.Icon;
+            _fishIcon.sprite = currentFish.CodexIcon;
         }
         else
         {

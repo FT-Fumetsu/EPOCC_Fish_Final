@@ -24,7 +24,7 @@ MonoBehaviour:
   - fishPrefab: {fileID: 5548365985278890572, guid: 0cefb3b9827aecd4683c06f8305d70f8, type: 3}
     spawnWeight: 0.0625
     currentChance: 0
-  - fishPrefab: {fileID: 0}
+  - fishPrefab: {fileID: 2213645133388932619, guid: ce02d3a74789281499530f82eb31f7fd, type: 3}
     spawnWeight: 0.0625
     currentChance: 0
   - fishPrefab: {fileID: 5548365985278890572, guid: aedd7dc4a81c5b748b588ec72831acab, type: 3}

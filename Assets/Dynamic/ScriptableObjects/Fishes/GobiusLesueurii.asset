@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GobiusLesueurii
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 21300000, guid: 00af18fa314c61f42aaf1f8d68044309, type: 3}
+  _codexIcon: {fileID: 21300000, guid: ade7b46efb9a8f64098ce5a9a0b462d9, type: 3}
   _fishName: GobiusLesueurii
   _fishSize: 10-13CM
   _fishFood: "Crustac\xE9s et invertebr\xE9"
