@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DicentrarchusLabrax
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 21300000, guid: 7d4fb0cc453d5164db92dacb8ee26f03, type: 3}
+  _codexIcon: {fileID: 21300000, guid: 23a47ea8bc9164e40b25f8f5d446855c, type: 3}
   _fishName: DicentrarchusLabrax
   _fishSize: 70-80CM
   _fishFood: "Petits poissons,Crustac\xE9s"

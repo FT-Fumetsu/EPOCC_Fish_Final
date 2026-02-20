@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SardinaPilchardus
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 21300000, guid: 9ad4999fc46d2094388247586f29c0a5, type: 3}
+  _codexIcon: {fileID: 21300000, guid: 634cc37980d5ff3498cee1d332f81bdc, type: 3}
   _fishName: SardinaPilchardus
   _fishSize: 15-20 CM
   _fishFood: Plancton, Vegetaux marins

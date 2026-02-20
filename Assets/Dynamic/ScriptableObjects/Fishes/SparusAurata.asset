@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SparusAurata
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 21300000, guid: c3c66eea0d430cd409ea471d9ef42b41, type: 3}
+  _codexIcon: {fileID: 21300000, guid: ca6ef8e96ea078e49ae21306e0f283df, type: 3}
   _fishName: SparusAurata
   _fishSize: 20-35CM
   _fishFood: "mollusques, crustac\xE9s et petits poissons"
