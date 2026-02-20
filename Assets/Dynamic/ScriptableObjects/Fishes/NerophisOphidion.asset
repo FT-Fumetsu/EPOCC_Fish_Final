@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: NerophisOphidion
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 21300000, guid: 9268f104d98e27a45abfe7e8e53d3afd, type: 3}
+  _codexIcon: {fileID: 21300000, guid: 5a2664d67b8035840bf1bed06d30651e, type: 3}
   _fishName: NerophisOphidion
   _fishSize: 15-20CM
   _fishFood: Plancton.

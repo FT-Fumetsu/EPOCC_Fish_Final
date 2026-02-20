@@ -366,7 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishingCodex
   _isUnparentOnAwake: 1
   _fishCountForName: 1
-  _fishCountForDescription: 5
+  _fishCountForDescription: 10
   _fishCountForIcon: 3
   _fishCountForSize: 7
   _fishCountForFood: 5
@@ -714,6 +714,10 @@ PrefabInstance:
     - target: {fileID: 3410920700781856122, guid: 8227c7f78c480d445ac7b98356337d4d, type: 3}
       propertyPath: m_Name
       value: Menus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410920700781856122, guid: 8227c7f78c480d445ac7b98356337d4d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

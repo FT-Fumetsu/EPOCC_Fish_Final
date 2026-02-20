@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PetromyzonMarinus
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   _icon: {fileID: 21300000, guid: 05d01e0b841d4234e8ce0e131aa76df0, type: 3}
+  _codexIcon: {fileID: 21300000, guid: 2d19306f8cf83a542999adde370628e3, type: 3}
   _fishName: PetromyzonMarinus
   _fishSize: 60-120CM
   _fishFood: Carnivore
