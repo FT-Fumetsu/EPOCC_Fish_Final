@@ -16,11 +16,14 @@ namespace UI.TraderPanel
         [SerializeField] private GameObject _lureUIPrefab;
         [SerializeField] private LureData[] _lureDatas;
 
-        [SerializeField] private TMP_Text _fishesNumberText;
+        [SerializeField] private TextMeshProUGUI _fishesNumberText;
 
         [Header("TradePanel")]
         [SerializeField] private Image _tradeIcon;
-        [SerializeField] private TMP_Text _tradePriceText;
+        [SerializeField] private TextMeshProUGUI _tradePriceText;
+        [SerializeField] private TextMeshProUGUI _numberOfLuresText;
+        
+        [SerializeField, Range(1, 100)] private int _numberOfLuresToSell = 1;
 
         private readonly List<GameObject> _spawnedItems = new();
 
@@ -46,7 +49,7 @@ namespace UI.TraderPanel
 
             if(_luresLayoutGroup == null || _lureUIPrefab == null || _lureDatas.Length == 0)
             {
-                Debug.LogWarning("SetAllLuresUI: Missing references or no lure data available.");
+                //Debug.LogWarning("SetAllLuresUI: Missing references or no lure data available.");
                 return;
             }
             
@@ -83,21 +86,45 @@ namespace UI.TraderPanel
             _currentData = data;
             _tradeIcon.sprite = data.LureIcon;
             _tradePriceText.text = data.LurePrice.ToString();
+            _numberOfLuresToSell = 1;
+            _numberOfLuresText.text = _numberOfLuresToSell.ToString();
             _currentFishPrice = data.LurePrice;
-            Debug.Log("Prix = " + data.LurePrice);
+            //Debug.Log("Prix = " + data.LurePrice);
         }
 
         public void AcceptTrade()
         {
             if(_currentFishPrice > FishsManager.Instance.FishsCount)
             {
-                Debug.LogWarning("SetAllLuresUI: Not enough fish to complete the trade.");
+                //Debug.LogWarning("SetAllLuresUI: Not enough fish to complete the trade.");
                 return;
             }
 
             FishsManager.Instance.RemoveFishs(_currentFishPrice);
             _fishesNumberText.text = FishsManager.Instance.FishsCount.ToString();
-            LureManager.Instance.AddLure(_currentData, 1);
+            LureManager.Instance.AddLure(_currentData, _numberOfLuresToSell);
+        }
+
+        public void AddLuresToSell()
+        {
+            if(_currentFishPrice + _currentData.LurePrice > FishsManager.Instance.FishsCount || _numberOfLuresToSell >= 100)
+                return;
+            
+            _numberOfLuresToSell++;
+            _numberOfLuresText.text = _numberOfLuresToSell.ToString();
+            _currentFishPrice = _currentData.LurePrice * _numberOfLuresToSell;
+            _tradePriceText.text = _currentFishPrice.ToString();
+        }
+        
+        public void RemoveLuresToSell()
+        {
+            if(_numberOfLuresToSell <= 1)
+                return;
+
+            _numberOfLuresToSell--;
+            _numberOfLuresText.text = _numberOfLuresToSell.ToString();
+            _currentFishPrice = _currentData.LurePrice * _numberOfLuresToSell;
+            _tradePriceText.text = _currentFishPrice.ToString();
         }
     }
 }

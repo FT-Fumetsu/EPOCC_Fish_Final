@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Lure.Data;
 using TMPro;
 using UnityEngine.Serialization;
 
@@ -13,6 +14,7 @@ public class CodexUIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _fishSizeText;
     [SerializeField] private TextMeshProUGUI _fishFoodText;
     [SerializeField] private TextMeshProUGUI _fishDescText;
+    [SerializeField] private HorizontalLayoutGroup _luresToCatchThisFish;
     [SerializeField] private Button _prevButton;
     [SerializeField] private Button _nextButton;
 
@@ -43,6 +45,8 @@ public class CodexUIManager : MonoBehaviour
         FishData currentFish = _allFishData[currentPageIndex];
 
         int count = FishingCodex.Instance.GetCountForFish(currentFish);
+        
+        SetLures(currentFish);
 
         if (FishingCodex.Instance.IsNameUnlocked(currentFish))
         {
@@ -110,5 +114,32 @@ public class CodexUIManager : MonoBehaviour
             currentPageIndex++;
 
         UpdatePage();
+    }
+
+    private void SetLures(FishData currentFish)
+    {
+        if (currentFish == null || currentFish.LuresToUnlock.Length == 0 || _luresToCatchThisFish == null)
+            return;
+        
+        // Clear existing lures
+        foreach (Transform child in _luresToCatchThisFish.transform)
+        {            
+            Destroy(child.gameObject);
+        }
+        
+        // Add new lures
+        foreach (LureData lureItem in currentFish.LuresToUnlock)
+        {
+            GameObject lureIcon = new GameObject("LureIcon", typeof(Image));
+            lureIcon.transform.SetParent(_luresToCatchThisFish.transform, false);
+            Image img = lureIcon.GetComponent<Image>();
+            img.sprite = lureItem.LureIcon;
+        }
+    }
+    
+    private void OnDestroy()
+    {
+        _prevButton.onClick.RemoveListener(OnPrevPage);
+        _nextButton.onClick.RemoveListener(OnNextPage);
     }
 }

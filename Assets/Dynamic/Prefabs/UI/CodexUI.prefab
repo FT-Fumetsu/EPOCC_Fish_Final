@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -336.1, y: 147}
+  m_AnchoredPosition: {x: -336.7, y: 127.1}
   m_SizeDelta: {x: 324.7911, y: 171.0563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7334504675807872388
@@ -426,8 +426,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -327.06, y: -160}
-  m_SizeDelta: {x: 428.12, y: 156.4332}
+  m_AnchoredPosition: {x: -325.60004, y: -88.636024}
+  m_SizeDelta: {x: 428.12, y: 80.1751}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4596815257425348895
 CanvasRenderer:
@@ -457,7 +457,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'FishSize
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
   m_sharedMaterial: {fileID: 2421999939311194209, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
@@ -563,8 +565,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 271.84, y: 213}
-  m_SizeDelta: {x: 464.92, y: 99.999}
+  m_AnchoredPosition: {x: -325.60004, y: -210.8969}
+  m_SizeDelta: {x: 464.92, y: 127.3927}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5623728666014969676
 CanvasRenderer:
@@ -594,7 +596,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'FishFood
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
   m_sharedMaterial: {fileID: 2421999939311194209, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
@@ -704,6 +708,7 @@ RectTransform:
   - {fileID: 5247339189126665974}
   - {fileID: 3449370100653146734}
   - {fileID: 2787303674710144698}
+  - {fileID: 1741241100786815071}
   m_Father: {fileID: 3434345126614147876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1015,6 +1020,7 @@ MonoBehaviour:
   _fishSizeText: {fileID: 661662691176834523}
   _fishFoodText: {fileID: 1134403015533911193}
   _fishDescText: {fileID: 381415495731621260}
+  _luresToCatchThisFish: {fileID: 3622479552037099093}
   _prevButton: {fileID: 1035360424619410632}
   _nextButton: {fileID: 3292666002912203289}
   _allFishData:
@@ -1032,6 +1038,68 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 28f18e94ea9b04c4e96185d9721fb2ba, type: 2}
   - {fileID: 11400000, guid: 0c9e6adbb337646488c67dda2cd807bf, type: 2}
   - {fileID: 11400000, guid: 5afeace1f804d2840b2197bad595ed83, type: 2}
+--- !u!1 &4064127531905980821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1741241100786815071}
+  - component: {fileID: 3622479552037099093}
+  m_Layer: 5
+  m_Name: HorizontalLayout
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1741241100786815071
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4064127531905980821}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6813369856946232494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -355.3374, y: 269.67044}
+  m_SizeDelta: {x: 211.8194, y: 54.1771}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3622479552037099093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4064127531905980821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 50
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &4278607045994355965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,8 +1134,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -327.06165, y: -33.246}
-  m_SizeDelta: {x: 428.1233, y: 36.4912}
+  m_AnchoredPosition: {x: -325.60004, y: -3.3944225}
+  m_SizeDelta: {x: 428.1233, y: 54.2601}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7988589137603448748
 CanvasRenderer:
@@ -1097,7 +1165,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'FishName
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
   m_sharedMaterial: {fileID: 2421999939311194209, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
@@ -1360,8 +1430,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 271.8423, y: -76.52869}
-  m_SizeDelta: {x: 464.9247, y: 374.9159}
+  m_AnchoredPosition: {x: 257.03485, y: 16.3878}
+  m_SizeDelta: {x: 494.5396, y: 560.7488}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1754446062054266078
 CanvasRenderer:
@@ -1391,7 +1461,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'FishDescription
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
   m_sharedMaterial: {fileID: 2421999939311194209, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
