@@ -3843,7 +3843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Scenes.ChangeSceneInteractable
   _changeScene: {fileID: 629749649}
-  _sceneToLoad: TapTaupeScene
+  _sceneToLoad: FiletMinigameScene
 --- !u!65 &777959468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6674,7 +6674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Scenes.ChangeSceneInteractable
   _changeScene: {fileID: 629749649}
-  _sceneToLoad: TapTaupeScene
+  _sceneToLoad: FiletMinigameScene
 --- !u!65 &1245068468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10070,7 +10070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Scenes.ChangeSceneInteractable
   _changeScene: {fileID: 629749649}
-  _sceneToLoad: TapTaupeScene
+  _sceneToLoad: FiletMinigameScene
 --- !u!65 &1888615179
 BoxCollider:
   m_ObjectHideFlags: 0
