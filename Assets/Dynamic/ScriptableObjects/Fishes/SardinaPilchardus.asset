@@ -18,10 +18,10 @@ MonoBehaviour:
   _fishSize: 15-20 CM
   _fishFood: Plancton, Vegetaux marins
   _description: "La sardine vit en pleine eau (esp\xE8ce p\xE9lagique), principalement
-    au-dessus du plateau continental.\nOn la rencontre entre la surface et environ
-    100 m de profondeur, en Atlantique Est et en M\xE9diterran\xE9e.Elle forme de
-    grands bancs compacts dans des zones riches en plancton. elle est un poisson
-    p\xE9lagique argent\xE9"
+    au-dessus du plateau continentalelle vit entre la surface et environ 100 m de
+    profondeur, en Atlantique et en M\xE9diterran\xE9e.Elle forme de grands bancs
+    compacts dans des zones riches en plancton. elle est un poisson p\xE9lagique
+    argent\xE9"
   _luresToUnlock:
   - {fileID: 11400000, guid: 85a463850de9b2145863d0e8b0643ad0, type: 2}
   - {fileID: 11400000, guid: a9648a603841f15498b077b4c256852a, type: 2}

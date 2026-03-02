@@ -17,14 +17,14 @@ MonoBehaviour:
   _fishName: BeloneAcus
   _fishSize: 50-100cm
   _fishFood: "Petits poissons, crustac\xE9s, vers marins, plancton"
-  _description: "L'Orphie est une espece cotiere diurne qui se rencontre souvent
-    en groupe lache a proximit\xE9 de la surface.\nSon corps extr\xEAmement \xE9lanc\xE9
-    et cylindrique, elle peut mesurer de 30cm a plus d'un metre et peut peuser jusqua
-    5 kg. La tete se prolonge par un long bec form\xE9e de 2 fines machoires arm\xE9e
-    de dents ac\xE9r\xE9es. Une coloration argent\xE9e avec des reflets bleu-vert
-    sur le dos, ce qui lui permet de se camoufler dans la lumi\xE8re de surface.
-    Un d\xE9tail \xE9tonnant : ses ar\xEAtes sont vertes, une coloration due \xE0
-    la pr\xE9sence de biliverdine "
+  _description: "L'Orphie est une espece cotiere qui se rencontre en groupe lache
+    a proximit\xE9 de la surface. Son corps extr\xEAmement \xE9lanc\xE9 et cylindrique,
+    elle peut mesurer de 30cm a plus d'un metre et peut peuser jusqua 5 kg. La tete
+    se prolonge par un long bec form\xE9e de 2 fines machoires arm\xE9e de dents
+    ac\xE9r\xE9es. Une coloration argent\xE9e avec des reflets bleu-vert sur le dos,
+    ce qui lui permet de se camoufler dans la lumi\xE8re de surface. Un d\xE9tail
+    \xE9tonnant : ses ar\xEAtes sont vertes, une coloration due \xE0 la pr\xE9sence
+    de biliverdine "
   _luresToUnlock:
   - {fileID: 11400000, guid: 3c34de61df66e5c44a4bf5b1a1de2d1d, type: 2}
   - {fileID: 11400000, guid: 8cc0dee4fb008674ebdfffbdd1a6e713, type: 2}

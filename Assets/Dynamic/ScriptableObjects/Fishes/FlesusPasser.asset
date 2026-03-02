@@ -17,13 +17,11 @@ MonoBehaviour:
   _fishName: FlesusPasser
   _fishSize: 50-60CM
   _fishFood: "Petits poisson, crustac\xE9s"
-  _description: "On le trouve aussi bien sur des fonds rocheux que sableux, dans
-    les lagunes ou les estuaires, et dans le lit des fleuves et affluents jusqu'\xE0
-    plusieurs centaines de kilom\xE8tres de la mer. Ce poisson plat d'allure g\xE9n\xE9rale
-    losangique, avec une teinte variable de vert olive \xE0 brun rouge\xE2tre ou
-    gris, rehauss\xE9e de marbrures vert fonc\xE9 avec de petites taches orang\xE9es,
-    ternes et peu nombreuses, atteint habituellement une taille de 50 cm ; la taille
-    maximale observ\xE9e est de 60 CM pour un poids de 1,5 kg."
+  _description: "On le trouve aussi bien sur des fonds rocheux que sableux. Ce poisson
+    plat d'allure g\xE9n\xE9rale losangique, avec une teinte variable de vert olive
+    \xE0 brun rouge\xE2tre ou gris, rehauss\xE9e de marbrures vert fonc\xE9 avec
+    de petites taches orang\xE9es, atteint habituellement une taille de 50 cm ; la
+    taille maximale observ\xE9e est de 60 CM pour un poids de 1,5 kg."
   _luresToUnlock:
   - {fileID: 11400000, guid: a9648a603841f15498b077b4c256852a, type: 2}
   - {fileID: 11400000, guid: 3c34de61df66e5c44a4bf5b1a1de2d1d, type: 2}
