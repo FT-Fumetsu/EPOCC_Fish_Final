@@ -17,11 +17,9 @@ MonoBehaviour:
   _fishName: NerophisOphidion
   _fishSize: 15-20CM
   _fishFood: Plancton.
-  _description: "le n\xE9rophis ophidion qui ressemble \xE0 un fil est facile \xE0
-    identifier gr\xE2ce \xE0 sa petite t\xEAte et \xE0 son opercule. La t\xEAte et
-    le museau rappellent l\u2019hippocampe,. Il vit en position verticale parmi le
-    crin marin, les laminaires et les algues brunes, en enroulant sa queue dans les
-    algues, et en flottant parmi la v\xE9g\xE9tation"
+  _description: "le n\xE9rophis ophidion ressemble \xE0 un fil. La t\xEAte et le
+    museau rappellent l\u2019hippocampe. Il enroule sa queue dans les algues, et
+    flotte en vertical  parmi la v\xE9g\xE9tation (algues, crin marin) "
   _luresToUnlock:
   - {fileID: 11400000, guid: 85a463850de9b2145863d0e8b0643ad0, type: 2}
   - {fileID: 11400000, guid: a9648a603841f15498b077b4c256852a, type: 2}
