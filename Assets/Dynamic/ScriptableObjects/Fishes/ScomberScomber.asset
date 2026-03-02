@@ -18,11 +18,11 @@ MonoBehaviour:
   _fishSize: 30-40CM
   _fishFood: Petits poisson
   _description: "Le maquereau commun vit en bancs dans les eaux c\xF4ti\xE8res et
-    oc\xE9aniques temp\xE9r\xE9es de l\u2019Atlantique Nord, \xE9voluant en pleine
-    eau (zone p\xE9lagique) entre la surface et environ 200 m de profondeur.Le maquereau
-    commun est un poisson \xE9lanc\xE9 au corps fusel\xE9, au dos bleu-vert z\xE9br\xE9
-    de lignes noires ondul\xE9es et aux flancs argent\xE9s brillants, dot\xE9 de
-    deux nageoires dorsales distinctes suivies de petites pinnules."
+    oc\xE9aniques temp\xE9r\xE9es de l\u2019Atlantique Nord, \xE9voluant entre la
+    surface et environ 200 m de profondeur.Le maquereau est un poisson \xE9lanc\xE9
+    au corps fusel\xE9, au dos bleu-vert z\xE9br\xE9 de lignes noires ondul\xE9es
+    et aux flancs argent\xE9s brillants, dot\xE9 de deux nageoires dorsales distinctes
+    suivies de petites pinnules."
   _luresToUnlock:
   - {fileID: 11400000, guid: a9648a603841f15498b077b4c256852a, type: 2}
   - {fileID: 11400000, guid: 3c34de61df66e5c44a4bf5b1a1de2d1d, type: 2}
