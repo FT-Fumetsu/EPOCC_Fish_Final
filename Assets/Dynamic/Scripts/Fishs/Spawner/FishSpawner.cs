@@ -46,7 +46,6 @@ namespace Fish.Spawner
 
                 if (fish == null)
                 {
-                    Debug.LogWarning("FishSpawner: No valid fish prefab found to spawn.");
                     continue;
                 }
                 
@@ -93,7 +92,6 @@ namespace Fish.Spawner
         {
             if (lures == null || lures.Length == 0)
             {
-                Debug.LogWarning("FishSpawner: aucun appât configuré.");
                 activeLureIndex = -1;
                 return;
             }
@@ -122,7 +120,6 @@ namespace Fish.Spawner
                 }
             }
         
-            Debug.LogWarning($"FishSpawner: appât non trouvé dans le tableau `lures` : {lure.name}");
             activeLureIndex = -1;
         }
         

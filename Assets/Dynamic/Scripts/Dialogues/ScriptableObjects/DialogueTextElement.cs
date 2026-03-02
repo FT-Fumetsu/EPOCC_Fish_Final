@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Dialogue.Element
 {
-    [CreateAssetMenu(fileName = "TextElement", menuName = "ScriptableObjects/TextElement")]
+    [CreateAssetMenu(fileName = "TextElement", menuName = "ScriptableObjects/Dialogue/TextElement")]
     public class DialogueTextElement : DialogueElement
     {
         [TextArea(2, 5)] public string text;

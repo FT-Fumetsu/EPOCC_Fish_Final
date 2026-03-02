@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CodexUIManager
   _fishIcon: {fileID: 3890730012460846500}
-  _hiddenFishIcon: {fileID: 0}
+  _hiddenFishIcon: {fileID: 21300000, guid: 5ed581ff2be5f00439f7a456349c1dda, type: 3}
   _fishNameText: {fileID: 5192712774518630453}
   _fishSizeText: {fileID: 661662691176834523}
   _fishFoodText: {fileID: 1134403015533911193}

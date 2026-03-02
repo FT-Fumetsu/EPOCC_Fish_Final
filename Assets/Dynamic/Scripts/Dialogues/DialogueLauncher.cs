@@ -11,13 +11,19 @@ public class DialogueLauncher : MonoBehaviour
     
     private bool _hasBeenLaunched;
 
+    public DialogueSequence Sequence
+    {
+        get => _sequence;
+        set => _sequence = value;
+    }
+
     private void Start()
     {
         if (_isLanchedOnStart)
             LaunchDialogue();
     }
 
-    public void LaunchDialogue()
+    public void LaunchDialogue(System.Action onEnd = null)
     {
         if (_hasBeenLaunched && !_isReusable)
             return;
@@ -32,6 +38,6 @@ public class DialogueLauncher : MonoBehaviour
             return;
         }
 
-        displayer.PlaySequence(_sequence);
+        displayer.PlaySequence(_sequence, onEnd);
     }
 }

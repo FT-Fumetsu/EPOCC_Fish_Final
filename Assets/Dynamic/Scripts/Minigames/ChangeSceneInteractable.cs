@@ -10,7 +10,6 @@ namespace Interactables.Scenes
         [SerializeField] private string _sceneToLoad;
         public void OnInteract()
         {
-            Debug.Log("Interact");
             var runMinigame = _changeScene.GetComponent<RunMinigame>();
             runMinigame.minigameSceneName = _sceneToLoad;
             _changeScene.SetActive(true);

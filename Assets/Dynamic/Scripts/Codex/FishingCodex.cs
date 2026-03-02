@@ -27,7 +27,6 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        Debug.Log("[FishingCodex] Initialized");
     }
     
     public void RecordFishCatch(FishData fish)
@@ -77,10 +76,6 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
             {
                 serializedData[lureId] = countByLureDataItem.Value;
             }
-            else
-            {
-                Debug.LogWarning($"Lure {countByLureDataItem.Key.FishName} not found in database, skipping serialization.");
-            }
         }
         
         return serializedData;
@@ -97,16 +92,11 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
                 FishData lure = _fishDatabase[item.Key];
                 _fishCounts[lure] = item.Value;
             }
-            else
-            {
-                Debug.LogWarning($"Lure ID {item.Key} is out of bounds, skipping deserialization.");
-            }
         }
     }
     
     public override void Uninitialize()
     {        
         _fishCounts.Clear();
-        Debug.Log("[FishingCodex] Uninitialized");
     }
 }

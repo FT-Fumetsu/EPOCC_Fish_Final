@@ -8,14 +8,12 @@ namespace UI.Menu
     {
         public void OpenLevel(string levelName)
         {
-            Debug.LogWarning("OPEN LEVEL " + levelName);
             PauseManager.Instance.TogglePause(false);
             SceneManager.LoadScene(levelName);
         }
 
         public void QuitGame()
         {
-            Debug.Log("QUIT GAME !!!");
             Application.Quit();
         }
 
