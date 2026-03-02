@@ -1,21 +1,116 @@
+using System.Collections;
+using Dialogue.Element;
 using Manager.Pause;
-using TMPro;
 using UnityEngine;
+using TMPro;
+using UnityEngine.InputSystem;
 
 public class DialogueDisplayer : MonoBehaviour
 {
     [SerializeField] private GameObject _dialoguePanel;
     [SerializeField] private TextMeshProUGUI _dialogueText;
+    [SerializeField] private TextMeshProUGUI _dialogueSpeakerText;
+    [SerializeField] private float _textDisplayDelay = 0.05f;
+    
+    [Header("Other UI Prefabs"), Tooltip("Les UI qui doivent ne pas apparaître pendant le dialogue")]
+    [SerializeField] private GameObject[] _otherUIPrefabs;
 
-    public void DisplayDialogue(string[] textArray)
+    private DialogueSequence _currentSequence;
+    private int _currentIndex;
+
+    private string _currentText;
+    private GameObject _currentUI;
+
+    private void Start()
     {
-        PauseManager.Instance?.TogglePause(true);
-        _dialoguePanel.SetActive(true);
-        _dialogueText.text = textArray[0];
+        _dialogueText.text = string.Empty;
+
+        foreach (var uiItem in _otherUIPrefabs)
+        {
+            uiItem.SetActive(false);
+        }
+    }
+    
+    private void Update()
+    {
+        if (Pointer.current?.press?.wasPressedThisFrame != true)
+            return;
+
+        if (_currentUI)
+        {
+            Next();
+        }
+        else if (_dialogueText.text == _currentText)
+        {
+            Next();
+        }
+        else
+        {
+            StopAllCoroutines();
+            _dialogueText.text = _currentText;
+        }
     }
 
-    private void UpdateDialogueText()
+    public void PlaySequence(DialogueSequence sequence)
     {
+        _currentSequence = sequence;
+        _currentIndex = 0;
+
+        PauseManager.Instance?.TogglePause(true);
+
+        PlayCurrentElement();
+    }
+
+    private void PlayCurrentElement()
+    {
+        if (_currentIndex >= _currentSequence.elements.Count)
+        {
+            EndDialogue();
+            return;
+        }
+        _dialogueText.text = string.Empty;
+
+        _currentSequence.elements[_currentIndex].Execute(this);
+    }
+
+    public void ShowText(string text, string speaker)
+    {
+        _dialoguePanel.SetActive(true);
+        _dialogueSpeakerText.text = speaker;
+        _currentText = text;
+        StartCoroutine(TypeLine(text));
+    }
+
+    IEnumerator TypeLine(string text)
+    {
+        foreach (char letter in text.ToCharArray())
+        {
+            _dialogueText.text += letter;
+            yield return new WaitForSecondsRealtime(_textDisplayDelay);
+        }
+    }
+
+    public void ShowUI(GameObject uiPrefab)
+    {
+        _dialoguePanel.SetActive(false);
+        _currentUI = Instantiate(uiPrefab);
+    }
+
+    public void Next()
+    {
+        Destroy(_currentUI);
+        _currentIndex++;
+        PlayCurrentElement();
+    }
+
+    private void EndDialogue()
+    {
+        _dialoguePanel.SetActive(false);
+        PauseManager.Instance?.TogglePause(false);
         
+        foreach (var uiItem in _otherUIPrefabs)
+        {
+            uiItem.SetActive(true);
+        }
     }
 }
