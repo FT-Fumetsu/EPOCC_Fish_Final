@@ -1,41 +1,37 @@
+using Dialogue.Element;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class DialogueLauncher : MonoBehaviour
 {
-    [SerializeField, TextArea(2,5)] private string[] _textArray;
-
+    [SerializeField] private DialogueSequence _sequence;
     [SerializeField] private bool _isLanchedOnStart;
-
     [SerializeField] private bool _isReusable;
-    
-    private bool _hasBeenLaunched;
-    
+
     public bool IsReusable => _isReusable;
     
+    private bool _hasBeenLaunched;
+
     private void Start()
     {
-        if (!_isLanchedOnStart)
-            return;
-        
-        LaunchDialogue();
+        if (_isLanchedOnStart)
+            LaunchDialogue();
     }
 
     public void LaunchDialogue()
     {
         if (_hasBeenLaunched && !_isReusable)
             return;
-        
-        _hasBeenLaunched = true;
-        
-        var dialogueDisplayer = FindFirstObjectByType<DialogueDisplayer>();
 
-        if (dialogueDisplayer == null)
+        _hasBeenLaunched = true;
+
+        var displayer = FindFirstObjectByType<DialogueDisplayer>();
+
+        if (displayer == null)
         {
-            Debug.LogError("DialogueLauncher: No DialogueDisplayer found in the scene.");
+            Debug.LogError("No DialogueDisplayer found.");
             return;
         }
-        
-        dialogueDisplayer.DisplayDialogue(_textArray);
+
+        displayer.PlaySequence(_sequence);
     }
 }
