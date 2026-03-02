@@ -11,13 +11,11 @@ namespace Fish.Interactable
         
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("FishInteractable: Trigger entered by " + other.gameObject.name);
             Capture();
         }
 
         private void OnCollisionEnter(Collision collision)
         {
-            Debug.Log("FishInteractable: Collision entered by " + collision.gameObject.name);
             Capture();
         }
 

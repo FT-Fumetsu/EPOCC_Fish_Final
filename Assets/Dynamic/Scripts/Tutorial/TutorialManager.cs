@@ -1,23 +1,46 @@
 using Dialogue.Element;
+using Singletons;
 using UnityEngine;
 
 namespace Tutorial.Manager
 {
-    public class TutorialManager : MonoBehaviour
+    [RequireComponent(typeof(DialogueLauncher))]
+    public class TutorialManager : PersistentMonoSingleton<TutorialManager>
     {
         [SerializeField] private DialogueSequence _tutorialSequence;
 
         [SerializeField] private bool _isTutorialFinished;
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
+        [SerializeField] private bool _isFirstTutorialFinished;
 
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
+        }
+        
+        public bool IsFirstTutorialFinished
+        {
+            get => _isFirstTutorialFinished;
+            set => _isFirstTutorialFinished = value;
+        }
+        
+        public bool IsTutorialFinished
+        {
+            get => _isTutorialFinished;
+            set => _isTutorialFinished = value;
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Start()
         {
-
+            if (_isFirstTutorialFinished)
+                return;
+            
+            var dialogueLauncher = GetComponent<DialogueLauncher>();
+            dialogueLauncher.LaunchDialogue(OnTutorialDialogueEnd);
+        }
+        
+        private void OnTutorialDialogueEnd()
+        {
+            IsFirstTutorialFinished = true;
         }
     }
 }

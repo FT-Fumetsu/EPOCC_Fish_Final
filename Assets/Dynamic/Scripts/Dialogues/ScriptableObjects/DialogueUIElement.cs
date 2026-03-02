@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Dialogue.Element
 {
-    [CreateAssetMenu(fileName = "UIElement", menuName = "ScriptableObjects/UI Element")]
+    [CreateAssetMenu(fileName = "UIElement", menuName = "ScriptableObjects/Dialogue/UI Element")]
     public class DialogueUIElement : DialogueElement
     {
         public GameObject uiPrefab;

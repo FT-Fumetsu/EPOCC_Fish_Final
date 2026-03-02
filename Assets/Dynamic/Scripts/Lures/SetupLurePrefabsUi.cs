@@ -28,11 +28,9 @@ namespace Lure.UI
 
         public void OpenTradePanel()
         {
-            Debug.LogError("Hello");
             
             if(_luresLayout != null)
             {
-                Debug.LogError("OpenTradeUI !!!!!!!!");
                 _luresLayout.LureTradeUi.SetActive(true);
                 _luresLayout.SetTradePanel(_currentLureData);
             }

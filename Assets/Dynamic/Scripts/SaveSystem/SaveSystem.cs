@@ -8,6 +8,7 @@ using Newtonsoft.Json.Serialization;
 using Player;
 using Save.Data;
 using Singletons;
+using Tutorial.Manager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,9 +21,8 @@ namespace Save
         private FishsManager _fishsManager;
         private LureManager _lureManager;
         private FishingCodex _fishingCodex;
-        private DialogueLauncher _tutorialDialogueLauncher;
+        private TutorialManager _tutorialManager;
 
-        // Dernière position connue du joueur (même si PlayerMovements n'est pas présent dans la scène)
         private SerializableVector3 _lastPlayerPosition;
         private bool _hasLastPlayerPosition;
 
@@ -38,10 +38,10 @@ namespace Save
             _fishsManager = (FishsManager)FindFirstObjectByType(typeof(FishsManager));
             _lureManager = (LureManager)FindFirstObjectByType(typeof(LureManager));
             _fishingCodex = (FishingCodex)FindFirstObjectByType(typeof(FishingCodex));
-            DialogueLauncher[] allDialogueLaunchers = FindObjectsByType<DialogueLauncher>(FindObjectsSortMode.None);
-            _tutorialDialogueLauncher = Array.Find(allDialogueLaunchers, dialogueLauncher => !dialogueLauncher.IsReusable);
+            _tutorialManager = (TutorialManager)FindFirstObjectByType(typeof(TutorialManager));
+            // DialogueLauncher[] allDialogueLaunchers = FindObjectsByType<DialogueLauncher>(FindObjectsSortMode.None);
+            // _tutorialDialogueLauncher = Array.Find(allDialogueLaunchers, dialogueLauncher => !dialogueLauncher.IsReusable);
             
-            // initialise
             _lastPlayerPosition = new SerializableVector3(Vector3.zero);
             _hasLastPlayerPosition = false;
 
@@ -63,6 +63,8 @@ namespace Save
                 _lureManager = (LureManager)FindFirstObjectByType(typeof(LureManager));
             if (_fishingCodex == null)
                 _fishingCodex = (FishingCodex)FindFirstObjectByType(typeof(FishingCodex));
+            if(_tutorialManager == null)
+                _tutorialManager = (TutorialManager)FindFirstObjectByType(typeof(TutorialManager));
 
             if (scene.name != "ile_CETTI")
                 return;
@@ -84,7 +86,6 @@ namespace Save
         {
             _playerMovements = playerMovements;
 
-            // Applique la dernière position connue si on en a une
             if (_playerMovements != null && _hasLastPlayerPosition)
             {
                 try
@@ -111,24 +112,9 @@ namespace Save
         [ContextMenu("Save")]
         public void Save()
         {
-            if (_fishsManager == null)
-            {
-                Debug.LogWarning("SaveSystem: FishsManager reference is null. totalFishCount will be null.");
-            }
-            if (_lureManager == null)
-            {
-                Debug.LogWarning("SaveSystem: LureManager reference is null. countByLure will be null.");
-            }
-            if (_fishingCodex == null)
-            {
-                Debug.LogWarning("SaveSystem: FishingCodex reference is null. countByFish will be null.");
-            }
-
-            // Utilise la position du player s'il existe sinon fallback sur la dernière position connue (ou zéro)
             SerializableVector3 positionToSave;
-            if (_playerMovements != null)
+            if (_playerMovements)
             {
-                Debug.LogWarning("Hello");
                 positionToSave = new SerializableVector3(_playerMovements.transform.position);
             }
             else if (_hasLastPlayerPosition)
@@ -139,9 +125,11 @@ namespace Save
             SaveData data = new()
             {
                 playerPosition = positionToSave,
-                totalFishCount = _fishsManager != null ? _fishsManager.FishsCount : 0,
-                countByLure = _lureManager != null ? _lureManager.Serialize() : new Dictionary<int, int>(),
-                countByFish = _fishingCodex != null ? _fishingCodex.Serialize() : new Dictionary<int, int>()
+                totalFishCount = _fishsManager ? _fishsManager.FishsCount : 0,
+                countByLure = _lureManager ? _lureManager.Serialize() : new Dictionary<int, int>(),
+                countByFish = _fishingCodex ? _fishingCodex.Serialize() : new Dictionary<int, int>(),
+                isFirstTutorialFinished = _tutorialManager && _tutorialManager.IsFirstTutorialFinished,
+                isTutorialDialogueFinished = _tutorialManager && _tutorialManager.IsTutorialFinished,
             };
             
             try
@@ -157,7 +145,6 @@ namespace Save
                 using FileStream stream = new(_filePath, FileMode.Create);
                 using StreamWriter writer = new(stream);
                 writer.Write(json);
-                Debug.Log($"Save Succeed : {_filePath}");
             }
             catch (Exception ex)
             {
@@ -172,7 +159,6 @@ namespace Save
             {
                 if (!File.Exists(_filePath))
                 {
-                    Debug.LogError($"JSON Deserialisation Error: Could not find file \"{_filePath}\"");
                     return;
                 }
 
@@ -183,47 +169,39 @@ namespace Save
 
                 if (data == null)
                 {
-                    Debug.LogError("SaveSystem: Loaded SaveData is null.");
                     return;
                 }
 
-                // Sauvegarde la position chargée dans _lastPlayerPosition (au cas où le player n'est pas encore présent)
                 _lastPlayerPosition = data.playerPosition;
                 _hasLastPlayerPosition = true;
 
                 if (_playerMovements != null)
                 {
-                    Debug.LogWarning(data.playerPosition.ToVector3());
-                    // Utiliser ApplyLoadedPosition pour s'assurer que le rigidbody est mis à jour proprement
                     try
                     {
                         _playerMovements.ApplyLoadedPosition(data.playerPosition.ToVector3());
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        Debug.LogWarning($"SaveSystem: failed to apply loaded position via ApplyLoadedPosition: {ex.Message}");
                         _playerMovements.transform.position = data.playerPosition.ToVector3();
                     }
                 }
-                else
-                    Debug.LogWarning("SaveSystem: PlayerMovements reference is null when loading - player position saved for later application.");
+                
 
                 if (_fishsManager != null)
                     _fishsManager.FishsCount = data.totalFishCount;
-                else
-                    Debug.LogWarning("SaveSystem: FishsManager reference is null when loading - totalFishCount not applied.");
 
                 if (_lureManager != null)
                     _lureManager.Deserialize(data.countByLure);
-                else
-                    Debug.LogWarning("SaveSystem: LureManager reference is null when loading - countByLure not applied.");
 
                 if (_fishingCodex != null)
                     _fishingCodex.Deserialize(data.countByFish);
-                else
-                    Debug.LogWarning("SaveSystem: FishingCodex reference is null when loading - countByFish not applied.");
 
-                Debug.Log($"Load Succed : {_filePath}");
+                if (_tutorialManager != null)
+                {
+                    _tutorialManager.IsFirstTutorialFinished = data.isFirstTutorialFinished;
+                    _tutorialManager.IsTutorialFinished = data.isTutorialDialogueFinished;
+                }
             }
             catch (Exception ex)
             {

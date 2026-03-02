@@ -25,14 +25,12 @@ namespace Debugging
             QueryTriggerInteraction qti = includeTriggers ? QueryTriggerInteraction.Collide : QueryTriggerInteraction.Ignore;
             _lastFound = Physics.OverlapSphere(transform.position, radius, layerMask, qti);
 
-            Debug.Log($"[OverlapDebug] Position: {transform.position}, radius: {radius}, found: {_lastFound.Length}");
 
             for (int i = 0; i < _lastFound.Length; i++)
             {
                 var c = _lastFound[i];
                 if (c == null) continue;
                 var rb = c.attachedRigidbody;
-                Debug.Log($"[OverlapDebug] Collider {i}: name={c.name}, type={c.GetType().Name}, isTrigger={c.isTrigger}, layer={LayerMask.LayerToName(c.gameObject.layer)}, attachedRigidbody={(rb != null ? rb.name : "null")}", c);
             }
 
             // visualisation simple : ligne vers le bas et sphere
@@ -46,7 +44,6 @@ namespace Debugging
             {
                 if (c != null)
                 {
-                    Debug.Log($"[OverlapDebug] Désactivation temporaire du collider: {c.name} (isTrigger={c.isTrigger})", c);
                     c.enabled = false;
                 }
             }

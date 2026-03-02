@@ -14,7 +14,8 @@ namespace Save.Data
         public Dictionary<int, int> countByLure;
         public Dictionary<int, int> countByFish;
         
-        public bool isTutorialDialogueLaunched;
+        public bool isFirstTutorialFinished;
+        public bool isTutorialDialogueFinished;
     }
 
     [System.Serializable]

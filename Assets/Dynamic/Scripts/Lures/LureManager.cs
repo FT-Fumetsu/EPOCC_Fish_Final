@@ -15,7 +15,6 @@ namespace Manager.Lure
         protected override void OnInitialized()
         {
             base.OnInitialized();
-            Debug.Log("[LureManager] Initialized");
         }
 
         public void AddLure(LureData lure, int amount = 1)
@@ -26,7 +25,6 @@ namespace Manager.Lure
                 _lureCounts[lure] = 0;
 
             _lureCounts[lure] += amount;
-            Debug.Log($"Ajout� {amount}x {lure.LureName}. Total : {_lureCounts[lure]}");
         }
 
         public bool HasLure(LureData lure)
@@ -47,7 +45,6 @@ namespace Manager.Lure
                 return false;
 
             _lureCounts[lure]--;
-            Debug.Log($"Utilisé 1x {lure.LureName}. Il en reste : {_lureCounts[lure]}");
 
             return true;
         }
@@ -64,12 +61,6 @@ namespace Manager.Lure
         {
             return new List<LureData>(_lureCounts.Keys);
         }
-        
-
-        public void Test()
-        {
-            Debug.Log(HasAnyLure() ? "Has any lure !" : "Has no lures !");
-        }
 
         public Dictionary<int, int> Serialize()
         {
@@ -81,10 +72,6 @@ namespace Manager.Lure
                 if (lureId >= 0)
                 {
                     serializedData[lureId] = countByLureDataItem.Value;
-                }
-                else
-                {
-                    Debug.LogWarning($"Lure {countByLureDataItem.Key.LureName} not found in database, skipping serialization.");
                 }
             }
             
@@ -102,17 +89,12 @@ namespace Manager.Lure
                     LureData lure = _lureDatabase[item.Key];
                     _lureCounts[lure] = item.Value;
                 }
-                else
-                {
-                    Debug.LogWarning($"Lure ID {item.Key} is out of bounds, skipping deserialization.");
-                }
             }
         }
 
         public override void Uninitialize()
         {
             _lureCounts.Clear();
-            Debug.Log("[LureManager] Uninitialized");
         }
     }
 }

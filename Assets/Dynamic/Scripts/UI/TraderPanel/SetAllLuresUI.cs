@@ -49,7 +49,6 @@ namespace UI.TraderPanel
 
             if(_luresLayoutGroup == null || _lureUIPrefab == null || _lureDatas.Length == 0)
             {
-                //Debug.LogWarning("SetAllLuresUI: Missing references or no lure data available.");
                 return;
             }
             
@@ -89,14 +88,12 @@ namespace UI.TraderPanel
             _numberOfLuresToSell = 1;
             _numberOfLuresText.text = _numberOfLuresToSell.ToString();
             _currentFishPrice = data.LurePrice;
-            //Debug.Log("Prix = " + data.LurePrice);
         }
 
         public void AcceptTrade()
         {
             if(_currentFishPrice > FishsManager.Instance.FishsCount)
             {
-                //Debug.LogWarning("SetAllLuresUI: Not enough fish to complete the trade.");
                 return;
             }
 

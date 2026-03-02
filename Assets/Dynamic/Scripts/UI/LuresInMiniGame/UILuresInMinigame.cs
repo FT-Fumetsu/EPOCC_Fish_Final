@@ -81,12 +81,7 @@ namespace UI.Lures
                
                CheckAllLures(true);
                CheckLureButton(true);
-               // Debug.Log($"Appât utilisé : {(lure != null ? lure.LureName : "Unknown")}");
            }
-           // else
-           // {
-           //     Debug.LogWarning($"Impossible d'utiliser l'appât : {(lure != null ? lure.LureName : "Unknown")}");
-           // }
        }
    
        private void CheckLureButton(bool lureUsed)
@@ -120,9 +115,7 @@ namespace UI.Lures
                    count = LureManager.Instance.GetLureCount(lureButtonItem.lure);
    
                bool shouldBeActive = count > 0;
-               Debug.Log(count);
                lureButtonItem.button.SetActive(shouldBeActive);
-               //Debug.Log($"Lure: {(lureButtonItem.lure != null ? lureButtonItem.lure.LureName : "Unknown")}, Count: {count}, ButtonActive: {shouldBeActive}");
            }
        }
    } 

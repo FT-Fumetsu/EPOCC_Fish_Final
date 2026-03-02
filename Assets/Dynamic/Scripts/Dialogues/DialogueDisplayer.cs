@@ -18,17 +18,15 @@ public class DialogueDisplayer : MonoBehaviour
     private DialogueSequence _currentSequence;
     private int _currentIndex;
 
+    // Callback invoked when the current sequence ends
+    private System.Action _onDialogueEnd;
+
     private string _currentText;
     private GameObject _currentUI;
 
     private void Start()
     {
         _dialogueText.text = string.Empty;
-
-        foreach (var uiItem in _otherUIPrefabs)
-        {
-            uiItem.SetActive(false);
-        }
     }
     
     private void Update()
@@ -51,10 +49,17 @@ public class DialogueDisplayer : MonoBehaviour
         }
     }
 
-    public void PlaySequence(DialogueSequence sequence)
+    public void PlaySequence(DialogueSequence sequence, System.Action onEnd = null)
     {
+        foreach (var uiItem in _otherUIPrefabs)
+        {
+            uiItem.SetActive(false);
+        }
+        
         _currentSequence = sequence;
         _currentIndex = 0;
+
+        _onDialogueEnd = onEnd;
 
         PauseManager.Instance?.TogglePause(true);
 
@@ -112,5 +117,9 @@ public class DialogueDisplayer : MonoBehaviour
         {
             uiItem.SetActive(true);
         }
+
+        // Invoke the optional end callback and clear it
+        _onDialogueEnd?.Invoke();
+        _onDialogueEnd = null;
     }
 }
