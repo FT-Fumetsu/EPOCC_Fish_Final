@@ -17,12 +17,10 @@ MonoBehaviour:
   _fishName: BlennisPavo
   _fishSize: 8-12CM
   _fishFood: "Crustac\xE9s, Vers marins, Algues"
-  _description: "On trouve cette esp\xE8ce principalement dnas des zones c\xF4ti\xE8res
-    peu profondes, souvent entre 0 et 10 m\xE8tres de  profondeur.  C\u2019est un
-    poisson territorial. La blennie paon est un poisson de petite taille,mesurant
-    g\xE9n\xE9ralement 8 \xE0 12 cm de long, une coloration excellente pour se camoufl\xE9
-    sur les rochers. Une t\xEAte large avec de gros yeux. Une bouche aux l\xE8vres
-    \xE9paisses."
+  _description: "On trouve ce poisson dans des zones c\xF4ti\xE8res peu profondes,
+    entre 0 et 10 m\xE8tres de  profondeur.  C\u2019est un poisson territorial, il
+    peut se camoufler sur les rochers. il a une t\xEAte large avec de gros yeux et
+    une bouche aux l\xE8vres \xE9paisses."
   _luresToUnlock:
   - {fileID: 11400000, guid: 85a463850de9b2145863d0e8b0643ad0, type: 2}
   - {fileID: 11400000, guid: a9648a603841f15498b077b4c256852a, type: 2}
