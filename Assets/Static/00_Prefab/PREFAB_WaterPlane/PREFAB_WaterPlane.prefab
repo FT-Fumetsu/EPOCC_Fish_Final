@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c18217fa8dd58a0478389d93580d4cf3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.3
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c18217fa8dd58a0478389d93580d4cf3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -95,7 +95,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: c18217fa8dd58a0478389d93580d4cf3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 815b3a26ca0f80e4f98bedd7f4eef2f3, type: 2}
+      objectReference: {fileID: 2100000, guid: 40eccbc5532b6da4ca8621a24fb92e7f, type: 2}
     - target: {fileID: 919132149155446097, guid: c18217fa8dd58a0478389d93580d4cf3, type: 3}
       propertyPath: m_Name
       value: SHADER_Plane_Water
