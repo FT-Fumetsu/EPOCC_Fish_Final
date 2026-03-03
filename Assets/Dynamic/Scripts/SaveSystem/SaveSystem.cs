@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using Inventory;
 using Manager.Fishs;
 using Manager.Lure;
 using Newtonsoft.Json;
@@ -22,6 +23,7 @@ namespace Save
         private LureManager _lureManager;
         private FishingCodex _fishingCodex;
         private TutorialManager _tutorialManager;
+        private InventoryManager _inventoryManager;
 
         private SerializableVector3 _lastPlayerPosition;
         private bool _hasLastPlayerPosition;
@@ -39,6 +41,7 @@ namespace Save
             _lureManager = (LureManager)FindFirstObjectByType(typeof(LureManager));
             _fishingCodex = (FishingCodex)FindFirstObjectByType(typeof(FishingCodex));
             _tutorialManager = (TutorialManager)FindFirstObjectByType(typeof(TutorialManager));
+            _inventoryManager = (InventoryManager)FindFirstObjectByType(typeof(InventoryManager));
             // DialogueLauncher[] allDialogueLaunchers = FindObjectsByType<DialogueLauncher>(FindObjectsSortMode.None);
             // _tutorialDialogueLauncher = Array.Find(allDialogueLaunchers, dialogueLauncher => !dialogueLauncher.IsReusable);
             
@@ -65,6 +68,8 @@ namespace Save
                 _fishingCodex = (FishingCodex)FindFirstObjectByType(typeof(FishingCodex));
             if(_tutorialManager == null)
                 _tutorialManager = (TutorialManager)FindFirstObjectByType(typeof(TutorialManager));
+            if(_inventoryManager == null)
+                _inventoryManager = (InventoryManager)FindFirstObjectByType(typeof(InventoryManager));
 
             if (scene.name != "ile_CETTI")
                 return;
@@ -79,9 +84,6 @@ namespace Save
             }
         }
 
-        /// <summary>
-        /// Called by Player when it is available. We record the reference and apply last known position if we have one.
-        /// </summary>
         public void SetPlayerMovements(PlayerMovements playerMovements)
         {
             _playerMovements = playerMovements;
@@ -99,10 +101,6 @@ namespace Save
             }
         }
 
-        /// <summary>
-        /// Permet aux autres scripts (ex: PlayerMovements) d'indiquer la position actuelle du joueur.
-        /// Utile pour garder une position quand le Player n'est pas présent dans la scène où on veut sauvegarder.
-        /// </summary>
         public void UpdatePlayerPosition(Vector3 pos)
         {
             _lastPlayerPosition = new SerializableVector3(pos);
@@ -130,6 +128,7 @@ namespace Save
                 countByFish = _fishingCodex ? _fishingCodex.Serialize() : new Dictionary<int, int>(),
                 isFirstTutorialFinished = _tutorialManager && _tutorialManager.IsFirstTutorialFinished,
                 isTutorialDialogueFinished = _tutorialManager && _tutorialManager.IsTutorialFinished,
+                isInventoryTutorialFinished = _inventoryManager && _inventoryManager.IsTutorialFinished
             };
             
             try
@@ -202,6 +201,8 @@ namespace Save
                     _tutorialManager.IsFirstTutorialFinished = data.isFirstTutorialFinished;
                     _tutorialManager.IsTutorialFinished = data.isTutorialDialogueFinished;
                 }
+                if(_inventoryManager != null)
+                    _inventoryManager.IsTutorialFinished = data.isInventoryTutorialFinished;
             }
             catch (Exception ex)
             {

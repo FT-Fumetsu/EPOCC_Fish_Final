@@ -16,6 +16,8 @@ namespace Save.Data
         
         public bool isFirstTutorialFinished;
         public bool isTutorialDialogueFinished;
+        
+        public bool isInventoryTutorialFinished;
     }
 
     [System.Serializable]

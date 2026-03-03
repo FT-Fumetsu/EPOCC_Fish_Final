@@ -48,7 +48,7 @@ namespace Interactables.Trader
             }
         }
 
-        private void OpenTradeUi()
+        public void OpenTradeUi()
         {
             if (!_tradeUi) 
                 return;
@@ -62,7 +62,7 @@ namespace Interactables.Trader
             }
         }
 
-        private void OpenCodexUi()
+        public void OpenCodexUi()
         {
             _tradeOrCodexChoiceUi.SetActive(false);
             _codexUi.SetActive(true);
@@ -72,6 +72,11 @@ namespace Interactables.Trader
         {
             if (!_tradeOrCodexChoiceUi)
                 return;
+            
+            if (_mobileControls)
+            {
+                _mobileControls.SetActive(false);
+            }
             
             _tradeOrCodexChoiceUi.SetActive(true);
         }
