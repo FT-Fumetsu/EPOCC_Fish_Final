@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2645de57b99f2574e999b8814450c35b, type: 3}
+  m_Name: WhackAMoleSequence
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue.Element.DialogueSequence
+  elements:
+  - {fileID: 11400000, guid: 0953f1a8aa7fdec42970b78810bf7454, type: 2}
+  - {fileID: 11400000, guid: 5d3375f8e1c196d4297e401543bf5fef, type: 2}
