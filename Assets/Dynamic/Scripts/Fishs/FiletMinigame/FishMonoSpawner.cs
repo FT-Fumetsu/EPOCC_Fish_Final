@@ -24,7 +24,7 @@ namespace Fishs.Spawner
         [SerializeField] private float _minDelay;
         [SerializeField] private float _maxDelay;
 
-        private void Start()
+        public void StartSpawning()
         {
             StartCoroutine(SpawnRoutine());
         }
