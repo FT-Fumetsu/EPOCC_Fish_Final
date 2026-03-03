@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbbee9ce03178614a9358d1c5d78f10e, type: 3}
   m_Name: RobertTuto 7
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue.Element.DialogueUIElement
-  uiPrefab: {fileID: 4945872865835039350, guid: 5c51d5c7ffdd2724c96d4b45ad6ef8c5, type: 3}
+  uiPrefab: {fileID: 3976282278060454892, guid: f1e8befa1944a3c4ea2fff4d38b0afba, type: 3}
