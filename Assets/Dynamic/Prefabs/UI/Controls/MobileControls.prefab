@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7681848343820957019}
   - component: {fileID: 4224056937029408480}
   - component: {fileID: 5422853418716072045}
+  - component: {fileID: 7738765498836201027}
+  - component: {fileID: 6799277083572865110}
   m_Layer: 5
   m_Name: InventoryButton
   m_TagString: Untagged
@@ -120,22 +122,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 8077670870100714422}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 7738765498836201027}
+        m_TargetAssemblyTypeName: Inventory.InventoryButton, Assembly-CSharp
+        m_MethodName: OnButtonPressed
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -144,6 +134,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7738765498836201027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808520362722134062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc719a551f94f8fbb1c3a3db088dc22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory.InventoryButton
+  _inventoryPanel: {fileID: 0}
+--- !u!114 &6799277083572865110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808520362722134062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0676c982045b10b468bea7ef77fc785b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueLauncher
+  _sequence: {fileID: 11400000, guid: 78386b606bdbee9489816d96c7d7bf92, type: 2}
+  _isLanchedOnStart: 0
+  _isReusable: 0
 --- !u!1 &1028816358878913771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,7 +1859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8516145454345454331
 RectTransform:
   m_ObjectHideFlags: 0

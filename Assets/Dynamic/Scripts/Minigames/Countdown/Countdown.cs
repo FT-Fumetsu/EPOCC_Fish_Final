@@ -12,8 +12,19 @@ namespace Minigames.Countdown
 
         [SerializeField] private GameObject _endPanel;
 
-        void Update()
+        private bool _isGameStarted;
+
+        public bool IsGameStarted
         {
+            get => _isGameStarted;
+            set => _isGameStarted = value;
+        }
+
+        private void Update()
+        {
+            if(!_isGameStarted)
+                return;
+            
             switch (_remainingTime)
             {
                 case > 0:

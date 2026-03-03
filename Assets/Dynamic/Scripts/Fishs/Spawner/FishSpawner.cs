@@ -29,8 +29,8 @@ namespace Fish.Spawner
         [Header("Gizmos")]
         [SerializeField] private float gizmoRadius = 20f;
         [SerializeField] private int gizmoSegments = 32;
-
-        private void Start()
+        
+        public void StartSpawning()
         {
             StartCoroutine(SpawnRoutine());
         }

@@ -7,15 +7,8 @@ namespace Tutorial.Manager
     [RequireComponent(typeof(DialogueLauncher))]
     public class TutorialManager : PersistentMonoSingleton<TutorialManager>
     {
-        [SerializeField] private DialogueSequence _tutorialSequence;
-
         [SerializeField] private bool _isTutorialFinished;
         [SerializeField] private bool _isFirstTutorialFinished;
-
-        protected override void OnInitialized()
-        {
-            base.OnInitialized();
-        }
         
         public bool IsFirstTutorialFinished
         {

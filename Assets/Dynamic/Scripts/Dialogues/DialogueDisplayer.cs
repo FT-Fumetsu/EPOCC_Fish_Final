@@ -28,26 +28,6 @@ public class DialogueDisplayer : MonoBehaviour
     {
         _dialogueText.text = string.Empty;
     }
-    
-    private void Update()
-    {
-        if (Pointer.current?.press?.wasPressedThisFrame != true)
-            return;
-
-        if (_currentUI)
-        {
-            Next();
-        }
-        else if (_dialogueText.text == _currentText)
-        {
-            Next();
-        }
-        else
-        {
-            StopAllCoroutines();
-            _dialogueText.text = _currentText;
-        }
-    }
 
     public void PlaySequence(DialogueSequence sequence, System.Action onEnd = null)
     {
@@ -121,5 +101,22 @@ public class DialogueDisplayer : MonoBehaviour
         // Invoke the optional end callback and clear it
         _onDialogueEnd?.Invoke();
         _onDialogueEnd = null;
+    }
+
+    public void TryToSkipDialogue()
+    {
+        if (_currentUI)
+        {
+            Next();
+        }
+        else if (_dialogueText.text == _currentText)
+        {
+            Next();
+        }
+        else
+        {
+            StopAllCoroutines();
+            _dialogueText.text = _currentText;
+        }
     }
 }

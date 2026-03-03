@@ -1,16 +1,18 @@
+using System;
+using Singletons;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class InventoryManager : MonoBehaviour
+namespace Inventory
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class InventoryManager : PersistentMonoSingleton<InventoryManager>
     {
+        [SerializeField] private bool _isTutorialFinished;
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public bool IsTutorialFinished
+        {
+            get => _isTutorialFinished;
+            set => _isTutorialFinished = value;
+        }
     }
 }

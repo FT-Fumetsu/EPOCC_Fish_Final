@@ -24,7 +24,7 @@ namespace UI.Lures
        [SerializeField] private GameObject luresButton;
        [SerializeField] private List<LureButtonEntry> lureButtons = new();
        
-       void Start()
+       private void Start()
        {
            CheckLureButton(false);
            SetupButtons();
