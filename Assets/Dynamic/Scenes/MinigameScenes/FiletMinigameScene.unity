@@ -5663,7 +5663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0676c982045b10b468bea7ef77fc785b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLauncher
-  _sequence: {fileID: 11400000, guid: 38fbbea61585a6145bbe7f2e2b73bece, type: 2}
+  _sequence: {fileID: 11400000, guid: 8cf4e988191dba84b97736073cfbd1b3, type: 2}
   _isLanchedOnStart: 0
   _isReusable: 0
 --- !u!4 &733771622
