@@ -16,6 +16,11 @@ namespace Minigames.Countdown
         [Tooltip("Prefab VFX à instancier quand le timer se termine")]
         [SerializeField] private GameObject _endVfxPrefab;
 
+        [Header("SFX")]
+        [Tooltip("SFX joué quand le timer se termine (sera lancé avant la mise en pause)")]
+        [SerializeField] private AudioClip _endSfx;
+        [Range(0f,1f), SerializeField] private float _endSfxVolume = 1f;
+
         private bool _isGameStarted;
 
         public bool IsGameStarted
@@ -65,8 +70,14 @@ namespace Minigames.Countdown
             {
                 var vfx = Instantiate(_endVfxPrefab, transform.position, Quaternion.identity);
                 
-                var play = vfx.GetComponent<global::VFX.PlayVFX>();
+                var play = vfx.GetComponent<VFX.PlayVFX>();
                 play?.Play();
+            }
+            
+            if (_endSfx != null)
+            {
+                var pos = Camera.main != null ? Camera.main.transform.position : transform.position;
+                PlaySFX.PlayClipAtPosition(_endSfx, pos, Mathf.Clamp01(_endSfxVolume), true, true);
             }
             
             Save.SaveSystem.Instance?.Save();

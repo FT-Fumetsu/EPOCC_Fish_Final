@@ -8332,6 +8332,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Scenes.ChangeSceneInteractable
   _changeScene: {fileID: 629749649}
   _sceneToLoad: FiletMinigameScene
+  _runSfx: {fileID: 8300000, guid: 2d52f5966c761004b91241875bcc0669, type: 3}
+  _sfxVolume: 1
 --- !u!65 &777959468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9597,6 +9599,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Scenes.ChangeSceneInteractable
   _changeScene: {fileID: 629749649}
   _sceneToLoad: TapTaupeScene
+  _runSfx: {fileID: 8300000, guid: eef0a0c9368a5984ea59e01be3cc4ded, type: 3}
+  _sfxVolume: 1
 --- !u!65 &882412432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10735,6 +10739,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Scenes.ChangeSceneInteractable
   _changeScene: {fileID: 629749649}
   _sceneToLoad: TapTaupeScene
+  _runSfx: {fileID: 8300000, guid: eef0a0c9368a5984ea59e01be3cc4ded, type: 3}
+  _sfxVolume: 1
 --- !u!65 &993156555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11350,6 +11356,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Scenes.ChangeSceneInteractable
   _changeScene: {fileID: 629749649}
   _sceneToLoad: TapTaupeScene
+  _runSfx: {fileID: 8300000, guid: eef0a0c9368a5984ea59e01be3cc4ded, type: 3}
+  _sfxVolume: 1
 --- !u!65 &1043800318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12801,6 +12809,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Scenes.ChangeSceneInteractable
   _changeScene: {fileID: 629749649}
   _sceneToLoad: TapTaupeScene
+  _runSfx: {fileID: 8300000, guid: eef0a0c9368a5984ea59e01be3cc4ded, type: 3}
+  _sfxVolume: 1
 --- !u!65 &1169526089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14024,6 +14034,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Scenes.ChangeSceneInteractable
   _changeScene: {fileID: 629749649}
   _sceneToLoad: FiletMinigameScene
+  _runSfx: {fileID: 8300000, guid: 2d52f5966c761004b91241875bcc0669, type: 3}
+  _sfxVolume: 1
 --- !u!65 &1245068468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17341,6 +17353,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Scenes.ChangeSceneInteractable
   _changeScene: {fileID: 629749649}
   _sceneToLoad: TapTaupeScene
+  _runSfx: {fileID: 8300000, guid: eef0a0c9368a5984ea59e01be3cc4ded, type: 3}
+  _sfxVolume: 1
 --- !u!65 &1525304559
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21484,6 +21498,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Scenes.ChangeSceneInteractable
   _changeScene: {fileID: 629749649}
   _sceneToLoad: FiletMinigameScene
+  _runSfx: {fileID: 8300000, guid: 2d52f5966c761004b91241875bcc0669, type: 3}
+  _sfxVolume: 1
 --- !u!65 &1888615179
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -5340,35 +5340,35 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1498686220}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 204.95009
+      value: 74.38197
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 204.95009
+      value: 74.38197
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 204.95009
+      value: 74.38198
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0359302
+      value: -4.415161
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26703
+      value: 1.0859851
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.18161
+      value: 0.2923584
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9904344
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5380,7 +5380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.13798466
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5400,9 +5400,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3792935f22a47494fac16ef769fe78c4, type: 2}
     - target: {fileID: 919132149155446097, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
       propertyPath: m_Name
-      value: PROP_Bush_A
+      value: Sound
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5754084199372789682, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
+    - {fileID: -7511558181221131132, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5410,11 +5412,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 694985815}
   m_SourcePrefab: {fileID: 100100000, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
---- !u!4 &694985814 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1d22fe08662d73444a3f9cd90b45be7f, type: 3}
-  m_PrefabInstance: {fileID: 694985813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!82 &694985815
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5424,7 +5421,7 @@ AudioSource:
   m_GameObject: {fileID: 145513837}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7493892554421982001, guid: f8e05a1df1c79da46850ea550ff9e788, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: f42cc549e05ba744196e980b78e55056, type: 3}
   m_PlayOnAwake: 1
@@ -12356,7 +12353,6 @@ Transform:
   m_LocalScale: {x: 0.36292726, y: 0.36292726, z: 0.3629273}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 694985814}
   - {fileID: 310569247}
   - {fileID: 42766483}
   - {fileID: 440460758}
@@ -12889,7 +12885,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 287644370239002267, guid: c0760ccee6afc0841a41e94f36d91f06, type: 3}
       propertyPath: m_Name
-      value: PROP_BigRocher_02
+      value: Sound 2
       objectReference: {fileID: 0}
     - target: {fileID: 627754804882230305, guid: c0760ccee6afc0841a41e94f36d91f06, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12953,11 +12949,11 @@ AudioSource:
   m_GameObject: {fileID: 1054513281}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7493892554421982001, guid: f8e05a1df1c79da46850ea550ff9e788, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d1f397befc305904e84036fd49e32f9d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -18888,3 +18884,4 @@ SceneRoots:
   - {fileID: 597508418}
   - {fileID: 733771622}
   - {fileID: 2112202520}
+  - {fileID: 694985813}

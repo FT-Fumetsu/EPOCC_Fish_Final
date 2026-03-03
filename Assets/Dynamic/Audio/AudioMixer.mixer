@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-8745619073105698605
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 78b0c1ed351472d4ca9ef604112b1d4b
+  m_EffectName: Attenuation
+  m_MixLevel: ddf2dd6066742344398ec3bdd3147dea
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!243 &-7493892554421982001
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TapTaupe
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: f7311d962dfde7b48a10c39d07c7c0b9
+  m_Children: []
+  m_Volume: feb76d0055a603447989ba3eb505cefe
+  m_Pitch: 387133edeb2401d42b17ca59756b238c
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -8745619073105698605}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -19,6 +52,7 @@ AudioMixerController:
   m_AudioMixerGroupViews:
   - guids:
     - cd9127d7b7e58b440aa592d27e90f3b4
+    - f7311d962dfde7b48a10c39d07c7c0b9
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -31,7 +65,8 @@ AudioMixerGroupController:
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: cd9127d7b7e58b440aa592d27e90f3b4
-  m_Children: []
+  m_Children:
+  - {fileID: -7493892554421982001}
   m_Volume: c2c07a0e6f9ab5044b7f89764faf383b
   m_Pitch: 18e8f89130775df4f965bf142dfffd3c
   m_Send: 00000000000000000000000000000000
@@ -65,5 +100,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: e3685f63722a6fb47bbc4d1a2decedbd
   m_FloatValues:
-    c2c07a0e6f9ab5044b7f89764faf383b: -80
+    feb76d0055a603447989ba3eb505cefe: -8.362404
+    7f6bf88c818b38541abd1282edc65f02: -8.048952
+    c2c07a0e6f9ab5044b7f89764faf383b: -0.010310441
   m_TransitionOverrides: {}

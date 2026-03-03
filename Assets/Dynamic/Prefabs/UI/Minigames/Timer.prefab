@@ -118,6 +118,9 @@ MonoBehaviour:
   _countdownText: {fileID: 5365739124963237185}
   _remainingTime: 30
   _endPanel: {fileID: 0}
+  _endVfxPrefab: {fileID: 0}
+  _endSfx: {fileID: 8300000, guid: 95a60ec63ff64eb4ea6be709f3d55201, type: 3}
+  _endSfxVolume: 1
 --- !u!1 &8426345392487072374
 GameObject:
   m_ObjectHideFlags: 0
