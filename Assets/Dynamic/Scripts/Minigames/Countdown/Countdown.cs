@@ -11,6 +11,10 @@ namespace Minigames.Countdown
         [SerializeField] private float _remainingTime;
 
         [SerializeField] private GameObject _endPanel;
+        
+        [Header("VFX")]
+        [Tooltip("Prefab VFX à instancier quand le timer se termine")]
+        [SerializeField] private GameObject _endVfxPrefab;
 
         private bool _isGameStarted;
 
@@ -56,6 +60,14 @@ namespace Minigames.Countdown
 
             if (_endPanel.activeSelf)
                 return;
+
+            if (_endVfxPrefab != null)
+            {
+                var vfx = Instantiate(_endVfxPrefab, transform.position, Quaternion.identity);
+                
+                var play = vfx.GetComponent<global::VFX.PlayVFX>();
+                play?.Play();
+            }
             
             Save.SaveSystem.Instance?.Save();
             

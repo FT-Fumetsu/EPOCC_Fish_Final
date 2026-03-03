@@ -20649,7 +20649,7 @@ GameObject:
   - component: {fileID: 1797919172}
   - component: {fileID: 1797919170}
   m_Layer: 0
-  m_Name: InevntoryManager
+  m_Name: InventoryManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23898,13 +23898,13 @@ AudioSource:
   m_GameObject: {fileID: 2097177041}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: f8e05a1df1c79da46850ea550ff9e788, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d1f397befc305904e84036fd49e32f9d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.671
+  m_Volume: 0
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
