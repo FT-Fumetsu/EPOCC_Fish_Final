@@ -368,7 +368,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Anne-Sophie Le \r\nJade Rousse\nDamien Esmieu  \nFabio Barbato\r\nNaomi
-    Trules\nMaelle Paccalet  \r\nMohamed Hattab \nEvann "
+    Trules\nMaelle Paccalet  \r\nMohamed Hattab \nEvann Rohart"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
   m_sharedMaterial: {fileID: 2421999939311194209, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}

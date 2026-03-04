@@ -886,6 +886,10 @@ PrefabInstance:
       propertyPath: masterSlider
       value: 
       objectReference: {fileID: 1013310154}
+    - target: {fileID: 1310254464540347896, guid: 8227c7f78c480d445ac7b98356337d4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1673220191937453406, guid: 8227c7f78c480d445ac7b98356337d4d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
