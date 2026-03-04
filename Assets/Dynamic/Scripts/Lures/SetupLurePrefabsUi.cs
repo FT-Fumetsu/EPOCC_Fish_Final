@@ -21,7 +21,7 @@ namespace Lure.UI
         {
             _currentLureData = data;
             _luresLayout = luresLayout;
-            _lureIcon.sprite = data.LureIcon;
+            _lureIcon.sprite = data.LureIconWithPrice;
             _lureCost = data.LurePrice;
             _lurePrice.text = (data.LurePrice.ToString());
         }

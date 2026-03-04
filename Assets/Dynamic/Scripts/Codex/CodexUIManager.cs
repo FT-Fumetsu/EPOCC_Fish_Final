@@ -133,7 +133,7 @@ public class CodexUIManager : MonoBehaviour
             GameObject lureIcon = new GameObject("LureIcon", typeof(Image));
             lureIcon.transform.SetParent(_luresToCatchThisFish.transform, false);
             Image img = lureIcon.GetComponent<Image>();
-            img.sprite = lureItem.LureIcon;
+            img.sprite = lureItem.LureIconWithoutPrice;
         }
     }
     
