@@ -86,9 +86,6 @@ public class AudioSettingsStore : PersistentMonoSingleton<AudioSettingsStore>
 
     public void LoadAll()
     {
-        bool result = audioMixer.SetFloat(musicParam, VolumeToDecibels(music));
-        Debug.Log("Set music result: " + result);
-        
         music = PlayerPrefs.GetFloat(MusicKey, 1f);
         sfx = PlayerPrefs.GetFloat(SfxKey, 1f);
         master = PlayerPrefs.GetFloat(MasterKey, 1f);
@@ -99,10 +96,5 @@ public class AudioSettingsStore : PersistentMonoSingleton<AudioSettingsStore>
             ApplyParam(sfxParam, sfx);
             ApplyParam(masterParam, master);
         }
-        
-        Debug.Log("Music param after set:");
-        float test;
-        audioMixer.GetFloat(musicParam, out test);
-        Debug.Log(test);
     }
 }

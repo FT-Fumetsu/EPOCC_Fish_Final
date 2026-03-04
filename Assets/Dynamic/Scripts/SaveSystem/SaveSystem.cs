@@ -78,10 +78,6 @@ namespace Save
             {
                 Load();
             }
-            else
-            {
-                Debug.LogWarning($"SaveSystem: aucun fichier de sauvegarde trouvé à {_filePath} lors de l'entrée dans {scene.name}.");
-            }
         }
 
         public void SetPlayerMovements(PlayerMovements playerMovements)
