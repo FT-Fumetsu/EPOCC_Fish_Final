@@ -1,14 +1,18 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 [RequireComponent(typeof(AudioSource))]
 public class PlaySFX : MonoBehaviour
 {
+    [Tooltip("Groupe d'AudioMixer vers lequel ce SFX sera routé (optionnel)")]
+    [SerializeField] private AudioMixerGroup _mixerGroup;
+
     [Tooltip("Clip audio joué par ce component")]
     [SerializeField] private AudioClip _clip;
     [Range(0f, 1f), SerializeField] private float _volume = 1f;
     
-    [SerializeField] private bool _playOnStart = false;
+    //[SerializeField] private bool _playOnStart = false;
     [SerializeField] private bool _autoDestroy = true;
     [Tooltip("Si vrai, l'auto-destruction utilisera WaitForSecondsRealtime pour ne pas être bloquée par Time.timeScale == 0")]
     [SerializeField] private bool _useRealtimeForDestroy = true;
@@ -20,6 +24,9 @@ public class PlaySFX : MonoBehaviour
         _source = GetComponent<AudioSource>();
         _source.playOnAwake = false;
         _source.spatialBlend = 0f;
+        // Assigner le groupe de mixeur (si renseigné) pour permettre le contrôle global du volume
+        if (_mixerGroup != null)
+            _source.outputAudioMixerGroup = _mixerGroup;
     }
 
     public void Play()
@@ -32,6 +39,9 @@ public class PlaySFX : MonoBehaviour
 
         _source.clip = _clip;
         _source.volume = _volume;
+        // (ré)appliquer le groupe au moment de jouer, si on l'a changé via InitAndPlay
+        if (_mixerGroup != null)
+            _source.outputAudioMixerGroup = _mixerGroup;
         _source.Play();
 
         if (_autoDestroy)
@@ -41,12 +51,15 @@ public class PlaySFX : MonoBehaviour
         }
     }
 
-    public void InitAndPlay(AudioClip clip, float volume = 1f, bool autoDestroy = true, bool useRealtime = true)
+    // Ajout d'un paramètre optionnel pour le groupe de mixeur afin de pouvoir l'assigner depuis l'appel statique
+    public void InitAndPlay(AudioClip clip, float volume = 1f, bool autoDestroy = true, bool useRealtime = true, AudioMixerGroup mixerGroup = null)
     {
         _clip = clip;
         _volume = volume;
         _autoDestroy = autoDestroy;
         _useRealtimeForDestroy = useRealtime;
+        if (mixerGroup != null)
+            _mixerGroup = mixerGroup;
         Play();
     }
 
@@ -60,7 +73,7 @@ public class PlaySFX : MonoBehaviour
         Destroy(gameObject);
     }
     
-    public static void PlayClipAtPosition(AudioClip clip, Vector3 position, float volume = 1f, bool autoDestroy = true, bool useRealtime = true)
+    public static void PlayClipAtPosition(AudioClip clip, Vector3 position, float volume = 1f, bool autoDestroy = true, bool useRealtime = true, AudioMixerGroup mixerGroup = null)
     {
         if (clip == null)
         {
@@ -71,6 +84,6 @@ public class PlaySFX : MonoBehaviour
         var go = new GameObject($"SFX_{clip.name}");
         go.transform.position = position;
         var sfx = go.AddComponent<PlaySFX>();
-        sfx.InitAndPlay(clip, volume, autoDestroy, useRealtime);
+        sfx.InitAndPlay(clip, volume, autoDestroy, useRealtime, mixerGroup);
     }
 }

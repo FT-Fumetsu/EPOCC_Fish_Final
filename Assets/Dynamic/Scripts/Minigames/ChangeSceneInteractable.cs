@@ -14,7 +14,8 @@ namespace Interactables.Scenes
         {
             var runMinigame = _changeScene.GetComponent<RunMinigame>();
             runMinigame.minigameSceneName = _sceneToLoad;
-            runMinigame.runSfx 
+            runMinigame.runSfx = _runSfx;
+            runMinigame.sfxVolume = _sfxVolume;
             _changeScene.SetActive(true);
         }
     }

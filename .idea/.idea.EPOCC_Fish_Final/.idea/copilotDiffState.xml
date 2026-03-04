@@ -3,6 +3,15 @@
   <component name="CopilotDiffPersistence">
     <option name="pendingDiffs">
       <map>
+        <entry key="$PROJECT_DIR$/Assets/Dynamic/Scripts/UI/Menus/RunMinigame.cs">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/Assets/Dynamic/Scripts/UI/Menus/RunMinigame.cs" />
+              <option name="originalContent" value="using UnityEngine;  &#10;using UnityEngine.Audio;&#10;using UnityEngine.SceneManagement;&#10;&#10;public class RunMinigame : MonoBehaviour&#10;{&#10;    public string minigameSceneName;&#10;    &#10;    public AudioClip runSfx;&#10;    [Range(0, 1)] public float sfxVolume = 1f;&#10;    [Tooltip(&quot;Groupe d'AudioMixer utilisé pour les SFX joués par ce script (optionnel)&quot;)]&#10;    [SerializeField] private AudioMixerGroup _sfxGroup;&#10;    public void LoadMinigame()&#10;    {&#10;        if (runSfx != null)&#10;        {&#10;            var pos = Camera.main != null ? Camera.main.transform.position : transform.position;&#10;            PlaySFX.PlayClipAtPosition(runSfx, pos, Mathf.Clamp01(sfxVolume), true, true, _sfxGroup);&#10;        }&#10;        &#10;        SceneManager.LoadScene(minigameSceneName);&#10;    }&#10;    &#10;    public void SaveGame()&#10;    {&#10;        Save.SaveSystem.Instance?.Save();&#10;    }&#10;}" />
+              <option name="updatedContent" value="using UnityEngine;  &#10;using UnityEngine.Audio;&#10;using UnityEngine.SceneManagement;&#10;&#10;public class RunMinigame : MonoBehaviour&#10;{&#10;    public string minigameSceneName;&#10;    &#10;    public AudioClip runSfx;&#10;    [Range(0, 1)] public float sfxVolume = 1f;&#10;    [Tooltip(&quot;Groupe d'AudioMixer utilisé pour les SFX joués par ce script (optionnel)&quot;)]&#10;    [SerializeField] private AudioMixerGroup _sfxGroup;&#10;    public void LoadMinigame()&#10;    {&#10;        if (runSfx != null)&#10;        {&#10;            var pos = Camera.main != null ? Camera.main.transform.position : transform.position;&#10;            PlaySFX.PlayClipAtPosition(runSfx, pos, Mathf.Clamp01(sfxVolume), true, true, _sfxGroup);&#10;        }&#10;        &#10;        SceneManager.LoadScene(minigameSceneName);&#10;    }&#10;    &#10;    public void SaveGame()&#10;    {&#10;        Save.SaveSystem.Instance?.Save();&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/Assets/Dynamic/Scripts/VFX/PlayVFX.cs">
           <value>
             <PendingDiffInfo>

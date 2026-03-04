@@ -48,7 +48,6 @@ namespace VFX
 
             if (_autoDestroy)
             {
-                // Utiliser WaitForSecondsRealtime pour que la coroutine attende même si timeScale == 0
                 StartCoroutine(AutoDestroyAfterRealtime(maxDuration > 0f ? maxDuration : _destroyFallback));
             }
         }
