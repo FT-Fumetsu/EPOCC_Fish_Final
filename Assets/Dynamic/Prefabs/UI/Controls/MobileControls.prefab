@@ -1373,7 +1373,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3070251003769382892}
+      - m_Target: {fileID: 8603704201121913993}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2346,7 +2346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7641159271817130634, guid: b573eef06937bf7448cc9e882c3ff227, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2361,6 +2361,11 @@ GameObject:
 --- !u!224 &5013783296997736549 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 361952092991264003, guid: b573eef06937bf7448cc9e882c3ff227, type: 3}
+  m_PrefabInstance: {fileID: 4652606383330579814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8603704201121913993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4032726866774854127, guid: b573eef06937bf7448cc9e882c3ff227, type: 3}
   m_PrefabInstance: {fileID: 4652606383330579814}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7241291290468659743

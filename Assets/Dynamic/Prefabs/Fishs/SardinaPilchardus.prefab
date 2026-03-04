@@ -107,9 +107,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5baac4192d73243860a62efddf3535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactables.Fishs.FishInteractable
-  _sceneName: 
   _fishCount: 4
   _fishData: {fileID: 11400000, guid: 28f18e94ea9b04c4e96185d9721fb2ba, type: 2}
+  _captureVfxPrefab: {fileID: 1933849654374725498, guid: 326a1b72e856f294396b93b635996b7e, type: 3}
 --- !u!65 &3845776522509432873
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System;
 using Manager.Pause;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace Minigames.Countdown
 {
@@ -11,6 +12,17 @@ namespace Minigames.Countdown
         [SerializeField] private float _remainingTime;
 
         [SerializeField] private GameObject _endPanel;
+        
+        [Header("VFX")]
+        [Tooltip("Prefab VFX à instancier quand le timer se termine")]
+        [SerializeField] private GameObject _endVfxPrefab;
+
+        [Header("SFX")]
+        [Tooltip("SFX joué quand le timer se termine (sera lancé avant la mise en pause)")]
+        [SerializeField] private AudioClip _endSfx;
+        [Range(0f,1f), SerializeField] private float _endSfxVolume = 1f;
+        [Tooltip("Groupe d'AudioMixer à utiliser pour l'end SFX (optionnel)")]
+        [SerializeField] private AudioMixerGroup _sfxGroup;
 
         private bool _isGameStarted;
 
@@ -56,6 +68,20 @@ namespace Minigames.Countdown
 
             if (_endPanel.activeSelf)
                 return;
+
+            if (_endVfxPrefab != null)
+            {
+                var vfx = Instantiate(_endVfxPrefab, transform.position, Quaternion.identity);
+                
+                var play = vfx.GetComponent<VFX.PlayVFX>();
+                play?.Play();
+            }
+            
+            if (_endSfx != null)
+            {
+                var pos = Camera.main != null ? Camera.main.transform.position : transform.position;
+                PlaySFX.PlayClipAtPosition(_endSfx, pos, Mathf.Clamp01(_endSfxVolume), true, true, _sfxGroup);
+            }
             
             Save.SaveSystem.Instance?.Save();
             

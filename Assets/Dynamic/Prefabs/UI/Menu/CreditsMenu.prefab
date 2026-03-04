@@ -336,8 +336,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -470, y: 100}
-  m_SizeDelta: {x: 200, y: 46.371}
+  m_AnchoredPosition: {x: 0.000061035, y: -59.395706}
+  m_SizeDelta: {x: 200, y: 180.2205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &736232855958838925
 CanvasRenderer:
@@ -368,7 +368,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Anne-Sophie Le \r\nJade Rousse\nDamien Esmieu  \nFabio Barbato\r\nNaomi
-    Trules\nMaelle Paccalet  \r\nMohamed Hattab "
+    Trules\nMaelle Paccalet  \r\nMohamed Hattab \nEvann "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
   m_sharedMaterial: {fileID: 2421999939311194209, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 18.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -238.20381, w: -68.94199}
+  m_margin: {x: 0, y: 0, z: 0.32740784, w: 0.050497044}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
