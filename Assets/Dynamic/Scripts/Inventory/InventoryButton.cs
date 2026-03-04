@@ -18,20 +18,17 @@ namespace Inventory
         {
             if (InventoryManager.Instance.IsTutorialFinished == true)
             {
-                Debug.Log("Open Inventory");
                 OpenInventory();
                 return;
             }
             
             LaunchDialogue();
-            Debug.Log("Launched Inventory Dialogue");
         }
 
         private void OpenInventory()
         {
             if (_inventoryPanel == null)
             {
-                Debug.Log("Inventory Panel not found!");
                 return;
             }
             

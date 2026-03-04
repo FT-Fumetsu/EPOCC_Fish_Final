@@ -34,7 +34,6 @@ public class DialogueLauncher : MonoBehaviour
 
         if (displayer == null)
         {
-            Debug.LogError("No DialogueDisplayer found.");
             return;
         }
 

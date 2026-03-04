@@ -33,7 +33,6 @@ public class PlaySFX : MonoBehaviour
     {
         if (_clip == null)
         {
-            Debug.LogWarning("PlaySFX: pas de clip assigné.");
             return;
         }
 
@@ -77,7 +76,6 @@ public class PlaySFX : MonoBehaviour
     {
         if (clip == null)
         {
-            Debug.LogWarning("PlaySFX.PlayClipAtPosition: clip null");
             return;
         }
 

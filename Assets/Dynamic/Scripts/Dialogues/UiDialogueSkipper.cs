@@ -10,7 +10,6 @@ public class UiDialogueSkipper : MonoBehaviour
         {
             return;
         }
-        Debug.Log("Skipped");
         displayer.Next();
     }
 }
