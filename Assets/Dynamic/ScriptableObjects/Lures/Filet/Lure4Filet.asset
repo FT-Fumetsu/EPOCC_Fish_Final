@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779b7c462bea1be4b8cc85fbcd0fc33b, type: 3}
   m_Name: Lure4Filet
   m_EditorClassIdentifier: Assembly-CSharp::Lure.Data.LureData
-  LureIcon: {fileID: 21300000, guid: 59e5ab12147ad164bba3398e1db90cb8, type: 3}
+  LureIconWithoutPrice: {fileID: 21300000, guid: 8a9f0e3384327364cad9dcde0cdceefc, type: 3}
+  LureIconWithPrice: {fileID: 21300000, guid: 59e5ab12147ad164bba3398e1db90cb8, type: 3}
   LurePrice: 100
   SpawnTable:
   - fishPrefab: {fileID: 3064477644981082617, guid: 0925dcd66f44ba1488696f1de37b2838, type: 3}

@@ -22,7 +22,7 @@ public class InventoryData : MonoBehaviour
         {
             if (_currentLureData == null)
                 return;
-            _icon.sprite = _currentLureData.LureIcon;
+            _icon.sprite = _currentLureData.LureIconWithoutPrice;
             _countText.text = Manager.Lure.LureManager.Instance?.GetLureCount(_currentLureData).ToString();
         }
         else

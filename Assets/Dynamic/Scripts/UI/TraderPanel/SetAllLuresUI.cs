@@ -83,7 +83,7 @@ namespace UI.TraderPanel
         public void SetTradePanel(LureData data)
         {
             _currentData = data;
-            _tradeIcon.sprite = data.LureIcon;
+            _tradeIcon.sprite = data.LureIconWithPrice;
             _tradePriceText.text = data.LurePrice.ToString();
             _numberOfLuresToSell = 1;
             _numberOfLuresText.text = _numberOfLuresToSell.ToString();

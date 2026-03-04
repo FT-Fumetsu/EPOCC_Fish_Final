@@ -1,13 +1,14 @@
 using Fish.Spawner.Data;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Lure.Data
 {
     [CreateAssetMenu(fileName = "LureData", menuName = "ScriptableObjects/Lure Data")]
     public class LureData : ScriptableObject
     {
-        //public Lure LureType;
-        public Sprite LureIcon;
+        public Sprite LureIconWithoutPrice;
+        public Sprite LureIconWithPrice;
         public int LurePrice;
         public FishSpawnData[] SpawnTable;
 
