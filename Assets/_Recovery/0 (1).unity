@@ -437,7 +437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishingCodex
   _isUnparentOnAwake: 1
   _fishCountForName: 1
-  _fishCountForDescription: 12
+  _fishCountForDescription: 10
   _fishCountForIcon: 3
   _fishCountForSize: 7
   _fishCountForFood: 5
