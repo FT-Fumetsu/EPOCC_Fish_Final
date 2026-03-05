@@ -1,9 +1,11 @@
+using System.Collections;
 using System.Collections.Generic;
 using Fishs.Spawner;
 using UnityEngine;
 
 using Lure.Data;
 using Manager.Lure;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 namespace UI.Lures.Buttons
@@ -30,6 +32,15 @@ namespace UI.Lures
        [SerializeField] private List<LureButtonNetEntry> lureButtons = new();
 
        [SerializeField] private FishMonoSpawner _spawner;
+       
+       [SerializeField] private GameObject _usedLureText;
+       
+       [Header("SFX")]
+       [SerializeField] private AudioClip _lureSfx;
+       [SerializeField, Range(0f, 1f)] private float _sfxVolume = 1f;
+       [SerializeField] private AudioMixerGroup _sfxGroup;
+       
+       private Coroutine _usedLureCoroutine;
        
        private void Start()
        {
@@ -74,7 +85,27 @@ namespace UI.Lures
                CheckAllLures(true);
                CheckLureButton(true);
            }
-           Debug.Log("Used ? " + used);
+           
+           if (_lureSfx != null)
+           {
+               var pos = Camera.main != null ? Camera.main.transform.position : transform.position;
+               PlaySFX.PlayClipAtPosition(_lureSfx, pos, Mathf.Clamp01(_sfxVolume), true, true, _sfxGroup);
+           }
+
+           if (_usedLureText == null) 
+               return;
+           
+           if (_usedLureCoroutine != null)
+               StopCoroutine(_usedLureCoroutine);
+           _usedLureCoroutine = StartCoroutine(ShowUsedLureTextRealtime(2f));
+       }
+       
+       private IEnumerator ShowUsedLureTextRealtime(float duration)
+       {
+           _usedLureText.SetActive(true);
+           yield return new WaitForSecondsRealtime(duration);
+           _usedLureText.SetActive(false);
+           _usedLureCoroutine = null;
        }
    
        public void CheckLureButton(bool lureUsed)
