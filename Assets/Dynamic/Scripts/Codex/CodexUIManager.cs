@@ -14,6 +14,7 @@ public class CodexUIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _fishSizeText;
     [SerializeField] private TextMeshProUGUI _fishFoodText;
     [SerializeField] private TextMeshProUGUI _fishDescText;
+    [SerializeField] private TextMeshProUGUI _pageNumberingText;
     [SerializeField] private HorizontalLayoutGroup _luresToCatchThisFish;
     [SerializeField] private Button _prevButton;
     [SerializeField] private Button _nextButton;
@@ -37,6 +38,7 @@ public class CodexUIManager : MonoBehaviour
         _fishSizeText.text = "";
         _fishFoodText.text = "";
         _fishDescText.text = "";
+        _pageNumberingText.text = "? / " + _allFishData.Count;
         _fishIcon.sprite = _hiddenFishIcon;
         
         if (_allFishData.Count == 0)
@@ -48,13 +50,31 @@ public class CodexUIManager : MonoBehaviour
         
         SetLures(currentFish);
 
+        _pageNumberingText.text = (currentPageIndex + 1) + " / " + _allFishData.Count;
+
+        if (currentPageIndex == 0)
+        {
+            _prevButton.gameObject.SetActive(false);
+            _nextButton.gameObject.SetActive(true);
+        }
+        else if (currentPageIndex == _allFishData.Count - 1)
+        {
+            _prevButton.gameObject.SetActive(true);
+            _nextButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            _prevButton.gameObject.SetActive(true);
+            _nextButton.gameObject.SetActive(true);
+        }
+        
         if (FishingCodex.Instance.IsNameUnlocked(currentFish))
         {
             _fishNameText.text = currentFish.FishName;
         }
         else
         {
-            _fishNameText.text = "Pêchez plus de cette espèce pour révéler son nom !";
+            _fishNameText.text = "Pêchez plus de cette espèce pour révéler son nom ! ( " + count + " / " + FishingCodex.Instance.FishCountForName + " )";
             return;
         }
 
@@ -65,7 +85,7 @@ public class CodexUIManager : MonoBehaviour
         else
         {
             _fishIcon.sprite = _hiddenFishIcon;
-            _fishSizeText.text = "Pêchez plus de cette espèce pour révéler sa taille !";
+            _fishSizeText.text = "Pêchez plus de cette espèce pour révéler sa taille ! ( " + count + " / " + FishingCodex.Instance.FishCountForSize + " )";
             return;
         }
         
@@ -75,7 +95,7 @@ public class CodexUIManager : MonoBehaviour
         }
         else
         {
-            _fishSizeText.text = "Pêchez plus de cette espèce pour révéler sa taille !";
+            _fishSizeText.text = "Pêchez plus de cette espèce pour révéler sa taille ! ( " + count + " / " + FishingCodex.Instance.FishCountForSize + " )";
             return;
         }
 
@@ -85,7 +105,7 @@ public class CodexUIManager : MonoBehaviour
         }
         else
         {
-            _fishFoodText.text = "Pêchez plus de cette espèce pour révéler sa nourriture préférée !";
+            _fishFoodText.text = "Pêchez plus de cette espèce pour révéler sa nourriture préférée ! ( " + count + " / " + FishingCodex.Instance.FishCountForFood + " )";
             return;
         }
         
@@ -95,7 +115,7 @@ public class CodexUIManager : MonoBehaviour
         }
         else
         {
-            _fishDescText.text = "Pêchez plus de cette espèce pour révéler sa description !";
+            _fishDescText.text = "Pêchez plus de cette espèce pour révéler sa description ! ( " + count + " / " + FishingCodex.Instance.FishCountForDescription + " )";
         }
     }
 

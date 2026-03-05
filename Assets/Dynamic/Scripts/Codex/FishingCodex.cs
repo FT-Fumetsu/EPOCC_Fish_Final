@@ -24,6 +24,12 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
     
     [SerializeField] private FishData[] _fishDatabase;
     
+    public int FishCountForName => _fishCountForName;
+    public int FishCountForDescription => _fishCountForDescription;
+    public int FishCountForIcon => _fishCountForIcon;
+    public int FishCountForSize => _fishCountForSize;
+    public int FishCountForFood => _fishCountForFood;
+    
     protected override void OnInitialized()
     {
         base.OnInitialized();
