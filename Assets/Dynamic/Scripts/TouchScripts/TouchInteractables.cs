@@ -32,14 +32,11 @@ namespace Interactables
                 HandleTouch(touchPosition);
             }
 
-    #if UNITY_EDITOR  
-
-            if (Mouse.current.leftButton.wasPressedThisFrame)
-            {
-                Vector2 mousePosition = Mouse.current.position.ReadValue();
-                HandleTouch(mousePosition);
-            }
-    #endif
+            if (!Mouse.current.leftButton.wasPressedThisFrame) 
+                return;
+            
+            Vector2 mousePosition = Mouse.current.position.ReadValue();
+            HandleTouch(mousePosition);
         }
 
         private void HandleTouch(Vector2 screenPosition)
