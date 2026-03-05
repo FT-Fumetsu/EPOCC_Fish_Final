@@ -18795,11 +18795,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3180358266322364367, guid: 6613302a0c6224e4b97c175bf7ce3d21, type: 3}
       propertyPath: _maxDelay
-      value: 0.5
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3180358266322364367, guid: 6613302a0c6224e4b97c175bf7ce3d21, type: 3}
       propertyPath: _minDelay
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3180358266322364367, guid: 6613302a0c6224e4b97c175bf7ce3d21, type: 3}
       propertyPath: _maxSpawnPosition
