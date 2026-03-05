@@ -8,9 +8,6 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
     [Tooltip("Nombre de poissons à pêcher pour révéler le nom")]
     [SerializeField] private int _fishCountForName = 1;
 
-    [Tooltip("Nombre de poissons à pêcher pour révéler la description")]
-    [SerializeField] private int _fishCountForDescription = 10;
-
     [Tooltip("Nombre de poissons à pêcher pour révéler l'icône")]
     [SerializeField] private int _fishCountForIcon = 3;
 
@@ -19,6 +16,10 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
     
     [Tooltip("Nombre de poissons à pêcher pour révéler la nourriture")]
     [SerializeField] private int _fishCountForFood = 7;
+    
+    
+    [Tooltip("Nombre de poissons à pêcher pour révéler la description")]
+    [SerializeField] private int _fishCountForDescription = 12;
 
     private Dictionary<FishData, int> _fishCounts = new();
     
@@ -69,6 +70,21 @@ public class FishingCodex : PersistentMonoSingleton<FishingCodex>
     public bool IsFoodUnlocked(FishData fish)
     {
         return GetCountForFish(fish) >= _fishCountForFood;
+    }
+    
+    public bool IsFishFullyUnlocked(FishData fish)
+    {
+        return IsNameUnlocked(fish) && IsDescriptionUnlocked(fish) && IsIconUnlocked(fish) && IsSizeUnlocked(fish) && IsFoodUnlocked(fish);
+    }
+    
+    public bool IsAllFishFullyUnlocked()
+    {
+        foreach (FishData fish in _fishDatabase)
+        {
+            if (!IsFishFullyUnlocked(fish))
+                return false;
+        }
+        return true;
     }
 
     public Dictionary<int, int> Serialize()

@@ -439,8 +439,8 @@ MonoBehaviour:
   _fishCountForName: 1
   _fishCountForDescription: 12
   _fishCountForIcon: 3
-  _fishCountForSize: 7
-  _fishCountForFood: 5
+  _fishCountForSize: 5
+  _fishCountForFood: 7
   _fishDatabase:
   - {fileID: 11400000, guid: 84542fe2c03e3b84898f311050561a09, type: 2}
   - {fileID: 11400000, guid: 29db27f0a9c2e5e408e444304e8bca79, type: 2}

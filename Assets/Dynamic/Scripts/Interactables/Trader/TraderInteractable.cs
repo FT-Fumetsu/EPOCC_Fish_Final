@@ -19,6 +19,7 @@ namespace Interactables.Trader
         [SerializeField] private DialogueSequence _tutorialDialogue;
         [SerializeField] private DialogueSequence _notEnoughFishDialogue;
         [SerializeField] private DialogueSequence _baseDialogue;
+        [SerializeField] private DialogueSequence _endDialogue;
         
         private DialogueLauncher _dialogueLauncher;
 
@@ -40,6 +41,11 @@ namespace Interactables.Trader
             {
                 _dialogueLauncher.Sequence = _tutorialDialogue;
                 _dialogueLauncher.LaunchDialogue(OnTutorialDialogueEnd);
+            }
+            else if (FishingCodex.Instance.IsAllFishFullyUnlocked())
+            {
+                _dialogueLauncher.Sequence = _endDialogue;
+                _dialogueLauncher.LaunchDialogue();
             }
             else
             {
