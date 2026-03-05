@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Appuyer sur \touvre le menu qui propose les diff\xE9rents app\xE2ts.\nAppuyer
+  m_text: "Appuyez sur \touvre le menu qui propose les diff\xE9rents app\xE2ts.\nAppuyez
     sur le type d'app\xE2t de votre choix et il se lancera dans l'eau.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 443898a74814a0340bee605d55ac56fb, type: 2}

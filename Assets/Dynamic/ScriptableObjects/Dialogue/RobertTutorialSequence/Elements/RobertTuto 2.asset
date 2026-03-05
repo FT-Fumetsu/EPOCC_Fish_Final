@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: RobertTuto 2
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue.Element.DialogueTextElement
   text: "Voil\xE0 de beaux poissons ! Tu pourrais en obtenir de diff\xE9rents en
-    utilisant des app\xE2ts. Mais fais bien attention Cetty, il faut que tu utilise
+    utilisant des app\xE2ts. Mais fais bien attention Cetty, il faut que tu utilises
     le bon app\xE2t !"
   speakerName: Robert

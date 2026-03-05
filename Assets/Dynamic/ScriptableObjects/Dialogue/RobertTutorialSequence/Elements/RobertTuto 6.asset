@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33dcbee11ebd14f43a74f3ec4c3c9981, type: 3}
   m_Name: RobertTuto 6
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue.Element.DialogueTextElement
-  text: "Plus tu me ram\xE8neras de poisson de la m\xEAme esp\xE8ce, plus je pourrais
+  text: "Plus tu me ram\xE8neras de poissons de la m\xEAme esp\xE8ce, plus je pourrais
     r\xE9colter des informations suppl\xE9mentaires \xE0 rajouter dans notre belle
     encyclop\xE9die. Il te faut le m\xEAme type de poissons.\n"
   speakerName: Robert

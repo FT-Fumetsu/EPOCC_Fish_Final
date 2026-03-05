@@ -431,7 +431,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Par exemple, ici je poss\xE8de 3 maqueraux"
+  m_text: "Par exemple, ici je poss\xE8de 3 maquereaux."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 443898a74814a0340bee605d55ac56fb, type: 2}
   m_sharedMaterial: {fileID: 914137408591302476, guid: 443898a74814a0340bee605d55ac56fb, type: 2}

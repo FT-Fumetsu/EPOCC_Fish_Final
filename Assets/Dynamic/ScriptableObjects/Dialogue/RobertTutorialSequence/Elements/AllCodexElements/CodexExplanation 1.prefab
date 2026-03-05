@@ -1768,7 +1768,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Voici l'encyclop\xE9die de Robert ! \nTu peux y retrouver des informations
-    sur les poissons que tu as p\xEAch\xE9 !\nPlus tu p\xEAches le poisson, plus
+    sur les poissons que tu as p\xEAch\xE9s !\nPlus tu p\xEAches le poisson, plus
     tu auras d'informations sur lui"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 443898a74814a0340bee605d55ac56fb, type: 2}

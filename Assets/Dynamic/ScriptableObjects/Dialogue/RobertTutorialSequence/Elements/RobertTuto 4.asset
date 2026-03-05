@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: RobertTuto 4
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue.Element.DialogueTextElement
   text: "Un poisson n\u2019appara\xEEtra pas si tu en utilises un qui ne l\u2019attire
-    pas. Pas d\u2019inqui\xE9tude, il est d\xE9j\xE0 indiqu\xE9 dans l\u2019encyclop\xE9die,
+    pas. Pas d\u2019inqui\xE9tude, il est d\xE9j\xE0 indiqu\xE9 dans l\u2019encyclop\xE9die
     ce que pr\xE9f\xE8re chaque poisson. "
   speakerName: Robert

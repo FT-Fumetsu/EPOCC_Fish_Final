@@ -218,7 +218,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Dans l'onglet App\xE2ts, tu peux retrouver les diff\xE9rents types d'app\xE2ts
-    que tu poss\xE8des. \n\nTu peux aussi voir le nombre exact d'app\xE2t en dessous
+    que tu poss\xE8des. \n\nTu peux aussi voir le nombre exact d'app\xE2ts en dessous
     de l'ic\xF4ne."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 443898a74814a0340bee605d55ac56fb, type: 2}

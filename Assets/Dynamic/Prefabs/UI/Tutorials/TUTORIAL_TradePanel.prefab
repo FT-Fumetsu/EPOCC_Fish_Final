@@ -1381,7 +1381,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Robert propose quatre vari\xE9t\xE9s d'app\xE2ts. Il faudra obtenir le
     nombre de poissons requis pour permettre l'\xE9change. \nS\xE9lectionne la vari\xE9t\xE9
-    d'app\xE2ts que tu veux puis accepte l'\xE9change avec le bouton "
+    d'app\xE2ts que tu veux, puis accepte l'\xE9change avec le bouton."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 443898a74814a0340bee605d55ac56fb, type: 2}
   m_sharedMaterial: {fileID: 914137408591302476, guid: 443898a74814a0340bee605d55ac56fb, type: 2}
