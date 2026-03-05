@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Lure.Data.LureData
   LureIconWithoutPrice: {fileID: 21300000, guid: d2aed64ff807ef44091738457790da9b, type: 3}
   LureIconWithPrice: {fileID: 21300000, guid: e0aca7bf4ec5da24db2f47a511220268, type: 3}
-  LurePrice: 25
+  LurePrice: 6
   SpawnTable:
   - fishPrefab: {fileID: 5548365985278890572, guid: 684648b057a692e45aa3cf4c46fee2e9, type: 3}
     spawnWeight: 0.1875
