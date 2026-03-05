@@ -1264,16 +1264,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5665465896098516487}
-  m_LocalRotation: {x: -0, y: -0, z: 0.38780534, w: -0.9217413}
+  m_LocalRotation: {x: -0, y: -0, z: 0.465232, w: -0.8851889}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5422293494061958744}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45.636}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -55.45}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -491, y: 48}
+  m_AnchoredPosition: {x: -472, y: 69}
   m_SizeDelta: {x: 306.1606, y: 347.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8480718661381587703
@@ -1381,7 +1381,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Robert propose quatre vari\xE9t\xE9s d'app\xE2ts. Il faudra obtenir le
     nombre de poissons requis pour permettre l'\xE9change. \nS\xE9lectionne la vari\xE9t\xE9
-    d'app\xE2t que tu veux puis accepte l'\xE9change avec le bouton "
+    d'app\xE2ts que tu veux puis accepte l'\xE9change avec le bouton "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 443898a74814a0340bee605d55ac56fb, type: 2}
   m_sharedMaterial: {fileID: 914137408591302476, guid: 443898a74814a0340bee605d55ac56fb, type: 2}
@@ -1615,7 +1615,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -1911,8 +1911,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -761.95, y: -121.61}
-  m_SizeDelta: {x: 456.1935, y: 187.9505}
+  m_AnchoredPosition: {x: -769.884, y: -121.61}
+  m_SizeDelta: {x: 472.6255, y: 187.9505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6158083638523920114
 CanvasRenderer:
@@ -1942,8 +1942,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Si je choisis ce type d'app\xE2t, je vais donc \xE9changer 25 poissons
-    contre 1 app\xE2t de ce type."
+  m_text: "Si je choisis ce compartiment d'app\xE2ts, je vais donc \xE9changer 25
+    poissons contre \n1 compartiment d'app\xE2ts."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 443898a74814a0340bee605d55ac56fb, type: 2}
   m_sharedMaterial: {fileID: 914137408591302476, guid: 443898a74814a0340bee605d55ac56fb, type: 2}
@@ -2009,7 +2009,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -9.389786, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
