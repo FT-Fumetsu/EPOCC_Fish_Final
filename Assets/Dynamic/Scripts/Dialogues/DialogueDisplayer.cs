@@ -18,7 +18,6 @@ public class DialogueDisplayer : MonoBehaviour
     private DialogueSequence _currentSequence;
     private int _currentIndex;
 
-    // Callback invoked when the current sequence ends
     private System.Action _onDialogueEnd;
 
     private string _currentText;
@@ -63,7 +62,7 @@ public class DialogueDisplayer : MonoBehaviour
         _dialoguePanel.SetActive(true);
         _dialogueSpeakerText.text = speaker;
         _currentText = text;
-        StartCoroutine(TypeLine(text));
+        _dialogueText.text = text;
     }
 
     IEnumerator TypeLine(string text)
