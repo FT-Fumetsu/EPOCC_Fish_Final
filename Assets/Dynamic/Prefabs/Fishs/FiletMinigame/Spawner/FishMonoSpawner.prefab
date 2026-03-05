@@ -65,5 +65,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9bdfd17fa4cbfdb41ad33a92bc27d590, type: 2}
   - {fileID: 11400000, guid: 33ab56cd1a95b5d45942fc7838b01347, type: 2}
   _activeLureIndex: -1
-  _minDelay: 1
-  _maxDelay: 3
+  _minDelay: 4
+  _maxDelay: 5.5

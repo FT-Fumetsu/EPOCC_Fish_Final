@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d3c089e55ca3a49b787e3f71400beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishMovement
-  _speed: 50
+  _speed: 30
   _direction: {x: 1, y: 0, z: 0}
 --- !u!114 &-7655158963241432386
 MonoBehaviour:
@@ -171,3 +171,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Fish.Interactable.FishCaptureWithNet
   _fishCount: 4
   _fishData: {fileID: 11400000, guid: c24c4e78b636004489a264d47b7c0848, type: 2}
+  _netCounter: {fileID: 0}
