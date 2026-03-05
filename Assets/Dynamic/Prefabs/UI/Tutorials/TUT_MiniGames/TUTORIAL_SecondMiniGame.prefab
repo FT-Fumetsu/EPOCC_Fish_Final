@@ -1461,7 +1461,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Presse ton doigt sur le filet, et fait le glisser de droite \xE0 gauche
+  m_text: "Presse ton doigt sur le filet, et fais le glisser de droite \xE0 gauche
     de l'\xE9cran pour te d\xE9placer. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 443898a74814a0340bee605d55ac56fb, type: 2}
