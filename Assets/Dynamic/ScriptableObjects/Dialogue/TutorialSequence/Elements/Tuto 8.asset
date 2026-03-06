@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbbee9ce03178614a9358d1c5d78f10e, type: 3}
-  m_Name: Tuto 7
+  m_Name: Tuto 8
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue.Element.DialogueUIElement
-  uiPrefab: {fileID: 8077670870100714422, guid: b38f6fc896f2b1143ae955e164e30431, type: 3}
+  uiPrefab: {fileID: 8077670870100714422, guid: 5432e8aeb32f56e49986209bfe88a96f, type: 3}

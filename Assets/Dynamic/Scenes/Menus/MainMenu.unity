@@ -437,10 +437,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishingCodex
   _isUnparentOnAwake: 1
   _fishCountForName: 1
-  _fishCountForDescription: 12
   _fishCountForIcon: 3
   _fishCountForSize: 5
   _fishCountForFood: 7
+  _fishCountForDescription: 12
   _fishDatabase:
   - {fileID: 11400000, guid: 84542fe2c03e3b84898f311050561a09, type: 2}
   - {fileID: 11400000, guid: 29db27f0a9c2e5e408e444304e8bca79, type: 2}
@@ -988,7 +988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3527830750417436520, guid: 8227c7f78c480d445ac7b98356337d4d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4189969326199415887, guid: 8227c7f78c480d445ac7b98356337d4d, type: 3}
       propertyPath: m_AnchorMax.x
