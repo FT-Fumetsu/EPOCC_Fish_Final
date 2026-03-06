@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33dcbee11ebd14f43a74f3ec4c3c9981, type: 3}
   m_Name: NotEnoughFish 1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue.Element.DialogueTextElement
-  text: 'Tu n''as pas de poissons? '
+  text: 'Tu n''as pas de poisson ? '
   speakerName: Robert

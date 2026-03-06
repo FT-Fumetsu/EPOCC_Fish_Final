@@ -364,7 +364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6883670129313766862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -464,6 +464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RunMinigame
   minigameSceneName: 
+  runSfx: {fileID: 0}
+  sfxVolume: 1
+  _sfxGroup: {fileID: -8233600911326940025, guid: f8e05a1df1c79da46850ea550ff9e788, type: 2}
 --- !u!1 &1686301684524151116
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +532,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Veux tu vraiment lancer le mini jeu?
+  m_text: Veux-tu vraiment lancer le mini jeu?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
   m_sharedMaterial: {fileID: 2421999939311194209, guid: fadacd8490da33a4caceaddd9051ebfe, type: 2}
