@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33dcbee11ebd14f43a74f3ec4c3c9981, type: 3}
   m_Name: RobertTuto 2
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue.Element.DialogueTextElement
-  text: "Voil\xE0 de beaux poissons ! Tu pourrais en obtenir de diff\xE9rents en
+  text: "Voil\xE0 de beaux poissons ! Tu pourrais en obtenir des diff\xE9rents en
     utilisant des app\xE2ts. Mais fais bien attention Cetty, il faut que tu utilises
     le bon app\xE2t !"
   speakerName: Robert
