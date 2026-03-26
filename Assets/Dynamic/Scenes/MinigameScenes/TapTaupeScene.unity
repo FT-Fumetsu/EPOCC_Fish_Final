@@ -977,6 +977,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: LuresUI
       objectReference: {fileID: 0}
+    - target: {fileID: 265088698720161141, guid: fa7369c9fbdacc04eb94f342282e614f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753007819490906496, guid: fa7369c9fbdacc04eb94f342282e614f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3608029211112447956, guid: fa7369c9fbdacc04eb94f342282e614f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155026535872557232, guid: fa7369c9fbdacc04eb94f342282e614f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373474851153094091, guid: fa7369c9fbdacc04eb94f342282e614f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6540770229877388461, guid: fa7369c9fbdacc04eb94f342282e614f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1060,6 +1080,10 @@ PrefabInstance:
     - target: {fileID: 8128129906321662348, guid: fa7369c9fbdacc04eb94f342282e614f, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 118.70166
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661594561181406318, guid: fa7369c9fbdacc04eb94f342282e614f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -19,7 +19,7 @@ MonoBehaviour:
   _fishFood: "Crustac\xE9s, Vers marins, Algues"
   _description: "On trouve ce poisson dans des zones c\xF4ti\xE8res peu profondes,
     entre 0 et 10 m\xE8tres de  profondeur.  C\u2019est un poisson territorial, il
-    peut se camoufler sur les rochers. il a une t\xEAte large avec de gros yeux et
+    peut se camoufler sur les rochers. Il a une t\xEAte large avec de gros yeux et
     une bouche aux l\xE8vres \xE9paisses."
   _luresToUnlock:
   - {fileID: 11400000, guid: 85a463850de9b2145863d0e8b0643ad0, type: 2}

@@ -62,7 +62,8 @@ public class DialogueDisplayer : MonoBehaviour
         _dialoguePanel.SetActive(true);
         _dialogueSpeakerText.text = speaker;
         _currentText = text;
-        StartCoroutine(TypeLine(text));
+        _dialogueText.text = text;
+        //StartCoroutine(TypeLine(text));
     }
 
     IEnumerator TypeLine(string text)
